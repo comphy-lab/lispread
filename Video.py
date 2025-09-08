@@ -13,8 +13,7 @@ from matplotlib.ticker import StrMethodFormatter
 import sys
 
 matplotlib.rcParams['font.family'] = 'serif'
-matplotlib.rcParams['text.usetex'] = True
-
+matplotlib.rcParams['text.usetex'] = False
 def gettingFacets(filename, Tracer):
     if Tracer == 1:
         exe = ["./getFacet1", filename]

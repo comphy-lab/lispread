@@ -1,7 +1,7 @@
 #!/bin/bash
 
 start="1000"
-end="1007"
+end="1001"
 
 for i in `seq $start $end`;
 do

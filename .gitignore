@@ -52,3 +52,12 @@ Mkfile.old
 dkms.conf
 dump
 .DS_Store
+
+# Ignore everything in the Video folder
+Video/
+
+# Ignore everything in the intermediate folder
+intermediate/
+
+# Ignore everything in the TrackingTP folder
+TrackingTP/

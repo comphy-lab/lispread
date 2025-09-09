@@ -67,8 +67,8 @@ int main(int argc, char const *argv[]) {
   rho3 = 1.0; mu3 = Ohw;
 
   f1.sigma = 1.0;     // liquid- air
-  f2.sigma = 20./40.; // oil and air
-
+  // f2.sigma = 20./40.; // oil and air
+  f2.sigma = 0; // oil to air
   fprintf(ferr, "Level %d tmax %g. Oho %3.2e, Ohw %3.2e, Oha %3.2e, hf %3.2f\n", MAXlevel, tmax, Oho, Ohw, Oha, hf);
   run();
 }
@@ -163,7 +163,7 @@ event adapt(i++) {
 // NOTE: a lot of screens open can mess up your computer (5 is not recommended)
 // reformat hard drive to xvat
 
-event writingFiles (t = 0; t += tsnap; t <= tmax + tsnap) {
+event writingFiles (t = 0; t += tsnap * 10; t <= tmax + tsnap) {
   dump (file = "dump");
   char nameOut[80];
   sprintf (nameOut, "intermediate/snapshot-%5.4f", t);
@@ -177,7 +177,7 @@ event logWriting (i++) {
   }
   static FILE * fp;
   if (i == 0) {
-    fprintf (ferr, "i dt t ke\n");
+    // fprintf (ferr, "i dt t ke\n");
     fp = fopen ("log", "w");
     fprintf (fp, "i dt t ke\n");
     fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
@@ -187,5 +187,5 @@ event logWriting (i++) {
     fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
     fclose(fp);
   }
-  fprintf (ferr, "%d %g %g %g\n", i, dt, t, ke);
+  // fprintf (ferr, "%d %g %g %g\n", i, dt, t, ke);
 }

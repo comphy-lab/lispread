@@ -61,3 +61,6 @@ intermediate/
 
 # Ignore everything in the TrackingTP folder
 TrackingTP/
+
+# Ignore everything in the Results folder
+Results/

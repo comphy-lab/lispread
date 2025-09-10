@@ -9,12 +9,12 @@
 #include "axi.h"      // axisymmetric geometry is alsays the bottom line , always need to be included first 
 #include "navier-stokes/centered.h" // centered uses central difference method, now also /conserving.h might also be bossible it can get rid of blow ups due to cells moving into other cells in case of large density ratios
 #define FILTERED     // spreads interface over a view grid cels to reduce jumps (mostly in curvature and fractions), the space o1
-#include "three-phase.h"
+#include "three-phase.h"  // initializes fractions mu1, mu2, mu3, rho1, rho2, rho3, + smearing out
 #include "tension.h"   // add surface tension
 #include "distance.h"   // some geometry
 #include "adapt_wavelet_limited_v2.h" // adaptive mesh refinement
 
-#define MINlevel 3                                              // maximum level, opposite of MAXlevel
+#define MINlevel 3                                              // maximum grid size, opposite of MAXlevel
 
 #define tsnap (5e-4)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
 
@@ -25,8 +25,6 @@
 #define OmegaErr (1e-2)                            // error tolerances in velocity
 
 // boundary conditions
-f1[left] = dirichlet(1.0);
-f2[left] = dirichlet(0.0);
 u.t[left] = dirichlet(0.0);
 
 // you can set pressures, velocities, height functions, (fractions but not advised)
@@ -56,19 +54,19 @@ int main(int argc, char const *argv[]) {
 
   L0=Ldomain;
   X0=-hf*1.001; Y0=0.;          // define origin, you can also define LD/2, can be easier
-  init_grid (1 << (4));       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
+  init_grid (1 << (MAXlevel));       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
   
   char comm[80];
   sprintf (comm, "mkdir -p intermediate");
   system(comm);
 
   rho1 = 1.0; mu1 = Oho;
-  rho2 = 1e-3; mu2 = Oha;
-  rho3 = 1.0; mu3 = Ohw;
+  rho3 = 1e-3; mu3 = Oha;
+  rho2 = 1.0; mu2 = Ohw;
 
   f1.sigma = 1.0;     // liquid- air
   // f2.sigma = 20./40.; // oil and air
-  f2.sigma = 0; // oil to air
+  f2.sigma = 1.0;    // liquid- air
   fprintf(ferr, "Level %d tmax %g. Oho %3.2e, Ohw %3.2e, Oha %3.2e, hf %3.2f\n", MAXlevel, tmax, Oho, Ohw, Oha, hf);
   run();
 }
@@ -85,10 +83,13 @@ int refRegion(double x, double y, double z){
 
 event init(t = 0){
   if(!restore (file = "dump")){   // it checks if it starts from a dump file, if no dump file, it initiates
+    fprintf(ferr, "No dump file found, start initialization\n" );
     char filename1[60], filename2[60];
     /**
     Initialization for f1 and f2, it is better to define this here instead of earlier at the other BC
     */
+    f1[left] = dirichlet(1.0);
+    f2[left] = dirichlet(0.0);
     sprintf(filename1, "f1_init-%3.2f.dat", delta);
     sprintf(filename2, "f2_init-%3.2f.dat", delta);
     // write fractions into file (not needed)

@@ -12,7 +12,7 @@ The densities and dynamic viscosities for fluid 1, 2 and 3 are *rho1*,
 
 #include "vof.h"
 scalar f1[], f2[], *interfaces = {f1, f2};
-double rho1 = 1., mu1 = 0., rho2 = 1., mu2 = 0., rho3 = 1., mu3 = 0.;
+double rho_drop = 1., mu_drop = 0., rho_film = 1., mu_film = 0., rho_env = 1., mu_env = 0.;
 
 /**
 Auxilliary fields are necessary to define the (variable) specific
@@ -29,7 +29,7 @@ event defaults (i = 0) {
   If the viscosity is non-zero, we need to allocate the face-centered
   viscosity field. */
 
-  if (mu1 || mu2)
+  if (mu_drop || mu_film)
     mu = new face vector;
 }
 
@@ -39,10 +39,12 @@ default. The user can overload these definitions to use other types of
 averages (i.e. harmonic). */
 
 #ifndef rho
-#define rho(f1, f2) (clamp(f1*(1-f2), 0., 1.) * rho1 + clamp(f1*f2, 0., 1.) * rho2 + clamp((1-f1), 0., 1.) * rho3)
+#define rho(f1, f2) (clamp(f1*(1-f2), 0., 1.) * rho_drop + clamp(f1*f2, 0., 1.) * rho_film \
+        + clamp((1-f1), 0., 1.) * rho_env)
 #endif
 #ifndef mu
-#define mu(f1, f2) (clamp(f1*(1-f2), 0., 1.) * mu1 + clamp(f1*f2, 0., 1.) * mu2 + clamp((1-f1), 0., 1.) * mu3)
+#define mu(f1, f2) (clamp(f1*(1-f2), 0., 1.) * mu_drop + clamp(f1*f2, 0., 1.) * mu_film \
+        + clamp((1-f1), 0., 1.) * mu_env)
 #endif
 
 /**

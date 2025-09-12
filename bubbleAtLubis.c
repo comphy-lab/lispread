@@ -33,19 +33,19 @@ u.t[left] = dirichlet(0.0);
 // open to athmosphere p= 0, neumann 0 for velocities( free surface)
 // you can also define a variable that is dependent on variables to for example give a contact angle that is dependent on the veloicyt of the droplet Can also give it if else statements and play around with it to see what basilisk recognizes
 
-double Oho, Ohw, Oha, hf, tmax, Ldomain, delta;
+double Oh_drop, Oh_film, Oh_env, hf, tmax, Ldomain, delta;
 int MAXlevel;
 
 int main(int argc, char const *argv[]) {
 
   if (argc < 9) {
-    fprintf(ferr, "Need %d more argument(s): Oho, Ohw, Oha, hf, tmax, Ldomain, delta, MAXlevel\n", 9-argc);
+    fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, hf, tmax, Ldomain, delta, MAXlevel\n", 9-argc);
     return 1;
   }
   
-  Oho = atof(argv[1]);
-  Ohw = atof(argv[2]);
-  Oha = atof(argv[3]);
+  Oh_drop = atof(argv[1]);
+  Oh_film = atof(argv[2]);
+  Oh_env = atof(argv[3]);
   hf = atof(argv[4]);  // used to determine where box start
   tmax = atof(argv[5]);
   Ldomain = atof(argv[6]); // used wherer box ends
@@ -60,14 +60,14 @@ int main(int argc, char const *argv[]) {
   sprintf (comm, "mkdir -p intermediate");
   system(comm);
 
-  rho1 = 1.0; mu1 = Oho;
-  rho3 = 1e-3; mu3 = Oha;
-  rho2 = 1.0; mu2 = Ohw;
+  rho_drop = 1.0; mu_drop = Oh_drop;
+  rho_film = 1.0; mu_film = Oh_film;
+  rho_env = 1e-3; mu_env = Oh_env;
 
-  f1.sigma = 1.0;     // liquid- air
-  // f2.sigma = 20./40.; // oil and air
-  f2.sigma = 1.0;    // liquid- air
-  fprintf(ferr, "Level %d tmax %g. Oho %3.2e, Ohw %3.2e, Oha %3.2e, hf %3.2f\n", MAXlevel, tmax, Oho, Ohw, Oha, hf);
+  f1.sigma = 1.0;    // drop-env
+  f2.sigma = 0.0;    // film-drop
+  fprintf(ferr, "Level %d tmax %g. Oho %3.2e, Ohw %3.2e, Oha %3.2e, hf %3.2f\n", 
+                MAXlevel, tmax, Oh_drop, Oh_film, Oh_env, hf);
   run();
 }
 
@@ -83,7 +83,7 @@ int refRegion(double x, double y, double z){
 
 event init(t = 0){
   if(!restore (file = "dump")){   // it checks if it starts from a dump file, if no dump file, it initiates
-    fprintf(ferr, "No dump file found, start initialization\n" );
+    fprintf(ferr, "No dump file found, start initialization ..." );
     char filename1[60], filename2[60];
     /**
     Initialization for f1 and f2, it is better to define this here instead of earlier at the other BC
@@ -130,6 +130,7 @@ event init(t = 0){
     We can now initialize the volume fractions in the domain. */
     fractions (phi1, f1);
     fractions (phi2, f2);
+    fprintf(ferr, " done\n" );
   }
   dump (file = "dump");
   // return 1;
@@ -148,21 +149,6 @@ event adapt(i++) {
     (double[]){fErr, fErr, VelErr, VelErr, KErr, KErr, OmegaErr},
     refRegion, MINlevel);
 }
-
-// Outputs
-// to decrease size you can also save every 3tnaps or something, tsnap is timestep of a simulation
-
-// if you first in terminal open a screen you can then close it and the simulation will keep running. 
-// screen
-// contr + a
-// c
-// then you can run the simulation
-//disconnect: contr+a
-// d
-// with screen -r you can reconnect, you can also name them to keep up which is which.
-// delete the screen by calling exit instad of contr+a, d 
-// NOTE: a lot of screens open can mess up your computer (5 is not recommended)
-// reformat hard drive to xvat
 
 event writingFiles (t = 0; t += tsnap * 10; t <= tmax + tsnap) {
   dump (file = "dump");

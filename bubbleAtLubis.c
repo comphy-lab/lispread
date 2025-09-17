@@ -24,6 +24,18 @@
 #define VelErr (1e-2)                            // error tolerances in velocity
 #define OmegaErr (1e-2)                            // error tolerances in velocity
 
+/** Variable definitions
+Curvature(f, kappa) calculates the curvature and stores it in kappa
+Curvature(f, kappa , sigma) calculates the curvature and multiplies it with sigma and stores it in kappa
+*/
+
+
+
+
+
+
+
+
 // boundary conditions
 u.t[left] = dirichlet(0.0);
 
@@ -33,28 +45,30 @@ u.t[left] = dirichlet(0.0);
 // open to athmosphere p= 0, neumann 0 for velocities( free surface)
 // you can also define a variable that is dependent on variables to for example give a contact angle that is dependent on the veloicyt of the droplet Can also give it if else statements and play around with it to see what basilisk recognizes
 
-double Oh_drop, Oh_film, Oh_env, hf, tmax, Ldomain, delta;
+double Oh_drop, Oh_film, Oh_env, sigma_1, sigma_2, hf, tmax, Ldomain, delta;
 int MAXlevel;
 
 int main(int argc, char const *argv[]) {
 
-  if (argc < 9) {
-    fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, hf, tmax, Ldomain, delta, MAXlevel\n", 9-argc);
+  if (argc < 11) {
+    fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, sigma_1, sigma_2, hf, tmax, Ldomain, delta, MAXlevel\n", 9-argc);
     return 1;
   }
   
   Oh_drop = atof(argv[1]);
   Oh_film = atof(argv[2]);
   Oh_env = atof(argv[3]);
-  hf = atof(argv[4]);  // used to determine where box start
-  tmax = atof(argv[5]);
-  Ldomain = atof(argv[6]); // used wherer box ends
-  delta = atof(argv[7]);
-  MAXlevel = atoi(argv[8]);
+  sigma_1 = atof(argv[4]);  // drop-env
+  sigma_2 = atof(argv[5]);  // drop-film
+  hf = atof(argv[6]);  // used to determine where box start
+  tmax = atof(argv[7]);
+  Ldomain = atof(argv[8]); // used wherer box ends
+  delta = atof(argv[9]);
+  MAXlevel = atoi(argv[10]);
 
   L0=Ldomain;
   X0=-hf*1.001; Y0=0.;          // define origin, you can also define LD/2, can be easier
-  init_grid (1 << (MAXlevel));       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
+  init_grid (1 << 4);       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
   
   char comm[80];
   sprintf (comm, "mkdir -p intermediate");
@@ -64,8 +78,8 @@ int main(int argc, char const *argv[]) {
   rho_film = 1.0; mu_film = Oh_film;
   rho_env = 1e-3; mu_env = Oh_env;
 
-  f1.sigma = 1.0;    // drop-env
-  f2.sigma = 0.0;    // film-drop
+  f1.sigma = sigma_1;    
+  f2.sigma = sigma_2;   
   fprintf(ferr, "Level %d tmax %g. Oho %3.2e, Ohw %3.2e, Oha %3.2e, hf %3.2f\n", 
                 MAXlevel, tmax, Oh_drop, Oh_film, Oh_env, hf);
   run();
@@ -103,6 +117,7 @@ event init(t = 0){
       fprintf(ferr, "There is no file named %s\n", filename2);
       return 1;
     }
+
     coord* InitialShape1;
     coord* InitialShape2;
     InitialShape1 = input_xy(fp1);

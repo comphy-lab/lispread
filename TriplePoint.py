@@ -57,10 +57,19 @@ def gettingTriplePoint(filename, name1, DistCutoff):
 
 
 nGFS = 10000
+if len(sys.argv) == 5:
+    save_folder= str(sys.argv[4])
+    folder = save_folder + '/TrackingTP' # output folder
+elif len(sys.argv) == 4:
+    folder = 'TrackingTP' # output folder
+else: 
+    assert False, "Incorrect number of arguments. Please provide 3 or 4 arguments: ci, Ldomain, hf, (optional) save_folder"
+
 ci = int(sys.argv[1])
 Ldomain = float(sys.argv[2])
 hf = float(sys.argv[3])
 
+tp_list = []            # list to be filled with triple point data
 DistCutoff, BoxSize = 1e-4, 0.1
 
 rmin, rmax, zmin, zmax = [-Ldomain/2., Ldomain/2., -hf*1.001, Ldomain-hf]
@@ -70,7 +79,6 @@ name1 = "%4.4d_X0Y0V0.dat" % ci
 if os.path.exists(name1):
     print("File %s found! New data will be appended to the file" % name1)
 
-folder = 'TrackingTP' # output folder
 if not os.path.isdir(folder):
     os.makedirs(folder)
 
@@ -91,7 +99,7 @@ for ti in range(nGFS):
             else:
                 tp, zTP, rTP, vTP  = gettingTriplePoint(place, name1, DistCutoff)
                 print("t %5.4f zTP %4.3f rTP %4.3f vTP %4.3e" % (tp, zTP, rTP, vTP))
-
+                tp_list.append([tp, zTP, rTP, vTP]) # appending tp data to the list
                 ## Part to plot
                 AxesLabel, TickLabel = [30, 25]
                 fig, (ax, ax2) = plt.subplots(1,2)
@@ -143,3 +151,5 @@ for ti in range(nGFS):
                 plt.savefig(ImageName,bbox_inches='tight')
                 plt.close()
     print(("Done %d of %d" % (ti+1, nGFS)))
+
+np.savetxt(save_folder +"/tp_data.npz", np.array(tp_list), header='t zTP rTP vTP')

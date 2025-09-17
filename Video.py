@@ -72,16 +72,22 @@ def gettingfield(filename):
 
     return R, Z, D2, vel, nz
 # ----------------------------------------------------------------------------------------------------------------------
+if len(sys.argv) == 7:
+    save_folder= str(sys.argv[6])
+    folder = save_folder + '/Video' # output folder
+elif len(sys.argv) == 6:
+    folder = 'Video' # output folder
+else: 
+    assert False, "Incorrect number of arguments. Please provide 5 or 6 arguments: hf, Ldomain, Oho, Ohw, Oha, (optional) save_folder"
 
 
 nr = 750
 hf, Ldomain = float(sys.argv[1]), float(sys.argv[2])
-Oho, Ohw, Oha = float(sys.argv[3]), float(sys.argv[4]), 1e-5 #float(sys.argv[5])
+Oho, Ohw, Oha = float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5])
 
 rmin, rmax, zmin, zmax = [-0.75*Ldomain, 0.75*Ldomain, -hf*1.001, Ldomain-hf*1.001]
 lw = 4
 
-folder = 'Video'  # output folder
 
 if not os.path.isdir(folder):
     os.makedirs(folder)

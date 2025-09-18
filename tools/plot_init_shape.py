@@ -67,9 +67,9 @@ def main():
 
     fig, ax = plt.subplots(figsize=(6, 6))
     first = True
-    for xs, ys in polys1:
-        ax.plot(xs, ys, linewidth=1.5, label="f1" if first else None)
-        first = False
+    # for xs, ys in polys1:
+    #     ax.plot(xs, ys, linewidth=1.5, label="f1" if first else None)
+    #     first = False
     first = True
     for xs, ys in polys2:
         ax.plot(xs, ys, linewidth=1.5, linestyle="--", label="f2" if first else None)

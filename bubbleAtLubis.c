@@ -27,6 +27,8 @@
 /** Variable definitions
 Curvature(f, kappa) calculates the curvature and stores it in kappa
 Curvature(f, kappa , sigma) calculates the curvature and multiplies it with sigma and stores it in kappa
+tensiion.h first gets all surface forces for each interface, and saves them in phi1 and phi2 and then puts all interfaces in 
+a list called list.
 */
 
 
@@ -45,26 +47,29 @@ u.t[left] = dirichlet(0.0);
 // open to athmosphere p= 0, neumann 0 for velocities( free surface)
 // you can also define a variable that is dependent on variables to for example give a contact angle that is dependent on the veloicyt of the droplet Can also give it if else statements and play around with it to see what basilisk recognizes
 
-double Oh_drop, Oh_film, Oh_env, sigma_1, sigma_2, hf, tmax, Ldomain, delta;
+double Oh_d, Oh_f, Oh_e, rho_d, rho_f, rho_e, sigma_1, sigma_2, hf, tmax, Ldomain, delta;
 int MAXlevel;
 
 int main(int argc, char const *argv[]) {
 
-  if (argc < 11) {
-    fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, sigma_1, sigma_2, hf, tmax, Ldomain, delta, MAXlevel\n", 9-argc);
+  if (argc < 14) {
+    fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, rho_d, rho_f, rho_e,sigma_1, sigma_2, hf, tmax, Ldomain, delta, MAXlevel\n", 9-argc);
     return 1;
   }
   
-  Oh_drop = atof(argv[1]);
-  Oh_film = atof(argv[2]);
-  Oh_env = atof(argv[3]);
-  sigma_1 = atof(argv[4]);  // drop-env
-  sigma_2 = atof(argv[5]);  // drop-film
-  hf = atof(argv[6]);  // used to determine where box start
-  tmax = atof(argv[7]);
-  Ldomain = atof(argv[8]); // used wherer box ends
-  delta = atof(argv[9]);
-  MAXlevel = atoi(argv[10]);
+  Oh_d = atof(argv[1]);
+  Oh_f = atof(argv[2]);
+  Oh_e = atof(argv[3]);
+  rho_d = atof(argv[4]);
+  rho_f = atof(argv[5]);
+  rho_e = atof(argv[6]);
+  sigma_1 = atof(argv[7]);  // liquid-env (assuming liquid has a lower surface tension then drop)
+  sigma_2 = atof(argv[8]);  // drop-liquid
+  hf = atof(argv[9]);  // used to determine where box start
+  tmax = atof(argv[10]);
+  Ldomain = atof(argv[11]); // used wherer box ends
+  delta = atof(argv[12]);
+  MAXlevel = atoi(argv[13]);
 
   L0=Ldomain;
   X0=-hf*1.001; Y0=0.;          // define origin, you can also define LD/2, can be easier
@@ -74,9 +79,9 @@ int main(int argc, char const *argv[]) {
   sprintf (comm, "mkdir -p intermediate");
   system(comm);
 
-  rho_drop = 1.0; mu_drop = Oh_drop;
-  rho_film = 1.0; mu_film = Oh_film;
-  rho_env = 1e-3; mu_env = Oh_env;
+  rho_drop = rho_d; mu_drop = Oh_drop;
+  rho_film = rho_f; mu_film = Oh_film;
+  rho_env = rho_e; mu_env = Oh_env;
 
   f1.sigma = sigma_1;    
   f2.sigma = sigma_2;   

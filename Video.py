@@ -42,7 +42,7 @@ def gettingFacets(filename, Tracer):
     return segs
 
 def gettingfield(filename):
-    exe = ["./getData", filename, str(zmin), str(0), str(zmax), str(rmax), str(nr), str(Oho), str(Ohw), str(Oha)]
+    exe = ["./getData", filename, str(zmin), str(0), str(zmax), str(rmax), str(nr), str(Ohd), str(Ohf), str(Ohe)]
     p = sp.Popen(exe, stdout=sp.PIPE, stderr=sp.PIPE)
     stdout, stderr = p.communicate()
     temp1 = stderr.decode("utf-8")
@@ -83,7 +83,7 @@ else:
 
 nr = 750
 hf, Ldomain = float(sys.argv[1]), float(sys.argv[2])
-Oho, Ohw, Oha = float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5])
+Ohd, Ohf, Ohe = float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5])
 
 rmin, rmax, zmin, zmax = [-0.75*Ldomain, 0.75*Ldomain, -hf*1.001, Ldomain-hf*1.001]
 lw = 4

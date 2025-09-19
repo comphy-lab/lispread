@@ -7,7 +7,7 @@
 #include "navier-stokes/centered.h"
 #include "fractions.h"
 
-char filename[80];
+char filename[1024];
 int nx, ny, len;
 double xmin, ymin, xmax, ymax, Deltax, Deltay, Ohd, Ohf, Ohe;
 scalar f1[], f2[], D2c[], vel[];

@@ -3,20 +3,20 @@
 
 
 Ohd="4.3e-3" 
-Ohf="0.1"
+Ohf="4.6"
 Ohe="8.4e-5"
 rhod="1"
 rhof="0.9"
 rhoe="1.2e-3"
 hf="0.25"
-tmax="2.5"
+tmax="0.5"
 Ldomain="4" 
 delta="0.01"
 MAXlevel="9"
 sigma_1="0.28"
 sigma_2="0.72"
 i="0" 
-savefolder="Results/test" 
+savefolder="Results/verify_Ohf4p6" 
 
 qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
 qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions

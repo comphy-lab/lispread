@@ -8,7 +8,7 @@
 #include "fractions.h"
 
 scalar f1[], f2[];
-char filename[80], nameTrack[80];
+char filename[1024], nameTrack[1024];
 double DistCutoff;
 double wt, xTP, yTP, vTP;
 

@@ -75,8 +75,11 @@ def gettingfield(filename):
 if len(sys.argv) == 7:
     save_folder= str(sys.argv[6])
     folder = save_folder + '/Video' # output folder
+    intermediate_folder= save_folder + '/intermediate'
+    print("test", folder, intermediate_folder)
 elif len(sys.argv) == 6:
     folder = 'Video' # output folder
+    intermediate_folder= 'intermediate'
 else: 
     assert False, "Incorrect number of arguments. Please provide 5 or 6 arguments: hf, Ldomain, Oho, Ohw, Oha, (optional) save_folder"
 
@@ -95,16 +98,16 @@ if not os.path.isdir(folder):
 nGFS=10000
 for ti in range(nGFS):
     t = ti*(5.0e-4)
-    print("Time is %f" % t)
-
-    place = "intermediate/snapshot-%5.4f" % t
+    place = intermediate_folder + "/snapshot-%5.4f" % t
     name = "%s/%8.8d.png" %(folder, int(t*100000))
 
-    if not os.path.exists(place):
-        print("%s File not found!" % place)
-    else:
+    # if not os.path.exists(place):
+        #print("%s File not found!" % place)
+    if os.path.exists(place):
         if os.path.exists(name):
             print("%s Image present!" % name)
+            print("Time is %f" % t)
+
         else:
 
             segs1 = gettingFacets(place, 1)

@@ -7,7 +7,7 @@
 #include "fractions.h"
 
 scalar f1[];
-char filename[80];
+char filename[1024];
 int main(int a, char const *arguments[])
 {
   sprintf (filename, "%s", arguments[1]);

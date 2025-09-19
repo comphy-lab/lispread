@@ -15,17 +15,17 @@ sigma_2="0.72"
 
 
 i="0" 
-savefolder="Results/2025_09_11_3phase" 
-{
-    qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
-    qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
-    qcc -Wall -O2 getData.c -o getData -lm -disable-dimensions
-    echo "Current directory:$(pwd)"
-    python3 Video.py $hf $Ldomain $Ohd $Ohf $Ohe $savefolder &
-    python3 TriplePoint.py $i $Ldomain $hf $savefolder &
-    wait
+savefolder="/home/mark/lispread/Results/2025_09_19_Ohd_4p3e-3_Ohf_0p6_Ohe_8p4e-5_rho_d_1_rho_f_0p9_rho_e_1p2e-3_s1_0p28_s2_0p72_hf_0p25_Ldomain_4_delta_0p01_MaxLevel_10"
 
-} > logPostProcess 2>&1
+qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
+qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
+qcc -Wall -O2 getData.c -o getData -lm -disable-dimensions
+qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
+echo "Current directory:$(pwd)"
+ls -l Results/2025_09_19_Ohd_4p3e-3_Ohf_0p6_Ohe_8p4e-5_rho_d_1_rho_f_0p9_rho_e_1p2e-3_s1_0p28_s2_0p72_hf_0p25_Ldomain_4_delta_0p01_MaxLevel_10/intermediate | head
+python3 Video.py $hf $Ldomain $Ohd $Ohf $Ohe $savefolder &
+python3 TriplePoint.py $i $Ldomain $hf $savefolder &
+wait
 
 cd $savefolder
 

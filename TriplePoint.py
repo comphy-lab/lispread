@@ -60,8 +60,10 @@ nGFS = 10000
 if len(sys.argv) == 5:
     save_folder= str(sys.argv[4])
     folder = save_folder + '/TrackingTP' # output folder
+    intermediate_folder = save_folder + '/intermediate'
 elif len(sys.argv) == 4:
     folder = 'TrackingTP' # output folder
+    intermediate_folder = 'intermediate'
 else: 
     assert False, "Incorrect number of arguments. Please provide 3 or 4 arguments: ci, Ldomain, hf, (optional) save_folder"
 
@@ -78,19 +80,19 @@ name1 = "%4.4d_X0Y0V0.dat" % ci
 
 if os.path.exists(name1):
     print("File %s found! New data will be appended to the file" % name1)
-
 if not os.path.isdir(folder):
     os.makedirs(folder)
 
 for ti in range(nGFS):
     t = (5e-4)*ti
-    place = "intermediate/snapshot-%5.4f" % t
+    place = intermediate_folder + "/snapshot-%5.4f" % t
     ImageName = "%s/%9.9d.png" %(folder, int(100000*ti))
-    if not os.path.exists(place):
-        print("%s File not found!" % place)
-    else:
+    # if not os.path.exists(place):
+    #     print("%s File not found!" % place)
+    if os.path.exists(place):
         if os.path.exists(ImageName):
             print("%s Image present!" % ImageName)
+            print(("Starting %d of %d" % (ti+1, nGFS)))
         else:
             facets1 = gettingFacets(place, 1)
             facets2 = gettingFacets(place, 2)
@@ -150,6 +152,5 @@ for ti in range(nGFS):
                 # plt.show()
                 plt.savefig(ImageName,bbox_inches='tight')
                 plt.close()
-    print(("Done %d of %d" % (ti+1, nGFS)))
 
 np.savetxt(save_folder +"/tp_data.npz", np.array(tp_list), header='t zTP rTP vTP')

@@ -1,9 +1,9 @@
-Current directory:/home/mark/bubble-at_lis
-/home/mark/bubble-at_lis/Video.py:145: SyntaxWarning: invalid escape sequence '\g'
+Current directory:/home/mark/lispread
+/home/mark/lispread/Video.py:145: SyntaxWarning: invalid escape sequence '\g'
   ax.set_title('$t/t_\gamma$ = %5.4f' % t, fontsize=TickLabel)
-/home/mark/bubble-at_lis/Video.py:150: SyntaxWarning: invalid escape sequence '\l'
+/home/mark/lispread/Video.py:150: SyntaxWarning: invalid escape sequence '\l'
   c1.set_label('$\log_{10}\left(\\varepsilon_\eta\\right)$',fontsize=TickLabel, labelpad=5)
-/home/mark/bubble-at_lis/Video.py:156: SyntaxWarning: invalid escape sequence '\|'
+/home/mark/lispread/Video.py:156: SyntaxWarning: invalid escape sequence '\|'
   c2.set_label('$\|v_i\|/V_\gamma$',fontsize=TickLabel)
 File 0000_X0Y0V0.dat found! New data will be appended to the file
 t 0.0000 zTP 0.020 rTP 0.018 vTP 0.000e+00
@@ -26,7 +26,7 @@ intermediate/snapshot-0.0040 File not found!
 Done 9 of 10000
 intermediate/snapshot-0.0045 File not found!
 Done 10 of 10000
-t 0.0050 zTP 0.022 rTP 0.048 vTP 2.815e-01
+t 0.0050 zTP 0.018 rTP 0.018 vTP 2.124e-01
 Done 11 of 10000
 intermediate/snapshot-0.0055 File not found!
 Done 12 of 10000
@@ -46,7 +46,7 @@ intermediate/snapshot-0.0090 File not found!
 Done 19 of 10000
 intermediate/snapshot-0.0095 File not found!
 Done 20 of 10000
-t 0.0100 zTP 0.018 rTP 0.071 vTP 4.965e+00
+t 0.0100 zTP 0.017 rTP 0.020 vTP 3.620e-01
 Done 21 of 10000
 intermediate/snapshot-0.0105 File not found!
 Done 22 of 10000
@@ -66,7 +66,7 @@ intermediate/snapshot-0.0140 File not found!
 Done 29 of 10000
 intermediate/snapshot-0.0145 File not found!
 Done 30 of 10000
-t 0.0150 zTP 0.019 rTP 0.103 vTP 6.093e+00
+t 0.0150 zTP 0.016 rTP 0.022 vTP 5.978e-01
 Done 31 of 10000
 intermediate/snapshot-0.0155 File not found!
 Done 32 of 10000
@@ -86,7 +86,7 @@ intermediate/snapshot-0.0190 File not found!
 Done 39 of 10000
 intermediate/snapshot-0.0195 File not found!
 Done 40 of 10000
-t 0.0200 zTP 0.026 rTP 0.135 vTP 5.088e+00
+t 0.0200 zTP 0.015 rTP 0.028 vTP 9.195e-01
 Done 41 of 10000
 intermediate/snapshot-0.0205 File not found!
 Done 42 of 10000
@@ -106,7 +106,7 @@ intermediate/snapshot-0.0240 File not found!
 Done 49 of 10000
 intermediate/snapshot-0.0245 File not found!
 Done 50 of 10000
-t 0.0250 zTP 0.026 rTP 0.161 vTP 4.612e+00
+t 0.0250 zTP 0.015 rTP 0.035 vTP 1.184e+00
 Done 51 of 10000
 intermediate/snapshot-0.0255 File not found!
 Done 52 of 10000
@@ -126,7 +126,7 @@ intermediate/snapshot-0.0290 File not found!
 Done 59 of 10000
 intermediate/snapshot-0.0295 File not found!
 Done 60 of 10000
-t 0.0300 zTP 0.028 rTP 0.187 vTP 5.231e+00
+t 0.0300 zTP 0.015 rTP 0.043 vTP 1.362e+00
 Done 61 of 10000
 intermediate/snapshot-0.0305 File not found!
 Done 62 of 10000
@@ -146,7 +146,7 @@ intermediate/snapshot-0.0340 File not found!
 Done 69 of 10000
 intermediate/snapshot-0.0345 File not found!
 Done 70 of 10000
-t 0.0350 zTP 0.034 rTP 0.212 vTP 4.507e+00
+t 0.0350 zTP 0.015 rTP 0.053 vTP 1.539e+00
 Done 71 of 10000
 intermediate/snapshot-0.0355 File not found!
 Done 72 of 10000
@@ -166,7 +166,7 @@ intermediate/snapshot-0.0390 File not found!
 Done 79 of 10000
 intermediate/snapshot-0.0395 File not found!
 Done 80 of 10000
-t 0.0400 zTP 0.035 rTP 0.234 vTP 4.480e+00
+t 0.0400 zTP 0.015 rTP 0.062 vTP 1.713e+00
 Done 81 of 10000
 intermediate/snapshot-0.0405 File not found!
 Done 82 of 10000
@@ -186,7 +186,7 @@ intermediate/snapshot-0.0440 File not found!
 Done 89 of 10000
 intermediate/snapshot-0.0445 File not found!
 Done 90 of 10000
-t 0.0450 zTP 0.041 rTP 0.256 vTP 3.663e+00
+t 0.0450 zTP 0.015 rTP 0.071 vTP 1.850e+00
 Done 91 of 10000
 intermediate/snapshot-0.0455 File not found!
 Done 92 of 10000
@@ -206,7 +206,7 @@ intermediate/snapshot-0.0490 File not found!
 Done 99 of 10000
 intermediate/snapshot-0.0495 File not found!
 Done 100 of 10000
-t 0.0500 zTP 0.043 rTP 0.276 vTP 3.878e+00
+t 0.0500 zTP 0.015 rTP 0.082 vTP 1.863e+00
 Done 101 of 10000
 intermediate/snapshot-0.0505 File not found!
 Done 102 of 10000
@@ -226,7 +226,7 @@ intermediate/snapshot-0.0540 File not found!
 Done 109 of 10000
 intermediate/snapshot-0.0545 File not found!
 Done 110 of 10000
-t 0.0550 zTP 0.049 rTP 0.295 vTP 3.364e+00
+t 0.0550 zTP 0.016 rTP 0.093 vTP 1.861e+00
 Done 111 of 10000
 intermediate/snapshot-0.0555 File not found!
 Done 112 of 10000
@@ -246,7 +246,7 @@ intermediate/snapshot-0.0590 File not found!
 Done 119 of 10000
 intermediate/snapshot-0.0595 File not found!
 Done 120 of 10000
-t 0.0600 zTP 0.058 rTP 0.314 vTP 3.378e+00
+t 0.0600 zTP 0.015 rTP 0.101 vTP 2.131e+00
 Done 121 of 10000
 intermediate/snapshot-0.0605 File not found!
 Done 122 of 10000
@@ -266,7 +266,7 @@ intermediate/snapshot-0.0640 File not found!
 Done 129 of 10000
 intermediate/snapshot-0.0645 File not found!
 Done 130 of 10000
-t 0.0650 zTP 0.059 rTP 0.330 vTP 3.372e+00
+t 0.0650 zTP 0.423 rTP 0.472 vTP 1.135e+00
 Done 131 of 10000
 intermediate/snapshot-0.0655 File not found!
 Done 132 of 10000
@@ -286,7 +286,7 @@ intermediate/snapshot-0.0690 File not found!
 Done 139 of 10000
 intermediate/snapshot-0.0695 File not found!
 Done 140 of 10000
-t 0.0700 zTP 0.066 rTP 0.347 vTP 3.021e+00
+t 0.0700 zTP 0.018 rTP 0.127 vTP 1.864e+00
 Done 141 of 10000
 intermediate/snapshot-0.0705 File not found!
 Done 142 of 10000
@@ -306,7 +306,7 @@ intermediate/snapshot-0.0740 File not found!
 Done 149 of 10000
 intermediate/snapshot-0.0745 File not found!
 Done 150 of 10000
-t 0.0750 zTP 0.074 rTP 0.363 vTP 2.831e+00
+t 0.0750 zTP 0.017 rTP 0.134 vTP 2.079e+00
 Done 151 of 10000
 intermediate/snapshot-0.0755 File not found!
 Done 152 of 10000
@@ -326,7 +326,7 @@ intermediate/snapshot-0.0790 File not found!
 Done 159 of 10000
 intermediate/snapshot-0.0795 File not found!
 Done 160 of 10000
-t 0.0800 zTP 0.074 rTP 0.377 vTP 2.910e+00
+t 0.0800 zTP 0.019 rTP 0.147 vTP 1.967e+00
 Done 161 of 10000
 intermediate/snapshot-0.0805 File not found!
 Done 162 of 10000
@@ -346,7 +346,7 @@ intermediate/snapshot-0.0840 File not found!
 Done 169 of 10000
 intermediate/snapshot-0.0845 File not found!
 Done 170 of 10000
-t 0.0850 zTP 0.080 rTP 0.390 vTP 2.564e+00
+t 0.0850 zTP 0.020 rTP 0.157 vTP 1.947e+00
 Done 171 of 10000
 intermediate/snapshot-0.0855 File not found!
 Done 172 of 10000
@@ -366,7 +366,7 @@ intermediate/snapshot-0.0890 File not found!
 Done 179 of 10000
 intermediate/snapshot-0.0895 File not found!
 Done 180 of 10000
-t 0.0900 zTP 0.081 rTP 0.403 vTP 2.495e+00
+t 0.0900 zTP 0.021 rTP 0.168 vTP 2.020e+00
 Done 181 of 10000
 intermediate/snapshot-0.0905 File not found!
 Done 182 of 10000
@@ -386,7 +386,7 @@ intermediate/snapshot-0.0940 File not found!
 Done 189 of 10000
 intermediate/snapshot-0.0945 File not found!
 Done 190 of 10000
-t 0.0950 zTP 0.089 rTP 0.417 vTP 2.435e+00
+t 0.0950 zTP 0.022 rTP 0.179 vTP 1.879e+00
 Done 191 of 10000
 intermediate/snapshot-0.0955 File not found!
 Done 192 of 10000
@@ -406,7 +406,7 @@ intermediate/snapshot-0.0990 File not found!
 Done 199 of 10000
 intermediate/snapshot-0.0995 File not found!
 Done 200 of 10000
-t 0.1000 zTP 0.096 rTP 0.429 vTP 2.291e+00
+t 0.1000 zTP 0.023 rTP 0.188 vTP 2.005e+00
 Done 201 of 10000
 intermediate/snapshot-0.1005 File not found!
 Done 202 of 10000
@@ -426,7 +426,7 @@ intermediate/snapshot-0.1040 File not found!
 Done 209 of 10000
 intermediate/snapshot-0.1045 File not found!
 Done 210 of 10000
-t 0.1050 zTP 0.103 rTP 0.442 vTP 2.184e+00
+t 0.1050 zTP 0.024 rTP 0.199 vTP 1.870e+00
 Done 211 of 10000
 intermediate/snapshot-0.1055 File not found!
 Done 212 of 10000
@@ -446,7 +446,7 @@ intermediate/snapshot-0.1090 File not found!
 Done 219 of 10000
 intermediate/snapshot-0.1095 File not found!
 Done 220 of 10000
-t 0.1100 zTP 0.104 rTP 0.452 vTP 2.165e+00
+t 0.1100 zTP 0.026 rTP 0.209 vTP 1.813e+00
 Done 221 of 10000
 intermediate/snapshot-0.1105 File not found!
 Done 222 of 10000
@@ -466,7 +466,7 @@ intermediate/snapshot-0.1140 File not found!
 Done 229 of 10000
 intermediate/snapshot-0.1145 File not found!
 Done 230 of 10000
-t 0.1150 zTP 0.111 rTP 0.464 vTP 2.104e+00
+t 0.1150 zTP 0.027 rTP 0.218 vTP 1.783e+00
 Done 231 of 10000
 intermediate/snapshot-0.1155 File not found!
 Done 232 of 10000
@@ -486,7 +486,7 @@ intermediate/snapshot-0.1190 File not found!
 Done 239 of 10000
 intermediate/snapshot-0.1195 File not found!
 Done 240 of 10000
-t 0.1200 zTP 0.118 rTP 0.475 vTP 1.906e+00
+t 0.1200 zTP 0.028 rTP 0.227 vTP 1.831e+00
 Done 241 of 10000
 intermediate/snapshot-0.1205 File not found!
 Done 242 of 10000
@@ -506,7 +506,7 @@ intermediate/snapshot-0.1240 File not found!
 Done 249 of 10000
 intermediate/snapshot-0.1245 File not found!
 Done 250 of 10000
-t 0.1250 zTP 0.118 rTP 0.484 vTP 2.023e+00
+t 0.1250 zTP 0.030 rTP 0.237 vTP 1.713e+00
 Done 251 of 10000
 intermediate/snapshot-0.1255 File not found!
 Done 252 of 10000
@@ -526,7 +526,7 @@ intermediate/snapshot-0.1290 File not found!
 Done 259 of 10000
 intermediate/snapshot-0.1295 File not found!
 Done 260 of 10000
-t 0.1300 zTP 0.127 rTP 0.495 vTP 1.890e+00
+t 0.1300 zTP 0.032 rTP 0.247 vTP 1.674e+00
 Done 261 of 10000
 intermediate/snapshot-0.1305 File not found!
 Done 262 of 10000
@@ -546,7 +546,7 @@ intermediate/snapshot-0.1340 File not found!
 Done 269 of 10000
 intermediate/snapshot-0.1345 File not found!
 Done 270 of 10000
-t 0.1350 zTP 0.121 rTP 0.503 vTP 1.884e+00
+t 0.1350 zTP 0.034 rTP 0.256 vTP 1.601e+00
 Done 271 of 10000
 intermediate/snapshot-0.1355 File not found!
 Done 272 of 10000
@@ -566,7 +566,7 @@ intermediate/snapshot-0.1390 File not found!
 Done 279 of 10000
 intermediate/snapshot-0.1395 File not found!
 Done 280 of 10000
-t 0.1400 zTP 0.127 rTP 0.513 vTP 1.721e+00
+t 0.1400 zTP 0.035 rTP 0.264 vTP 1.557e+00
 Done 281 of 10000
 intermediate/snapshot-0.1405 File not found!
 Done 282 of 10000
@@ -586,7 +586,7 @@ intermediate/snapshot-0.1440 File not found!
 Done 289 of 10000
 intermediate/snapshot-0.1445 File not found!
 Done 290 of 10000
-t 0.1450 zTP 0.141 rTP 0.523 vTP 1.653e+00
+t 0.1450 zTP 0.037 rTP 0.273 vTP 1.543e+00
 Done 291 of 10000
 intermediate/snapshot-0.1455 File not found!
 Done 292 of 10000
@@ -606,7 +606,7 @@ intermediate/snapshot-0.1490 File not found!
 Done 299 of 10000
 intermediate/snapshot-0.1495 File not found!
 Done 300 of 10000
-t 0.1500 zTP 0.141 rTP 0.531 vTP 1.633e+00
+t 0.1500 zTP 0.038 rTP 0.280 vTP 1.597e+00
 Done 301 of 10000
 intermediate/snapshot-0.1505 File not found!
 Done 302 of 10000
@@ -626,7 +626,7 @@ intermediate/snapshot-0.1540 File not found!
 Done 309 of 10000
 intermediate/snapshot-0.1545 File not found!
 Done 310 of 10000
-t 0.1550 zTP 0.152 rTP 0.540 vTP 1.692e+00
+t 0.1550 zTP 0.040 rTP 0.289 vTP 1.502e+00
 Done 311 of 10000
 intermediate/snapshot-0.1555 File not found!
 Done 312 of 10000
@@ -646,7 +646,7 @@ intermediate/snapshot-0.1590 File not found!
 Done 319 of 10000
 intermediate/snapshot-0.1595 File not found!
 Done 320 of 10000
-t 0.1600 zTP 0.146 rTP 0.547 vTP 1.711e+00
+t 0.1600 zTP 0.042 rTP 0.297 vTP 1.456e+00
 Done 321 of 10000
 intermediate/snapshot-0.1605 File not found!
 Done 322 of 10000
@@ -666,7 +666,7 @@ intermediate/snapshot-0.1640 File not found!
 Done 329 of 10000
 intermediate/snapshot-0.1645 File not found!
 Done 330 of 10000
-t 0.1650 zTP 0.159 rTP 0.556 vTP 1.603e+00
+t 0.1650 zTP 0.044 rTP 0.305 vTP 1.423e+00
 Done 331 of 10000
 intermediate/snapshot-0.1655 File not found!
 Done 332 of 10000
@@ -686,7 +686,7 @@ intermediate/snapshot-0.1690 File not found!
 Done 339 of 10000
 intermediate/snapshot-0.1695 File not found!
 Done 340 of 10000
-t 0.1700 zTP 0.154 rTP 0.563 vTP 1.581e+00
+t 0.1700 zTP 0.045 rTP 0.311 vTP 1.428e+00
 Done 341 of 10000
 intermediate/snapshot-0.1705 File not found!
 Done 342 of 10000
@@ -706,7 +706,7 @@ intermediate/snapshot-0.1740 File not found!
 Done 349 of 10000
 intermediate/snapshot-0.1745 File not found!
 Done 350 of 10000
-t 0.1750 zTP 0.167 rTP 0.572 vTP 1.533e+00
+t 0.1750 zTP 0.048 rTP 0.320 vTP 1.353e+00
 Done 351 of 10000
 intermediate/snapshot-0.1755 File not found!
 Done 352 of 10000
@@ -726,7 +726,7 @@ intermediate/snapshot-0.1790 File not found!
 Done 359 of 10000
 intermediate/snapshot-0.1795 File not found!
 Done 360 of 10000
-t 0.1800 zTP 0.173 rTP 0.579 vTP 1.513e+00
+t 0.1800 zTP 0.049 rTP 0.327 vTP 1.321e+00
 Done 361 of 10000
 intermediate/snapshot-0.1805 File not found!
 Done 362 of 10000
@@ -746,7 +746,7 @@ intermediate/snapshot-0.1840 File not found!
 Done 369 of 10000
 intermediate/snapshot-0.1845 File not found!
 Done 370 of 10000
-t 0.1850 zTP 0.175 rTP 0.586 vTP 1.501e+00
+t 0.1850 zTP 0.051 rTP 0.334 vTP 1.265e+00
 Done 371 of 10000
 intermediate/snapshot-0.1855 File not found!
 Done 372 of 10000
@@ -766,7 +766,7 @@ intermediate/snapshot-0.1890 File not found!
 Done 379 of 10000
 intermediate/snapshot-0.1895 File not found!
 Done 380 of 10000
-t 0.1900 zTP 0.183 rTP 0.593 vTP 1.281e+00
+t 0.1900 zTP 0.052 rTP 0.340 vTP 1.317e+00
 Done 381 of 10000
 intermediate/snapshot-0.1905 File not found!
 Done 382 of 10000
@@ -786,7 +786,7 @@ intermediate/snapshot-0.1940 File not found!
 Done 389 of 10000
 intermediate/snapshot-0.1945 File not found!
 Done 390 of 10000
-t 0.1950 zTP 0.181 rTP 0.600 vTP 1.263e+00
+t 0.1950 zTP 0.055 rTP 0.348 vTP 1.210e+00
 Done 391 of 10000
 intermediate/snapshot-0.1955 File not found!
 Done 392 of 10000
@@ -806,7 +806,7 @@ intermediate/snapshot-0.1990 File not found!
 Done 399 of 10000
 intermediate/snapshot-0.1995 File not found!
 Done 400 of 10000
-t 0.2000 zTP 0.174 rTP 0.605 vTP 1.345e+00
+t 0.2000 zTP 0.056 rTP 0.354 vTP 1.266e+00
 Done 401 of 10000
 intermediate/snapshot-0.2005 File not found!
 Done 402 of 10000
@@ -826,7 +826,7 @@ intermediate/snapshot-0.2040 File not found!
 Done 409 of 10000
 intermediate/snapshot-0.2045 File not found!
 Done 410 of 10000
-t 0.2050 zTP 0.190 rTP 0.613 vTP 1.270e+00
+t 0.2050 zTP 0.058 rTP 0.360 vTP 1.171e+00
 Done 411 of 10000
 intermediate/snapshot-0.2055 File not found!
 Done 412 of 10000
@@ -846,7 +846,7 @@ intermediate/snapshot-0.2090 File not found!
 Done 419 of 10000
 intermediate/snapshot-0.2095 File not found!
 Done 420 of 10000
-t 0.2100 zTP 0.191 rTP 0.619 vTP 1.279e+00
+t 0.2100 zTP 0.061 rTP 0.368 vTP 1.147e+00
 Done 421 of 10000
 intermediate/snapshot-0.2105 File not found!
 Done 422 of 10000
@@ -866,7 +866,7 @@ intermediate/snapshot-0.2140 File not found!
 Done 429 of 10000
 intermediate/snapshot-0.2145 File not found!
 Done 430 of 10000
-t 0.2150 zTP 0.193 rTP 0.625 vTP 1.320e+00
+t 0.2150 zTP 0.062 rTP 0.374 vTP 1.199e+00
 Done 431 of 10000
 intermediate/snapshot-0.2155 File not found!
 Done 432 of 10000
@@ -886,7 +886,7 @@ intermediate/snapshot-0.2190 File not found!
 Done 439 of 10000
 intermediate/snapshot-0.2195 File not found!
 Done 440 of 10000
-t 0.2200 zTP 0.203 rTP 0.631 vTP 1.092e+00
+t 0.2200 zTP 0.064 rTP 0.380 vTP 1.126e+00
 Done 441 of 10000
 intermediate/snapshot-0.2205 File not found!
 Done 442 of 10000
@@ -906,7 +906,7 @@ intermediate/snapshot-0.2240 File not found!
 Done 449 of 10000
 intermediate/snapshot-0.2245 File not found!
 Done 450 of 10000
-t 0.2250 zTP 0.205 rTP 0.637 vTP 1.140e+00
+t 0.2250 zTP 0.065 rTP 0.385 vTP 1.150e+00
 Done 451 of 10000
 intermediate/snapshot-0.2255 File not found!
 Done 452 of 10000
@@ -926,7 +926,7 @@ intermediate/snapshot-0.2290 File not found!
 Done 459 of 10000
 intermediate/snapshot-0.2295 File not found!
 Done 460 of 10000
-t 0.2300 zTP 0.214 rTP 0.643 vTP 1.170e+00
+t 0.2300 zTP 0.067 rTP 0.391 vTP 1.119e+00
 Done 461 of 10000
 intermediate/snapshot-0.2305 File not found!
 Done 462 of 10000
@@ -946,7 +946,7 @@ intermediate/snapshot-0.2340 File not found!
 Done 469 of 10000
 intermediate/snapshot-0.2345 File not found!
 Done 470 of 10000
-t 0.2350 zTP 0.208 rTP 0.648 vTP 1.118e+00
+t 0.2350 zTP 0.069 rTP 0.396 vTP 1.100e+00
 Done 471 of 10000
 intermediate/snapshot-0.2355 File not found!
 Done 472 of 10000
@@ -966,7 +966,7 @@ intermediate/snapshot-0.2390 File not found!
 Done 479 of 10000
 intermediate/snapshot-0.2395 File not found!
 Done 480 of 10000
-t 0.2400 zTP 0.220 rTP 0.654 vTP 1.005e+00
+t 0.2400 zTP 0.071 rTP 0.402 vTP 1.079e+00
 Done 481 of 10000
 intermediate/snapshot-0.2405 File not found!
 Done 482 of 10000
@@ -986,7 +986,7 @@ intermediate/snapshot-0.2440 File not found!
 Done 489 of 10000
 intermediate/snapshot-0.2445 File not found!
 Done 490 of 10000
-t 0.2450 zTP 0.220 rTP 0.659 vTP 1.087e+00
+t 0.2450 zTP 0.073 rTP 0.408 vTP 1.061e+00
 Done 491 of 10000
 intermediate/snapshot-0.2455 File not found!
 Done 492 of 10000
@@ -1006,7 +1006,7 @@ intermediate/snapshot-0.2490 File not found!
 Done 499 of 10000
 intermediate/snapshot-0.2495 File not found!
 Done 500 of 10000
-t 0.2500 zTP 0.236 rTP 0.664 vTP 1.027e+00
+t 0.2500 zTP 0.075 rTP 0.414 vTP 1.050e+00
 Done 501 of 10000
 intermediate/snapshot-0.2505 File not found!
 Done 502 of 10000
@@ -1026,7 +1026,7 @@ intermediate/snapshot-0.2540 File not found!
 Done 509 of 10000
 intermediate/snapshot-0.2545 File not found!
 Done 510 of 10000
-t 0.2550 zTP 0.220 rTP 0.670 vTP 9.472e-01
+t 0.2550 zTP 0.076 rTP 0.419 vTP 1.062e+00
 Done 511 of 10000
 intermediate/snapshot-0.2555 File not found!
 Done 512 of 10000
@@ -1046,7 +1046,7 @@ intermediate/snapshot-0.2590 File not found!
 Done 519 of 10000
 intermediate/snapshot-0.2595 File not found!
 Done 520 of 10000
-t 0.2600 zTP 0.221 rTP 0.675 vTP 1.027e+00
+t 0.2600 zTP 0.078 rTP 0.425 vTP 1.041e+00
 Done 521 of 10000
 intermediate/snapshot-0.2605 File not found!
 Done 522 of 10000
@@ -1066,7 +1066,7 @@ intermediate/snapshot-0.2640 File not found!
 Done 529 of 10000
 intermediate/snapshot-0.2645 File not found!
 Done 530 of 10000
-t 0.2650 zTP 0.238 rTP 0.679 vTP 8.987e-01
+t 0.2650 zTP 0.080 rTP 0.430 vTP 9.872e-01
 Done 531 of 10000
 intermediate/snapshot-0.2655 File not found!
 Done 532 of 10000
@@ -1086,7 +1086,7 @@ intermediate/snapshot-0.2690 File not found!
 Done 539 of 10000
 intermediate/snapshot-0.2695 File not found!
 Done 540 of 10000
-t 0.2700 zTP 0.227 rTP 0.684 vTP 9.382e-01
+t 0.2700 zTP 0.083 rTP 0.435 vTP 9.875e-01
 Done 541 of 10000
 intermediate/snapshot-0.2705 File not found!
 Done 542 of 10000
@@ -1106,7 +1106,7 @@ intermediate/snapshot-0.2740 File not found!
 Done 549 of 10000
 intermediate/snapshot-0.2745 File not found!
 Done 550 of 10000
-t 0.2750 zTP 0.243 rTP 0.689 vTP 1.017e+00
+t 0.2750 zTP 0.084 rTP 0.440 vTP 9.732e-01
 Done 551 of 10000
 intermediate/snapshot-0.2755 File not found!
 Done 552 of 10000
@@ -1126,7 +1126,7 @@ intermediate/snapshot-0.2790 File not found!
 Done 559 of 10000
 intermediate/snapshot-0.2795 File not found!
 Done 560 of 10000
-t 0.2800 zTP 0.237 rTP 0.694 vTP 8.598e-01
+t 0.2800 zTP 0.086 rTP 0.445 vTP 9.534e-01
 Done 561 of 10000
 intermediate/snapshot-0.2805 File not found!
 Done 562 of 10000
@@ -1146,7 +1146,7 @@ intermediate/snapshot-0.2840 File not found!
 Done 569 of 10000
 intermediate/snapshot-0.2845 File not found!
 Done 570 of 10000
-t 0.2850 zTP 0.245 rTP 0.698 vTP 9.309e-01
+t 0.2850 zTP 0.088 rTP 0.450 vTP 9.355e-01
 Done 571 of 10000
 intermediate/snapshot-0.2855 File not found!
 Done 572 of 10000
@@ -1166,7 +1166,7 @@ intermediate/snapshot-0.2890 File not found!
 Done 579 of 10000
 intermediate/snapshot-0.2895 File not found!
 Done 580 of 10000
-t 0.2900 zTP 0.247 rTP 0.703 vTP 8.106e-01
+t 0.2900 zTP 0.090 rTP 0.455 vTP 9.197e-01
 Done 581 of 10000
 intermediate/snapshot-0.2905 File not found!
 Done 582 of 10000
@@ -1186,7 +1186,7 @@ intermediate/snapshot-0.2940 File not found!
 Done 589 of 10000
 intermediate/snapshot-0.2945 File not found!
 Done 590 of 10000
-t 0.2950 zTP 0.242 rTP 0.707 vTP 8.513e-01
+t 0.2950 zTP 0.091 rTP 0.460 vTP 9.013e-01
 Done 591 of 10000
 intermediate/snapshot-0.2955 File not found!
 Done 592 of 10000
@@ -1206,7 +1206,7 @@ intermediate/snapshot-0.2990 File not found!
 Done 599 of 10000
 intermediate/snapshot-0.2995 File not found!
 Done 600 of 10000
-t 0.3000 zTP 0.258 rTP 0.711 vTP 9.072e-01
+t 0.3000 zTP 0.094 rTP 0.465 vTP 8.897e-01
 Done 601 of 10000
 intermediate/snapshot-0.3005 File not found!
 Done 602 of 10000
@@ -1226,7 +1226,7 @@ intermediate/snapshot-0.3040 File not found!
 Done 609 of 10000
 intermediate/snapshot-0.3045 File not found!
 Done 610 of 10000
-t 0.3050 zTP 0.251 rTP 0.716 vTP 8.458e-01
+t 0.3050 zTP 0.095 rTP 0.469 vTP 8.787e-01
 Done 611 of 10000
 intermediate/snapshot-0.3055 File not found!
 Done 612 of 10000
@@ -1246,7 +1246,7 @@ intermediate/snapshot-0.3090 File not found!
 Done 619 of 10000
 intermediate/snapshot-0.3095 File not found!
 Done 620 of 10000
-t 0.3100 zTP 0.264 rTP 0.719 vTP 8.999e-01
+t 0.3100 zTP 0.097 rTP 0.474 vTP 8.621e-01
 Done 621 of 10000
 intermediate/snapshot-0.3105 File not found!
 Done 622 of 10000
@@ -1266,7 +1266,7 @@ intermediate/snapshot-0.3140 File not found!
 Done 629 of 10000
 intermediate/snapshot-0.3145 File not found!
 Done 630 of 10000
-t 0.3150 zTP 0.268 rTP 0.723 vTP 7.799e-01
+t 0.3150 zTP 0.098 rTP 0.478 vTP 8.814e-01
 Done 631 of 10000
 intermediate/snapshot-0.3155 File not found!
 Done 632 of 10000
@@ -1286,7 +1286,7 @@ intermediate/snapshot-0.3190 File not found!
 Done 639 of 10000
 intermediate/snapshot-0.3195 File not found!
 Done 640 of 10000
-t 0.3200 zTP 0.275 rTP 0.727 vTP 8.322e-01
+t 0.3200 zTP 0.100 rTP 0.482 vTP 8.740e-01
 Done 641 of 10000
 intermediate/snapshot-0.3205 File not found!
 Done 642 of 10000
@@ -1306,7 +1306,7 @@ intermediate/snapshot-0.3240 File not found!
 Done 649 of 10000
 intermediate/snapshot-0.3245 File not found!
 Done 650 of 10000
-t 0.3250 zTP 0.274 rTP 0.731 vTP 7.641e-01
+t 0.3250 zTP 0.102 rTP 0.487 vTP 8.784e-01
 Done 651 of 10000
 intermediate/snapshot-0.3255 File not found!
 Done 652 of 10000
@@ -1326,7 +1326,7 @@ intermediate/snapshot-0.3290 File not found!
 Done 659 of 10000
 intermediate/snapshot-0.3295 File not found!
 Done 660 of 10000
-t 0.3300 zTP 0.274 rTP 0.735 vTP 8.664e-01
+t 0.3300 zTP 0.104 rTP 0.492 vTP 8.390e-01
 Done 661 of 10000
 intermediate/snapshot-0.3305 File not found!
 Done 662 of 10000
@@ -1346,7 +1346,7 @@ intermediate/snapshot-0.3340 File not found!
 Done 669 of 10000
 intermediate/snapshot-0.3345 File not found!
 Done 670 of 10000
-t 0.3350 zTP 0.267 rTP 0.740 vTP 7.290e-01
+t 0.3350 zTP 0.106 rTP 0.496 vTP 8.244e-01
 Done 671 of 10000
 intermediate/snapshot-0.3355 File not found!
 Done 672 of 10000
@@ -1366,7 +1366,7 @@ intermediate/snapshot-0.3390 File not found!
 Done 679 of 10000
 intermediate/snapshot-0.3395 File not found!
 Done 680 of 10000
-t 0.3400 zTP 0.286 rTP 0.742 vTP 7.862e-01
+t 0.3400 zTP 0.108 rTP 0.500 vTP 8.218e-01
 Done 681 of 10000
 intermediate/snapshot-0.3405 File not found!
 Done 682 of 10000
@@ -1386,7 +1386,7 @@ intermediate/snapshot-0.3440 File not found!
 Done 689 of 10000
 intermediate/snapshot-0.3445 File not found!
 Done 690 of 10000
-t 0.3450 zTP 0.275 rTP 0.747 vTP 6.776e-01
+t 0.3450 zTP 0.109 rTP 0.504 vTP 8.085e-01
 Done 691 of 10000
 intermediate/snapshot-0.3455 File not found!
 Done 692 of 10000
@@ -1406,7 +1406,7 @@ intermediate/snapshot-0.3490 File not found!
 Done 699 of 10000
 intermediate/snapshot-0.3495 File not found!
 Done 700 of 10000
-t 0.3500 zTP 0.290 rTP 0.749 vTP 6.247e-01
+t 0.3500 zTP 0.111 rTP 0.509 vTP 7.911e-01
 Done 701 of 10000
 intermediate/snapshot-0.3505 File not found!
 Done 702 of 10000
@@ -1426,7 +1426,7 @@ intermediate/snapshot-0.3540 File not found!
 Done 709 of 10000
 intermediate/snapshot-0.3545 File not found!
 Done 710 of 10000
-t 0.3550 zTP 0.298 rTP 0.752 vTP 7.476e-01
+t 0.3550 zTP 0.113 rTP 0.513 vTP 7.693e-01
 Done 711 of 10000
 intermediate/snapshot-0.3555 File not found!
 Done 712 of 10000
@@ -1446,7 +1446,7 @@ intermediate/snapshot-0.3590 File not found!
 Done 719 of 10000
 intermediate/snapshot-0.3595 File not found!
 Done 720 of 10000
-t 0.3600 zTP 0.302 rTP 0.755 vTP 7.667e-01
+t 0.3600 zTP 0.115 rTP 0.517 vTP 7.583e-01
 Done 721 of 10000
 intermediate/snapshot-0.3605 File not found!
 Done 722 of 10000
@@ -1466,7 +1466,7 @@ intermediate/snapshot-0.3640 File not found!
 Done 729 of 10000
 intermediate/snapshot-0.3645 File not found!
 Done 730 of 10000
-t 0.3650 zTP 0.286 rTP 0.761 vTP 7.085e-01
+t 0.3650 zTP 0.115 rTP 0.520 vTP 7.861e-01
 Done 731 of 10000
 intermediate/snapshot-0.3655 File not found!
 Done 732 of 10000
@@ -1486,7 +1486,7 @@ intermediate/snapshot-0.3690 File not found!
 Done 739 of 10000
 intermediate/snapshot-0.3695 File not found!
 Done 740 of 10000
-t 0.3700 zTP 0.291 rTP 0.764 vTP 6.163e-01
+t 0.3700 zTP 0.117 rTP 0.524 vTP 7.756e-01
 Done 741 of 10000
 intermediate/snapshot-0.3705 File not found!
 Done 742 of 10000
@@ -1506,7 +1506,7 @@ intermediate/snapshot-0.3740 File not found!
 Done 749 of 10000
 intermediate/snapshot-0.3745 File not found!
 Done 750 of 10000
-t 0.3750 zTP 0.304 rTP 0.766 vTP 6.929e-01
+t 0.3750 zTP 0.119 rTP 0.528 vTP 7.603e-01
 Done 751 of 10000
 intermediate/snapshot-0.3755 File not found!
 Done 752 of 10000
@@ -1526,7 +1526,7 @@ intermediate/snapshot-0.3790 File not found!
 Done 759 of 10000
 intermediate/snapshot-0.3795 File not found!
 Done 760 of 10000
-t 0.3800 zTP 0.316 rTP 0.767 vTP 6.998e-01
+t 0.3800 zTP 0.121 rTP 0.532 vTP 7.415e-01
 Done 761 of 10000
 intermediate/snapshot-0.3805 File not found!
 Done 762 of 10000
@@ -1546,7 +1546,7 @@ intermediate/snapshot-0.3840 File not found!
 Done 769 of 10000
 intermediate/snapshot-0.3845 File not found!
 Done 770 of 10000
-t 0.3850 zTP 0.316 rTP 0.771 vTP 7.268e-01
+t 0.3850 zTP 0.123 rTP 0.536 vTP 7.297e-01
 Done 771 of 10000
 intermediate/snapshot-0.3855 File not found!
 Done 772 of 10000
@@ -1566,7 +1566,7 @@ intermediate/snapshot-0.3890 File not found!
 Done 779 of 10000
 intermediate/snapshot-0.3895 File not found!
 Done 780 of 10000
-t 0.3900 zTP 0.303 rTP 0.777 vTP 6.502e-01
+t 0.3900 zTP 0.125 rTP 0.540 vTP 7.181e-01
 Done 781 of 10000
 intermediate/snapshot-0.3905 File not found!
 Done 782 of 10000
@@ -1586,7 +1586,7 @@ intermediate/snapshot-0.3940 File not found!
 Done 789 of 10000
 intermediate/snapshot-0.3945 File not found!
 Done 790 of 10000
-t 0.3950 zTP 0.306 rTP 0.780 vTP 5.661e-01
+t 0.3950 zTP 0.127 rTP 0.544 vTP 7.063e-01
 Done 791 of 10000
 intermediate/snapshot-0.3955 File not found!
 Done 792 of 10000
@@ -1606,7 +1606,7 @@ intermediate/snapshot-0.3990 File not found!
 Done 799 of 10000
 intermediate/snapshot-0.3995 File not found!
 Done 800 of 10000
-t 0.4000 zTP 0.318 rTP 0.781 vTP 6.758e-01
+t 0.4000 zTP 0.129 rTP 0.548 vTP 6.949e-01
 Done 801 of 10000
 intermediate/snapshot-0.4005 File not found!
 Done 802 of 10000
@@ -1626,7 +1626,7 @@ intermediate/snapshot-0.4040 File not found!
 Done 809 of 10000
 intermediate/snapshot-0.4045 File not found!
 Done 810 of 10000
-t 0.4050 zTP 0.329 rTP 0.782 vTP 7.337e-01
+t 0.4050 zTP 0.129 rTP 0.551 vTP 7.059e-01
 Done 811 of 10000
 intermediate/snapshot-0.4055 File not found!
 Done 812 of 10000
@@ -1646,7 +1646,7 @@ intermediate/snapshot-0.4090 File not found!
 Done 819 of 10000
 intermediate/snapshot-0.4095 File not found!
 Done 820 of 10000
-t 0.4100 zTP 0.319 rTP 0.788 vTP 5.986e-01
+t 0.4100 zTP 0.131 rTP 0.555 vTP 6.970e-01
 Done 821 of 10000
 intermediate/snapshot-0.4105 File not found!
 Done 822 of 10000
@@ -1666,7 +1666,7 @@ intermediate/snapshot-0.4140 File not found!
 Done 829 of 10000
 intermediate/snapshot-0.4145 File not found!
 Done 830 of 10000
-t 0.4150 zTP 0.331 rTP 0.789 vTP 5.974e-01
+t 0.4150 zTP 0.133 rTP 0.558 vTP 6.869e-01
 Done 831 of 10000
 intermediate/snapshot-0.4155 File not found!
 Done 832 of 10000
@@ -1686,7 +1686,7 @@ intermediate/snapshot-0.4190 File not found!
 Done 839 of 10000
 intermediate/snapshot-0.4195 File not found!
 Done 840 of 10000
-t 0.4200 zTP 0.320 rTP 0.794 vTP 5.335e-01
+t 0.4200 zTP 0.135 rTP 0.562 vTP 6.833e-01
 Done 841 of 10000
 intermediate/snapshot-0.4205 File not found!
 Done 842 of 10000
@@ -1706,7 +1706,7 @@ intermediate/snapshot-0.4240 File not found!
 Done 849 of 10000
 intermediate/snapshot-0.4245 File not found!
 Done 850 of 10000
-t 0.4250 zTP 0.322 rTP 0.797 vTP 5.617e-01
+t 0.4250 zTP 0.137 rTP 0.565 vTP 6.643e-01
 Done 851 of 10000
 intermediate/snapshot-0.4255 File not found!
 Done 852 of 10000
@@ -1726,7 +1726,7 @@ intermediate/snapshot-0.4290 File not found!
 Done 859 of 10000
 intermediate/snapshot-0.4295 File not found!
 Done 860 of 10000
-t 0.4300 zTP 0.334 rTP 0.798 vTP 6.006e-01
+t 0.4300 zTP 0.137 rTP 0.568 vTP 6.733e-01
 Done 861 of 10000
 intermediate/snapshot-0.4305 File not found!
 Done 862 of 10000
@@ -1746,7 +1746,7 @@ intermediate/snapshot-0.4340 File not found!
 Done 869 of 10000
 intermediate/snapshot-0.4345 File not found!
 Done 870 of 10000
-t 0.4350 zTP 0.346 rTP 0.798 vTP 7.114e-01
+t 0.4350 zTP 0.139 rTP 0.572 vTP 6.657e-01
 Done 871 of 10000
 intermediate/snapshot-0.4355 File not found!
 Done 872 of 10000
@@ -1766,7 +1766,7 @@ intermediate/snapshot-0.4390 File not found!
 Done 879 of 10000
 intermediate/snapshot-0.4395 File not found!
 Done 880 of 10000
-t 0.4400 zTP 0.344 rTP 0.802 vTP 6.186e-01
+t 0.4400 zTP 0.141 rTP 0.575 vTP 6.565e-01
 Done 881 of 10000
 intermediate/snapshot-0.4405 File not found!
 Done 882 of 10000
@@ -1786,7 +1786,7 @@ intermediate/snapshot-0.4440 File not found!
 Done 889 of 10000
 intermediate/snapshot-0.4445 File not found!
 Done 890 of 10000
-t 0.4450 zTP 0.346 rTP 0.805 vTP 5.822e-01
+t 0.4450 zTP 0.142 rTP 0.579 vTP 6.514e-01
 Done 891 of 10000
 intermediate/snapshot-0.4455 File not found!
 Done 892 of 10000
@@ -1806,7 +1806,7 @@ intermediate/snapshot-0.4490 File not found!
 Done 899 of 10000
 intermediate/snapshot-0.4495 File not found!
 Done 900 of 10000
-t 0.4500 zTP 0.336 rTP 0.810 vTP 5.041e-01
+t 0.4500 zTP 0.145 rTP 0.582 vTP 6.426e-01
 Done 901 of 10000
 intermediate/snapshot-0.4505 File not found!
 Done 902 of 10000
@@ -1826,7 +1826,7 @@ intermediate/snapshot-0.4540 File not found!
 Done 909 of 10000
 intermediate/snapshot-0.4545 File not found!
 Done 910 of 10000
-t 0.4550 zTP 0.339 rTP 0.813 vTP 4.844e-01
+intermediate/snapshot-0.4550 File not found!
 Done 911 of 10000
 intermediate/snapshot-0.4555 File not found!
 Done 912 of 10000
@@ -1846,7 +1846,7 @@ intermediate/snapshot-0.4590 File not found!
 Done 919 of 10000
 intermediate/snapshot-0.4595 File not found!
 Done 920 of 10000
-t 0.4600 zTP 0.350 rTP 0.813 vTP 5.163e-01
+intermediate/snapshot-0.4600 File not found!
 Done 921 of 10000
 intermediate/snapshot-0.4605 File not found!
 Done 922 of 10000
@@ -1866,7 +1866,7 @@ intermediate/snapshot-0.4640 File not found!
 Done 929 of 10000
 intermediate/snapshot-0.4645 File not found!
 Done 930 of 10000
-t 0.4650 zTP 0.358 rTP 0.813 vTP 6.241e-01
+intermediate/snapshot-0.4650 File not found!
 Done 931 of 10000
 intermediate/snapshot-0.4655 File not found!
 Done 932 of 10000
@@ -1886,7 +1886,7 @@ intermediate/snapshot-0.4690 File not found!
 Done 939 of 10000
 intermediate/snapshot-0.4695 File not found!
 Done 940 of 10000
-t 0.4700 zTP 0.363 rTP 0.815 vTP 5.671e-01
+intermediate/snapshot-0.4700 File not found!
 Done 941 of 10000
 intermediate/snapshot-0.4705 File not found!
 Done 942 of 10000
@@ -1906,7 +1906,7 @@ intermediate/snapshot-0.4740 File not found!
 Done 949 of 10000
 intermediate/snapshot-0.4745 File not found!
 Done 950 of 10000
-t 0.4750 zTP 0.361 rTP 0.818 vTP 5.040e-01
+intermediate/snapshot-0.4750 File not found!
 Done 951 of 10000
 intermediate/snapshot-0.4755 File not found!
 Done 952 of 10000
@@ -1926,7 +1926,7 @@ intermediate/snapshot-0.4790 File not found!
 Done 959 of 10000
 intermediate/snapshot-0.4795 File not found!
 Done 960 of 10000
-t 0.4800 zTP 0.363 rTP 0.820 vTP 4.854e-01
+intermediate/snapshot-0.4800 File not found!
 Done 961 of 10000
 intermediate/snapshot-0.4805 File not found!
 Done 962 of 10000
@@ -1946,7 +1946,7 @@ intermediate/snapshot-0.4840 File not found!
 Done 969 of 10000
 intermediate/snapshot-0.4845 File not found!
 Done 970 of 10000
-t 0.4850 zTP 0.353 rTP 0.826 vTP 4.099e-01
+intermediate/snapshot-0.4850 File not found!
 Done 971 of 10000
 intermediate/snapshot-0.4855 File not found!
 Done 972 of 10000
@@ -1966,7 +1966,7 @@ intermediate/snapshot-0.4890 File not found!
 Done 979 of 10000
 intermediate/snapshot-0.4895 File not found!
 Done 980 of 10000
-t 0.4900 zTP 0.352 rTP 0.829 vTP 4.011e-01
+intermediate/snapshot-0.4900 File not found!
 Done 981 of 10000
 intermediate/snapshot-0.4905 File not found!
 Done 982 of 10000
@@ -1986,7 +1986,7 @@ intermediate/snapshot-0.4940 File not found!
 Done 989 of 10000
 intermediate/snapshot-0.4945 File not found!
 Done 990 of 10000
-t 0.4950 zTP 0.363 rTP 0.829 vTP 5.385e-01
+intermediate/snapshot-0.4950 File not found!
 Done 991 of 10000
 intermediate/snapshot-0.4955 File not found!
 Done 992 of 10000
@@ -2006,7 +2006,7 @@ intermediate/snapshot-0.4990 File not found!
 Done 999 of 10000
 intermediate/snapshot-0.4995 File not found!
 Done 1000 of 10000
-t 0.5000 zTP 0.366 rTP 0.830 vTP 4.792e-01
+intermediate/snapshot-0.5000 File not found!
 Done 1001 of 10000
 intermediate/snapshot-0.5005 File not found!
 Done 1002 of 10000
@@ -2026,7 +2026,7 @@ intermediate/snapshot-0.5040 File not found!
 Done 1009 of 10000
 intermediate/snapshot-0.5045 File not found!
 Done 1010 of 10000
-t 0.5050 zTP 0.371 rTP 0.832 vTP 5.526e-01
+intermediate/snapshot-0.5050 File not found!
 Done 1011 of 10000
 intermediate/snapshot-0.5055 File not found!
 Done 1012 of 10000
@@ -2046,7 +2046,7 @@ intermediate/snapshot-0.5090 File not found!
 Done 1019 of 10000
 intermediate/snapshot-0.5095 File not found!
 Done 1020 of 10000
-t 0.5100 zTP 0.378 rTP 0.833 vTP 5.456e-01
+intermediate/snapshot-0.5100 File not found!
 Done 1021 of 10000
 intermediate/snapshot-0.5105 File not found!
 Done 1022 of 10000
@@ -2066,7 +2066,7 @@ intermediate/snapshot-0.5140 File not found!
 Done 1029 of 10000
 intermediate/snapshot-0.5145 File not found!
 Done 1030 of 10000
-t 0.5150 zTP 0.379 rTP 0.835 vTP 5.291e-01
+intermediate/snapshot-0.5150 File not found!
 Done 1031 of 10000
 intermediate/snapshot-0.5155 File not found!
 Done 1032 of 10000
@@ -2086,7 +2086,7 @@ intermediate/snapshot-0.5190 File not found!
 Done 1039 of 10000
 intermediate/snapshot-0.5195 File not found!
 Done 1040 of 10000
-t 0.5200 zTP 0.368 rTP 0.841 vTP 4.699e-01
+intermediate/snapshot-0.5200 File not found!
 Done 1041 of 10000
 intermediate/snapshot-0.5205 File not found!
 Done 1042 of 10000
@@ -2106,7 +2106,7 @@ intermediate/snapshot-0.5240 File not found!
 Done 1049 of 10000
 intermediate/snapshot-0.5245 File not found!
 Done 1050 of 10000
-t 0.5250 zTP 0.365 rTP 0.845 vTP 4.283e-01
+intermediate/snapshot-0.5250 File not found!
 Done 1051 of 10000
 intermediate/snapshot-0.5255 File not found!
 Done 1052 of 10000
@@ -2126,7 +2126,7 @@ intermediate/snapshot-0.5290 File not found!
 Done 1059 of 10000
 intermediate/snapshot-0.5295 File not found!
 Done 1060 of 10000
-t 0.5300 zTP 0.379 rTP 0.844 vTP 5.278e-01
+intermediate/snapshot-0.5300 File not found!
 Done 1061 of 10000
 intermediate/snapshot-0.5305 File not found!
 Done 1062 of 10000
@@ -2146,7 +2146,7 @@ intermediate/snapshot-0.5340 File not found!
 Done 1069 of 10000
 intermediate/snapshot-0.5345 File not found!
 Done 1070 of 10000
-t 0.5350 zTP 0.382 rTP 0.845 vTP 4.474e-01
+intermediate/snapshot-0.5350 File not found!
 Done 1071 of 10000
 intermediate/snapshot-0.5355 File not found!
 Done 1072 of 10000
@@ -2166,7 +2166,7 @@ intermediate/snapshot-0.5390 File not found!
 Done 1079 of 10000
 intermediate/snapshot-0.5395 File not found!
 Done 1080 of 10000
-t 0.5400 zTP 0.388 rTP 0.846 vTP 5.273e-01
+intermediate/snapshot-0.5400 File not found!
 Done 1081 of 10000
 intermediate/snapshot-0.5405 File not found!
 Done 1082 of 10000
@@ -2186,7 +2186,7 @@ intermediate/snapshot-0.5440 File not found!
 Done 1089 of 10000
 intermediate/snapshot-0.5445 File not found!
 Done 1090 of 10000
-t 0.5450 zTP 0.391 rTP 0.848 vTP 4.909e-01
+intermediate/snapshot-0.5450 File not found!
 Done 1091 of 10000
 intermediate/snapshot-0.5455 File not found!
 Done 1092 of 10000
@@ -2206,7 +2206,7 @@ intermediate/snapshot-0.5490 File not found!
 Done 1099 of 10000
 intermediate/snapshot-0.5495 File not found!
 Done 1100 of 10000
-t 0.5500 zTP 0.395 rTP 0.849 vTP 4.680e-01
+intermediate/snapshot-0.5500 File not found!
 Done 1101 of 10000
 intermediate/snapshot-0.5505 File not found!
 Done 1102 of 10000
@@ -2226,7 +2226,7 @@ intermediate/snapshot-0.5540 File not found!
 Done 1109 of 10000
 intermediate/snapshot-0.5545 File not found!
 Done 1110 of 10000
-t 0.5550 zTP 0.396 rTP 0.851 vTP 4.501e-01
+intermediate/snapshot-0.5550 File not found!
 Done 1111 of 10000
 intermediate/snapshot-0.5555 File not found!
 Done 1112 of 10000
@@ -2246,7 +2246,7 @@ intermediate/snapshot-0.5590 File not found!
 Done 1119 of 10000
 intermediate/snapshot-0.5595 File not found!
 Done 1120 of 10000
-t 0.5600 zTP 0.378 rTP 0.859 vTP 3.661e-01
+intermediate/snapshot-0.5600 File not found!
 Done 1121 of 10000
 intermediate/snapshot-0.5605 File not found!
 Done 1122 of 10000
@@ -2266,7 +2266,7 @@ intermediate/snapshot-0.5640 File not found!
 Done 1129 of 10000
 intermediate/snapshot-0.5645 File not found!
 Done 1130 of 10000
-t 0.5650 zTP 0.382 rTP 0.860 vTP 3.261e-01
+intermediate/snapshot-0.5650 File not found!
 Done 1131 of 10000
 intermediate/snapshot-0.5655 File not found!
 Done 1132 of 10000
@@ -2286,7 +2286,7 @@ intermediate/snapshot-0.5690 File not found!
 Done 1139 of 10000
 intermediate/snapshot-0.5695 File not found!
 Done 1140 of 10000
-t 0.5700 zTP 0.393 rTP 0.859 vTP 4.396e-01
+intermediate/snapshot-0.5700 File not found!
 Done 1141 of 10000
 intermediate/snapshot-0.5705 File not found!
 Done 1142 of 10000
@@ -2306,7 +2306,7 @@ intermediate/snapshot-0.5740 File not found!
 Done 1149 of 10000
 intermediate/snapshot-0.5745 File not found!
 Done 1150 of 10000
-t 0.5750 zTP 0.397 rTP 0.860 vTP 3.859e-01
+intermediate/snapshot-0.5750 File not found!
 Done 1151 of 10000
 intermediate/snapshot-0.5755 File not found!
 Done 1152 of 10000
@@ -2326,7 +2326,7 @@ intermediate/snapshot-0.5790 File not found!
 Done 1159 of 10000
 intermediate/snapshot-0.5795 File not found!
 Done 1160 of 10000
-t 0.5800 zTP 0.398 rTP 0.861 vTP 3.494e-01
+intermediate/snapshot-0.5800 File not found!
 Done 1161 of 10000
 intermediate/snapshot-0.5805 File not found!
 Done 1162 of 10000
@@ -2346,7 +2346,7 @@ intermediate/snapshot-0.5840 File not found!
 Done 1169 of 10000
 intermediate/snapshot-0.5845 File not found!
 Done 1170 of 10000
-t 0.5850 zTP 0.405 rTP 0.861 vTP 4.546e-01
+intermediate/snapshot-0.5850 File not found!
 Done 1171 of 10000
 intermediate/snapshot-0.5855 File not found!
 Done 1172 of 10000
@@ -2366,7 +2366,7 @@ intermediate/snapshot-0.5890 File not found!
 Done 1179 of 10000
 intermediate/snapshot-0.5895 File not found!
 Done 1180 of 10000
-t 0.5900 zTP 0.407 rTP 0.863 vTP 4.256e-01
+intermediate/snapshot-0.5900 File not found!
 Done 1181 of 10000
 intermediate/snapshot-0.5905 File not found!
 Done 1182 of 10000
@@ -2386,7 +2386,7 @@ intermediate/snapshot-0.5940 File not found!
 Done 1189 of 10000
 intermediate/snapshot-0.5945 File not found!
 Done 1190 of 10000
-t 0.5950 zTP 0.416 rTP 0.861 vTP 3.688e-01
+intermediate/snapshot-0.5950 File not found!
 Done 1191 of 10000
 intermediate/snapshot-0.5955 File not found!
 Done 1192 of 10000
@@ -2406,7 +2406,7 @@ intermediate/snapshot-0.5990 File not found!
 Done 1199 of 10000
 intermediate/snapshot-0.5995 File not found!
 Done 1200 of 10000
-t 0.6000 zTP 0.412 rTP 0.865 vTP 3.907e-01
+intermediate/snapshot-0.6000 File not found!
 Done 1201 of 10000
 intermediate/snapshot-0.6005 File not found!
 Done 1202 of 10000
@@ -2426,7 +2426,7 @@ intermediate/snapshot-0.6040 File not found!
 Done 1209 of 10000
 intermediate/snapshot-0.6045 File not found!
 Done 1210 of 10000
-t 0.6050 zTP 0.412 rTP 0.867 vTP 3.900e-01
+intermediate/snapshot-0.6050 File not found!
 Done 1211 of 10000
 intermediate/snapshot-0.6055 File not found!
 Done 1212 of 10000
@@ -2446,7 +2446,7 @@ intermediate/snapshot-0.6090 File not found!
 Done 1219 of 10000
 intermediate/snapshot-0.6095 File not found!
 Done 1220 of 10000
-t 0.6100 zTP 0.393 rTP 0.876 vTP 3.219e-01
+intermediate/snapshot-0.6100 File not found!
 Done 1221 of 10000
 intermediate/snapshot-0.6105 File not found!
 Done 1222 of 10000
@@ -2466,7 +2466,7 @@ intermediate/snapshot-0.6140 File not found!
 Done 1229 of 10000
 intermediate/snapshot-0.6145 File not found!
 Done 1230 of 10000
-t 0.6150 zTP 0.400 rTP 0.876 vTP 2.714e-01
+intermediate/snapshot-0.6150 File not found!
 Done 1231 of 10000
 intermediate/snapshot-0.6155 File not found!
 Done 1232 of 10000
@@ -2486,7 +2486,7 @@ intermediate/snapshot-0.6190 File not found!
 Done 1239 of 10000
 intermediate/snapshot-0.6195 File not found!
 Done 1240 of 10000
-t 0.6200 zTP 0.407 rTP 0.875 vTP 3.269e-01
+intermediate/snapshot-0.6200 File not found!
 Done 1241 of 10000
 intermediate/snapshot-0.6205 File not found!
 Done 1242 of 10000
@@ -2506,7 +2506,7 @@ intermediate/snapshot-0.6240 File not found!
 Done 1249 of 10000
 intermediate/snapshot-0.6245 File not found!
 Done 1250 of 10000
-t 0.6250 zTP 0.412 rTP 0.875 vTP 3.548e-01
+intermediate/snapshot-0.6250 File not found!
 Done 1251 of 10000
 intermediate/snapshot-0.6255 File not found!
 Done 1252 of 10000
@@ -2526,7 +2526,7 @@ intermediate/snapshot-0.6290 File not found!
 Done 1259 of 10000
 intermediate/snapshot-0.6295 File not found!
 Done 1260 of 10000
-t 0.6300 zTP 0.414 rTP 0.877 vTP 3.236e-01
+intermediate/snapshot-0.6300 File not found!
 Done 1261 of 10000
 intermediate/snapshot-0.6305 File not found!
 Done 1262 of 10000
@@ -2546,7 +2546,7 @@ intermediate/snapshot-0.6340 File not found!
 Done 1269 of 10000
 intermediate/snapshot-0.6345 File not found!
 Done 1270 of 10000
-t 0.6350 zTP 0.424 rTP 0.874 vTP 4.269e-01
+intermediate/snapshot-0.6350 File not found!
 Done 1271 of 10000
 intermediate/snapshot-0.6355 File not found!
 Done 1272 of 10000
@@ -2566,7 +2566,7 @@ intermediate/snapshot-0.6390 File not found!
 Done 1279 of 10000
 intermediate/snapshot-0.6395 File not found!
 Done 1280 of 10000
-t 0.6400 zTP 0.427 rTP 0.875 vTP 3.885e-01
+intermediate/snapshot-0.6400 File not found!
 Done 1281 of 10000
 intermediate/snapshot-0.6405 File not found!
 Done 1282 of 10000
@@ -2586,7 +2586,7 @@ intermediate/snapshot-0.6440 File not found!
 Done 1289 of 10000
 intermediate/snapshot-0.6445 File not found!
 Done 1290 of 10000
-t 0.6450 zTP 0.430 rTP 0.875 vTP 3.524e-01
+intermediate/snapshot-0.6450 File not found!
 Done 1291 of 10000
 intermediate/snapshot-0.6455 File not found!
 Done 1292 of 10000
@@ -2606,7 +2606,7 @@ intermediate/snapshot-0.6490 File not found!
 Done 1299 of 10000
 intermediate/snapshot-0.6495 File not found!
 Done 1300 of 10000
-t 0.6500 zTP 0.431 rTP 0.876 vTP 3.241e-01
+intermediate/snapshot-0.6500 File not found!
 Done 1301 of 10000
 intermediate/snapshot-0.6505 File not found!
 Done 1302 of 10000
@@ -2626,7 +2626,7 @@ intermediate/snapshot-0.6540 File not found!
 Done 1309 of 10000
 intermediate/snapshot-0.6545 File not found!
 Done 1310 of 10000
-t 0.6550 zTP 0.430 rTP 0.879 vTP 3.189e-01
+intermediate/snapshot-0.6550 File not found!
 Done 1311 of 10000
 intermediate/snapshot-0.6555 File not found!
 Done 1312 of 10000
@@ -2646,7 +2646,7 @@ intermediate/snapshot-0.6590 File not found!
 Done 1319 of 10000
 intermediate/snapshot-0.6595 File not found!
 Done 1320 of 10000
-t 0.6600 zTP 0.428 rTP 0.882 vTP 3.111e-01
+intermediate/snapshot-0.6600 File not found!
 Done 1321 of 10000
 intermediate/snapshot-0.6605 File not found!
 Done 1322 of 10000
@@ -2666,7 +2666,7 @@ intermediate/snapshot-0.6640 File not found!
 Done 1329 of 10000
 intermediate/snapshot-0.6645 File not found!
 Done 1330 of 10000
-t 0.6650 zTP 0.410 rTP 0.891 vTP 2.429e-01
+intermediate/snapshot-0.6650 File not found!
 Done 1331 of 10000
 intermediate/snapshot-0.6655 File not found!
 Done 1332 of 10000
@@ -2686,7 +2686,7 @@ intermediate/snapshot-0.6690 File not found!
 Done 1339 of 10000
 intermediate/snapshot-0.6695 File not found!
 Done 1340 of 10000
-t 0.6700 zTP 0.413 rTP 0.892 vTP 2.095e-01
+intermediate/snapshot-0.6700 File not found!
 Done 1341 of 10000
 intermediate/snapshot-0.6705 File not found!
 Done 1342 of 10000
@@ -2706,7 +2706,7 @@ intermediate/snapshot-0.6740 File not found!
 Done 1349 of 10000
 intermediate/snapshot-0.6745 File not found!
 Done 1350 of 10000
-t 0.6750 zTP 0.427 rTP 0.887 vTP 3.060e-01
+intermediate/snapshot-0.6750 File not found!
 Done 1351 of 10000
 intermediate/snapshot-0.6755 File not found!
 Done 1352 of 10000
@@ -2726,7 +2726,7 @@ intermediate/snapshot-0.6790 File not found!
 Done 1359 of 10000
 intermediate/snapshot-0.6795 File not found!
 Done 1360 of 10000
-t 0.6800 zTP 0.422 rTP 0.890 vTP 2.853e-01
+intermediate/snapshot-0.6800 File not found!
 Done 1361 of 10000
 intermediate/snapshot-0.6805 File not found!
 Done 1362 of 10000
@@ -2746,7 +2746,7 @@ intermediate/snapshot-0.6840 File not found!
 Done 1369 of 10000
 intermediate/snapshot-0.6845 File not found!
 Done 1370 of 10000
-t 0.6850 zTP 0.427 rTP 0.891 vTP 3.081e-01
+intermediate/snapshot-0.6850 File not found!
 Done 1371 of 10000
 intermediate/snapshot-0.6855 File not found!
 Done 1372 of 10000
@@ -2766,7 +2766,7 @@ intermediate/snapshot-0.6890 File not found!
 Done 1379 of 10000
 intermediate/snapshot-0.6895 File not found!
 Done 1380 of 10000
-t 0.6900 zTP 0.430 rTP 0.891 vTP 2.933e-01
+intermediate/snapshot-0.6900 File not found!
 Done 1381 of 10000
 intermediate/snapshot-0.6905 File not found!
 Done 1382 of 10000
@@ -2786,7 +2786,7 @@ intermediate/snapshot-0.6940 File not found!
 Done 1389 of 10000
 intermediate/snapshot-0.6945 File not found!
 Done 1390 of 10000
-t 0.6950 zTP 0.431 rTP 0.892 vTP 2.828e-01
+intermediate/snapshot-0.6950 File not found!
 Done 1391 of 10000
 intermediate/snapshot-0.6955 File not found!
 Done 1392 of 10000
@@ -2806,7 +2806,7 @@ intermediate/snapshot-0.6990 File not found!
 Done 1399 of 10000
 intermediate/snapshot-0.6995 File not found!
 Done 1400 of 10000
-t 0.7000 zTP 0.441 rTP 0.889 vTP 3.590e-01
+intermediate/snapshot-0.7000 File not found!
 Done 1401 of 10000
 intermediate/snapshot-0.7005 File not found!
 Done 1402 of 10000
@@ -2826,7 +2826,7 @@ intermediate/snapshot-0.7040 File not found!
 Done 1409 of 10000
 intermediate/snapshot-0.7045 File not found!
 Done 1410 of 10000
-t 0.7050 zTP 0.443 rTP 0.889 vTP 3.578e-01
+intermediate/snapshot-0.7050 File not found!
 Done 1411 of 10000
 intermediate/snapshot-0.7055 File not found!
 Done 1412 of 10000
@@ -2846,7 +2846,7 @@ intermediate/snapshot-0.7090 File not found!
 Done 1419 of 10000
 intermediate/snapshot-0.7095 File not found!
 Done 1420 of 10000
-t 0.7100 zTP 0.444 rTP 0.891 vTP 3.848e-01
+intermediate/snapshot-0.7100 File not found!
 Done 1421 of 10000
 intermediate/snapshot-0.7105 File not found!
 Done 1422 of 10000
@@ -2866,7 +2866,7 @@ intermediate/snapshot-0.7140 File not found!
 Done 1429 of 10000
 intermediate/snapshot-0.7145 File not found!
 Done 1430 of 10000
-t 0.7150 zTP 0.445 rTP 0.892 vTP 3.682e-01
+intermediate/snapshot-0.7150 File not found!
 Done 1431 of 10000
 intermediate/snapshot-0.7155 File not found!
 Done 1432 of 10000
@@ -2886,7 +2886,7 @@ intermediate/snapshot-0.7190 File not found!
 Done 1439 of 10000
 intermediate/snapshot-0.7195 File not found!
 Done 1440 of 10000
-t 0.7200 zTP 0.447 rTP 0.893 vTP 3.509e-01
+intermediate/snapshot-0.7200 File not found!
 Done 1441 of 10000
 intermediate/snapshot-0.7205 File not found!
 Done 1442 of 10000
@@ -2906,7 +2906,7 @@ intermediate/snapshot-0.7240 File not found!
 Done 1449 of 10000
 intermediate/snapshot-0.7245 File not found!
 Done 1450 of 10000
-t 0.7250 zTP 0.444 rTP 0.897 vTP 3.346e-01
+intermediate/snapshot-0.7250 File not found!
 Done 1451 of 10000
 intermediate/snapshot-0.7255 File not found!
 Done 1452 of 10000
@@ -2926,7 +2926,7 @@ intermediate/snapshot-0.7290 File not found!
 Done 1459 of 10000
 intermediate/snapshot-0.7295 File not found!
 Done 1460 of 10000
-t 0.7300 zTP 0.428 rTP 0.907 vTP 2.344e-01
+intermediate/snapshot-0.7300 File not found!
 Done 1461 of 10000
 intermediate/snapshot-0.7305 File not found!
 Done 1462 of 10000
@@ -2946,7 +2946,7 @@ intermediate/snapshot-0.7340 File not found!
 Done 1469 of 10000
 intermediate/snapshot-0.7345 File not found!
 Done 1470 of 10000
-t 0.7350 zTP 0.431 rTP 0.907 vTP 2.089e-01
+intermediate/snapshot-0.7350 File not found!
 Done 1471 of 10000
 intermediate/snapshot-0.7355 File not found!
 Done 1472 of 10000
@@ -2966,7 +2966,7 @@ intermediate/snapshot-0.7390 File not found!
 Done 1479 of 10000
 intermediate/snapshot-0.7395 File not found!
 Done 1480 of 10000
-t 0.7400 zTP 0.438 rTP 0.905 vTP 2.658e-01
+intermediate/snapshot-0.7400 File not found!
 Done 1481 of 10000
 intermediate/snapshot-0.7405 File not found!
 Done 1482 of 10000
@@ -2986,7 +2986,7 @@ intermediate/snapshot-0.7440 File not found!
 Done 1489 of 10000
 intermediate/snapshot-0.7445 File not found!
 Done 1490 of 10000
-t 0.7450 zTP 0.457 rTP 0.897 vTP 3.638e-01
+intermediate/snapshot-0.7450 File not found!
 Done 1491 of 10000
 intermediate/snapshot-0.7455 File not found!
 Done 1492 of 10000
@@ -3006,7 +3006,7 @@ intermediate/snapshot-0.7490 File not found!
 Done 1499 of 10000
 intermediate/snapshot-0.7495 File not found!
 Done 1500 of 10000
-t 0.7500 zTP 0.445 rTP 0.906 vTP 2.519e-01
+intermediate/snapshot-0.7500 File not found!
 Done 1501 of 10000
 intermediate/snapshot-0.7505 File not found!
 Done 1502 of 10000
@@ -3026,7 +3026,7 @@ intermediate/snapshot-0.7540 File not found!
 Done 1509 of 10000
 intermediate/snapshot-0.7545 File not found!
 Done 1510 of 10000
-t 0.7550 zTP 0.446 rTP 0.907 vTP 2.100e-01
+intermediate/snapshot-0.7550 File not found!
 Done 1511 of 10000
 intermediate/snapshot-0.7555 File not found!
 Done 1512 of 10000
@@ -3046,7 +3046,7 @@ intermediate/snapshot-0.7590 File not found!
 Done 1519 of 10000
 intermediate/snapshot-0.7595 File not found!
 Done 1520 of 10000
-t 0.7600 zTP 0.447 rTP 0.907 vTP 1.716e-01
+intermediate/snapshot-0.7600 File not found!
 Done 1521 of 10000
 intermediate/snapshot-0.7605 File not found!
 Done 1522 of 10000
@@ -3066,7 +3066,7 @@ intermediate/snapshot-0.7640 File not found!
 Done 1529 of 10000
 intermediate/snapshot-0.7645 File not found!
 Done 1530 of 10000
-t 0.7650 zTP 0.452 rTP 0.907 vTP 3.030e-01
+intermediate/snapshot-0.7650 File not found!
 Done 1531 of 10000
 intermediate/snapshot-0.7655 File not found!
 Done 1532 of 10000
@@ -3086,7 +3086,7 @@ intermediate/snapshot-0.7690 File not found!
 Done 1539 of 10000
 intermediate/snapshot-0.7695 File not found!
 Done 1540 of 10000
-t 0.7700 zTP 0.455 rTP 0.906 vTP 2.644e-01
+intermediate/snapshot-0.7700 File not found!
 Done 1541 of 10000
 intermediate/snapshot-0.7705 File not found!
 Done 1542 of 10000
@@ -3106,7 +3106,7 @@ intermediate/snapshot-0.7740 File not found!
 Done 1549 of 10000
 intermediate/snapshot-0.7745 File not found!
 Done 1550 of 10000
-t 0.7750 zTP 0.456 rTP 0.906 vTP 2.658e-01
+intermediate/snapshot-0.7750 File not found!
 Done 1551 of 10000
 intermediate/snapshot-0.7755 File not found!
 Done 1552 of 10000
@@ -3126,7 +3126,7 @@ intermediate/snapshot-0.7790 File not found!
 Done 1559 of 10000
 intermediate/snapshot-0.7795 File not found!
 Done 1560 of 10000
-t 0.7800 zTP 0.457 rTP 0.907 vTP 2.552e-01
+intermediate/snapshot-0.7800 File not found!
 Done 1561 of 10000
 intermediate/snapshot-0.7805 File not found!
 Done 1562 of 10000
@@ -3146,7 +3146,7 @@ intermediate/snapshot-0.7840 File not found!
 Done 1569 of 10000
 intermediate/snapshot-0.7845 File not found!
 Done 1570 of 10000
-t 0.7850 zTP 0.459 rTP 0.907 vTP 2.494e-01
+intermediate/snapshot-0.7850 File not found!
 Done 1571 of 10000
 intermediate/snapshot-0.7855 File not found!
 Done 1572 of 10000
@@ -3166,7 +3166,7 @@ intermediate/snapshot-0.7890 File not found!
 Done 1579 of 10000
 intermediate/snapshot-0.7895 File not found!
 Done 1580 of 10000
-t 0.7900 zTP 0.459 rTP 0.908 vTP 2.524e-01
+intermediate/snapshot-0.7900 File not found!
 Done 1581 of 10000
 intermediate/snapshot-0.7905 File not found!
 Done 1582 of 10000
@@ -3186,7 +3186,7 @@ intermediate/snapshot-0.7940 File not found!
 Done 1589 of 10000
 intermediate/snapshot-0.7945 File not found!
 Done 1590 of 10000
-t 0.7950 zTP 0.460 rTP 0.908 vTP 2.396e-01
+intermediate/snapshot-0.7950 File not found!
 Done 1591 of 10000
 intermediate/snapshot-0.7955 File not found!
 Done 1592 of 10000
@@ -3206,7 +3206,7 @@ intermediate/snapshot-0.7990 File not found!
 Done 1599 of 10000
 intermediate/snapshot-0.7995 File not found!
 Done 1600 of 10000
-t 0.8000 zTP 0.461 rTP 0.908 vTP 2.406e-01
+intermediate/snapshot-0.8000 File not found!
 Done 1601 of 10000
 intermediate/snapshot-0.8005 File not found!
 Done 1602 of 10000
@@ -3226,7 +3226,7 @@ intermediate/snapshot-0.8040 File not found!
 Done 1609 of 10000
 intermediate/snapshot-0.8045 File not found!
 Done 1610 of 10000
-t 0.8050 zTP 0.462 rTP 0.908 vTP 2.462e-01
+intermediate/snapshot-0.8050 File not found!
 Done 1611 of 10000
 intermediate/snapshot-0.8055 File not found!
 Done 1612 of 10000
@@ -3246,7 +3246,7 @@ intermediate/snapshot-0.8090 File not found!
 Done 1619 of 10000
 intermediate/snapshot-0.8095 File not found!
 Done 1620 of 10000
-t 0.8100 zTP 0.462 rTP 0.909 vTP 2.628e-01
+intermediate/snapshot-0.8100 File not found!
 Done 1621 of 10000
 intermediate/snapshot-0.8105 File not found!
 Done 1622 of 10000
@@ -3266,7 +3266,7 @@ intermediate/snapshot-0.8140 File not found!
 Done 1629 of 10000
 intermediate/snapshot-0.8145 File not found!
 Done 1630 of 10000
-t 0.8150 zTP 0.463 rTP 0.909 vTP 2.860e-01
+intermediate/snapshot-0.8150 File not found!
 Done 1631 of 10000
 intermediate/snapshot-0.8155 File not found!
 Done 1632 of 10000
@@ -3286,7 +3286,7 @@ intermediate/snapshot-0.8190 File not found!
 Done 1639 of 10000
 intermediate/snapshot-0.8195 File not found!
 Done 1640 of 10000
-t 0.8200 zTP 0.445 rTP 0.923 vTP 2.186e-01
+intermediate/snapshot-0.8200 File not found!
 Done 1641 of 10000
 intermediate/snapshot-0.8205 File not found!
 Done 1642 of 10000
@@ -3306,7 +3306,7 @@ intermediate/snapshot-0.8240 File not found!
 Done 1649 of 10000
 intermediate/snapshot-0.8245 File not found!
 Done 1650 of 10000
-t 0.8250 zTP 0.444 rTP 0.924 vTP 3.131e-01
+intermediate/snapshot-0.8250 File not found!
 Done 1651 of 10000
 intermediate/snapshot-0.8255 File not found!
 Done 1652 of 10000
@@ -3326,7 +3326,7 @@ intermediate/snapshot-0.8290 File not found!
 Done 1659 of 10000
 intermediate/snapshot-0.8295 File not found!
 Done 1660 of 10000
-t 0.8300 zTP 0.447 rTP 0.923 vTP 3.601e-01
+intermediate/snapshot-0.8300 File not found!
 Done 1661 of 10000
 intermediate/snapshot-0.8305 File not found!
 Done 1662 of 10000
@@ -3346,7 +3346,7 @@ intermediate/snapshot-0.8340 File not found!
 Done 1669 of 10000
 intermediate/snapshot-0.8345 File not found!
 Done 1670 of 10000
-t 0.8350 zTP 0.453 rTP 0.922 vTP 3.600e-01
+intermediate/snapshot-0.8350 File not found!
 Done 1671 of 10000
 intermediate/snapshot-0.8355 File not found!
 Done 1672 of 10000
@@ -3366,7 +3366,7 @@ intermediate/snapshot-0.8390 File not found!
 Done 1679 of 10000
 intermediate/snapshot-0.8395 File not found!
 Done 1680 of 10000
-t 0.8400 zTP 0.458 rTP 0.921 vTP 3.970e-01
+intermediate/snapshot-0.8400 File not found!
 Done 1681 of 10000
 intermediate/snapshot-0.8405 File not found!
 Done 1682 of 10000
@@ -3386,7 +3386,7 @@ intermediate/snapshot-0.8440 File not found!
 Done 1689 of 10000
 intermediate/snapshot-0.8445 File not found!
 Done 1690 of 10000
-t 0.8450 zTP 0.459 rTP 0.923 vTP 3.869e-01
+intermediate/snapshot-0.8450 File not found!
 Done 1691 of 10000
 intermediate/snapshot-0.8455 File not found!
 Done 1692 of 10000
@@ -3406,7 +3406,7 @@ intermediate/snapshot-0.8490 File not found!
 Done 1699 of 10000
 intermediate/snapshot-0.8495 File not found!
 Done 1700 of 10000
-t 0.8500 zTP 0.460 rTP 0.923 vTP 3.712e-01
+intermediate/snapshot-0.8500 File not found!
 Done 1701 of 10000
 intermediate/snapshot-0.8505 File not found!
 Done 1702 of 10000
@@ -3426,7 +3426,7 @@ intermediate/snapshot-0.8540 File not found!
 Done 1709 of 10000
 intermediate/snapshot-0.8545 File not found!
 Done 1710 of 10000
-t 0.8550 zTP 0.461 rTP 0.924 vTP 3.513e-01
+intermediate/snapshot-0.8550 File not found!
 Done 1711 of 10000
 intermediate/snapshot-0.8555 File not found!
 Done 1712 of 10000
@@ -3446,7 +3446,7 @@ intermediate/snapshot-0.8590 File not found!
 Done 1719 of 10000
 intermediate/snapshot-0.8595 File not found!
 Done 1720 of 10000
-t 0.8600 zTP 0.461 rTP 0.926 vTP 3.262e-01
+intermediate/snapshot-0.8600 File not found!
 Done 1721 of 10000
 intermediate/snapshot-0.8605 File not found!
 Done 1722 of 10000
@@ -3466,7 +3466,7 @@ intermediate/snapshot-0.8640 File not found!
 Done 1729 of 10000
 intermediate/snapshot-0.8645 File not found!
 Done 1730 of 10000
-t 0.8650 zTP 0.472 rTP 0.920 vTP 4.218e-01
+intermediate/snapshot-0.8650 File not found!
 Done 1731 of 10000
 intermediate/snapshot-0.8655 File not found!
 Done 1732 of 10000
@@ -3486,7 +3486,7 @@ intermediate/snapshot-0.8690 File not found!
 Done 1739 of 10000
 intermediate/snapshot-0.8695 File not found!
 Done 1740 of 10000
-t 0.8700 zTP 0.474 rTP 0.920 vTP 3.821e-01
+intermediate/snapshot-0.8700 File not found!
 Done 1741 of 10000
 intermediate/snapshot-0.8705 File not found!
 Done 1742 of 10000
@@ -3506,7 +3506,7 @@ intermediate/snapshot-0.8740 File not found!
 Done 1749 of 10000
 intermediate/snapshot-0.8745 File not found!
 Done 1750 of 10000
-t 0.8750 zTP 0.470 rTP 0.926 vTP 3.451e-01
+intermediate/snapshot-0.8750 File not found!
 Done 1751 of 10000
 intermediate/snapshot-0.8755 File not found!
 Done 1752 of 10000
@@ -3526,7 +3526,7 @@ intermediate/snapshot-0.8790 File not found!
 Done 1759 of 10000
 intermediate/snapshot-0.8795 File not found!
 Done 1760 of 10000
-t 0.8800 zTP 0.469 rTP 0.929 vTP 2.892e-01
+intermediate/snapshot-0.8800 File not found!
 Done 1761 of 10000
 intermediate/snapshot-0.8805 File not found!
 Done 1762 of 10000
@@ -3546,7 +3546,7 @@ intermediate/snapshot-0.8840 File not found!
 Done 1769 of 10000
 intermediate/snapshot-0.8845 File not found!
 Done 1770 of 10000
-t 0.8850 zTP 0.468 rTP 0.931 vTP 2.593e-01
+intermediate/snapshot-0.8850 File not found!
 Done 1771 of 10000
 intermediate/snapshot-0.8855 File not found!
 Done 1772 of 10000
@@ -3566,7 +3566,7 @@ intermediate/snapshot-0.8890 File not found!
 Done 1779 of 10000
 intermediate/snapshot-0.8895 File not found!
 Done 1780 of 10000
-t 0.8900 zTP 0.469 rTP 0.932 vTP 2.380e-01
+intermediate/snapshot-0.8900 File not found!
 Done 1781 of 10000
 intermediate/snapshot-0.8905 File not found!
 Done 1782 of 10000
@@ -21827,7 +21827,7 @@ intermediate/snapshot-0.4540 File not found!
 Time is 0.454500
 intermediate/snapshot-0.4545 File not found!
 Time is 0.455000
-nz is 1000
+intermediate/snapshot-0.4550 File not found!
 Time is 0.455500
 intermediate/snapshot-0.4555 File not found!
 Time is 0.456000
@@ -21847,7 +21847,7 @@ intermediate/snapshot-0.4590 File not found!
 Time is 0.459500
 intermediate/snapshot-0.4595 File not found!
 Time is 0.460000
-nz is 1000
+intermediate/snapshot-0.4600 File not found!
 Time is 0.460500
 intermediate/snapshot-0.4605 File not found!
 Time is 0.461000
@@ -21867,7 +21867,7 @@ intermediate/snapshot-0.4640 File not found!
 Time is 0.464500
 intermediate/snapshot-0.4645 File not found!
 Time is 0.465000
-nz is 1000
+intermediate/snapshot-0.4650 File not found!
 Time is 0.465500
 intermediate/snapshot-0.4655 File not found!
 Time is 0.466000
@@ -21887,7 +21887,7 @@ intermediate/snapshot-0.4690 File not found!
 Time is 0.469500
 intermediate/snapshot-0.4695 File not found!
 Time is 0.470000
-nz is 1000
+intermediate/snapshot-0.4700 File not found!
 Time is 0.470500
 intermediate/snapshot-0.4705 File not found!
 Time is 0.471000
@@ -21907,7 +21907,7 @@ intermediate/snapshot-0.4740 File not found!
 Time is 0.474500
 intermediate/snapshot-0.4745 File not found!
 Time is 0.475000
-nz is 1000
+intermediate/snapshot-0.4750 File not found!
 Time is 0.475500
 intermediate/snapshot-0.4755 File not found!
 Time is 0.476000
@@ -21927,7 +21927,7 @@ intermediate/snapshot-0.4790 File not found!
 Time is 0.479500
 intermediate/snapshot-0.4795 File not found!
 Time is 0.480000
-nz is 1000
+intermediate/snapshot-0.4800 File not found!
 Time is 0.480500
 intermediate/snapshot-0.4805 File not found!
 Time is 0.481000
@@ -21947,7 +21947,7 @@ intermediate/snapshot-0.4840 File not found!
 Time is 0.484500
 intermediate/snapshot-0.4845 File not found!
 Time is 0.485000
-nz is 1000
+intermediate/snapshot-0.4850 File not found!
 Time is 0.485500
 intermediate/snapshot-0.4855 File not found!
 Time is 0.486000
@@ -21967,7 +21967,7 @@ intermediate/snapshot-0.4890 File not found!
 Time is 0.489500
 intermediate/snapshot-0.4895 File not found!
 Time is 0.490000
-nz is 1000
+intermediate/snapshot-0.4900 File not found!
 Time is 0.490500
 intermediate/snapshot-0.4905 File not found!
 Time is 0.491000
@@ -21987,7 +21987,7 @@ intermediate/snapshot-0.4940 File not found!
 Time is 0.494500
 intermediate/snapshot-0.4945 File not found!
 Time is 0.495000
-nz is 1000
+intermediate/snapshot-0.4950 File not found!
 Time is 0.495500
 intermediate/snapshot-0.4955 File not found!
 Time is 0.496000
@@ -22007,7 +22007,7 @@ intermediate/snapshot-0.4990 File not found!
 Time is 0.499500
 intermediate/snapshot-0.4995 File not found!
 Time is 0.500000
-nz is 1000
+intermediate/snapshot-0.5000 File not found!
 Time is 0.500500
 intermediate/snapshot-0.5005 File not found!
 Time is 0.501000
@@ -22027,7 +22027,7 @@ intermediate/snapshot-0.5040 File not found!
 Time is 0.504500
 intermediate/snapshot-0.5045 File not found!
 Time is 0.505000
-nz is 1000
+intermediate/snapshot-0.5050 File not found!
 Time is 0.505500
 intermediate/snapshot-0.5055 File not found!
 Time is 0.506000
@@ -22047,7 +22047,7 @@ intermediate/snapshot-0.5090 File not found!
 Time is 0.509500
 intermediate/snapshot-0.5095 File not found!
 Time is 0.510000
-nz is 1000
+intermediate/snapshot-0.5100 File not found!
 Time is 0.510500
 intermediate/snapshot-0.5105 File not found!
 Time is 0.511000
@@ -22067,7 +22067,7 @@ intermediate/snapshot-0.5140 File not found!
 Time is 0.514500
 intermediate/snapshot-0.5145 File not found!
 Time is 0.515000
-nz is 1000
+intermediate/snapshot-0.5150 File not found!
 Time is 0.515500
 intermediate/snapshot-0.5155 File not found!
 Time is 0.516000
@@ -22087,7 +22087,7 @@ intermediate/snapshot-0.5190 File not found!
 Time is 0.519500
 intermediate/snapshot-0.5195 File not found!
 Time is 0.520000
-nz is 1000
+intermediate/snapshot-0.5200 File not found!
 Time is 0.520500
 intermediate/snapshot-0.5205 File not found!
 Time is 0.521000
@@ -22107,7 +22107,7 @@ intermediate/snapshot-0.5240 File not found!
 Time is 0.524500
 intermediate/snapshot-0.5245 File not found!
 Time is 0.525000
-nz is 1000
+intermediate/snapshot-0.5250 File not found!
 Time is 0.525500
 intermediate/snapshot-0.5255 File not found!
 Time is 0.526000
@@ -22127,7 +22127,7 @@ intermediate/snapshot-0.5290 File not found!
 Time is 0.529500
 intermediate/snapshot-0.5295 File not found!
 Time is 0.530000
-nz is 1000
+intermediate/snapshot-0.5300 File not found!
 Time is 0.530500
 intermediate/snapshot-0.5305 File not found!
 Time is 0.531000
@@ -22147,7 +22147,7 @@ intermediate/snapshot-0.5340 File not found!
 Time is 0.534500
 intermediate/snapshot-0.5345 File not found!
 Time is 0.535000
-nz is 1000
+intermediate/snapshot-0.5350 File not found!
 Time is 0.535500
 intermediate/snapshot-0.5355 File not found!
 Time is 0.536000
@@ -22167,7 +22167,7 @@ intermediate/snapshot-0.5390 File not found!
 Time is 0.539500
 intermediate/snapshot-0.5395 File not found!
 Time is 0.540000
-nz is 1000
+intermediate/snapshot-0.5400 File not found!
 Time is 0.540500
 intermediate/snapshot-0.5405 File not found!
 Time is 0.541000
@@ -22187,7 +22187,7 @@ intermediate/snapshot-0.5440 File not found!
 Time is 0.544500
 intermediate/snapshot-0.5445 File not found!
 Time is 0.545000
-nz is 1000
+intermediate/snapshot-0.5450 File not found!
 Time is 0.545500
 intermediate/snapshot-0.5455 File not found!
 Time is 0.546000
@@ -22207,7 +22207,7 @@ intermediate/snapshot-0.5490 File not found!
 Time is 0.549500
 intermediate/snapshot-0.5495 File not found!
 Time is 0.550000
-nz is 1000
+intermediate/snapshot-0.5500 File not found!
 Time is 0.550500
 intermediate/snapshot-0.5505 File not found!
 Time is 0.551000
@@ -22227,7 +22227,7 @@ intermediate/snapshot-0.5540 File not found!
 Time is 0.554500
 intermediate/snapshot-0.5545 File not found!
 Time is 0.555000
-nz is 1000
+intermediate/snapshot-0.5550 File not found!
 Time is 0.555500
 intermediate/snapshot-0.5555 File not found!
 Time is 0.556000
@@ -22247,7 +22247,7 @@ intermediate/snapshot-0.5590 File not found!
 Time is 0.559500
 intermediate/snapshot-0.5595 File not found!
 Time is 0.560000
-nz is 1000
+intermediate/snapshot-0.5600 File not found!
 Time is 0.560500
 intermediate/snapshot-0.5605 File not found!
 Time is 0.561000
@@ -22267,7 +22267,7 @@ intermediate/snapshot-0.5640 File not found!
 Time is 0.564500
 intermediate/snapshot-0.5645 File not found!
 Time is 0.565000
-nz is 1000
+intermediate/snapshot-0.5650 File not found!
 Time is 0.565500
 intermediate/snapshot-0.5655 File not found!
 Time is 0.566000
@@ -22287,7 +22287,7 @@ intermediate/snapshot-0.5690 File not found!
 Time is 0.569500
 intermediate/snapshot-0.5695 File not found!
 Time is 0.570000
-nz is 1000
+intermediate/snapshot-0.5700 File not found!
 Time is 0.570500
 intermediate/snapshot-0.5705 File not found!
 Time is 0.571000
@@ -22307,7 +22307,7 @@ intermediate/snapshot-0.5740 File not found!
 Time is 0.574500
 intermediate/snapshot-0.5745 File not found!
 Time is 0.575000
-nz is 1000
+intermediate/snapshot-0.5750 File not found!
 Time is 0.575500
 intermediate/snapshot-0.5755 File not found!
 Time is 0.576000
@@ -22327,7 +22327,7 @@ intermediate/snapshot-0.5790 File not found!
 Time is 0.579500
 intermediate/snapshot-0.5795 File not found!
 Time is 0.580000
-nz is 1000
+intermediate/snapshot-0.5800 File not found!
 Time is 0.580500
 intermediate/snapshot-0.5805 File not found!
 Time is 0.581000
@@ -22347,7 +22347,7 @@ intermediate/snapshot-0.5840 File not found!
 Time is 0.584500
 intermediate/snapshot-0.5845 File not found!
 Time is 0.585000
-nz is 1000
+intermediate/snapshot-0.5850 File not found!
 Time is 0.585500
 intermediate/snapshot-0.5855 File not found!
 Time is 0.586000
@@ -22367,7 +22367,7 @@ intermediate/snapshot-0.5890 File not found!
 Time is 0.589500
 intermediate/snapshot-0.5895 File not found!
 Time is 0.590000
-nz is 1000
+intermediate/snapshot-0.5900 File not found!
 Time is 0.590500
 intermediate/snapshot-0.5905 File not found!
 Time is 0.591000
@@ -22387,7 +22387,7 @@ intermediate/snapshot-0.5940 File not found!
 Time is 0.594500
 intermediate/snapshot-0.5945 File not found!
 Time is 0.595000
-nz is 1000
+intermediate/snapshot-0.5950 File not found!
 Time is 0.595500
 intermediate/snapshot-0.5955 File not found!
 Time is 0.596000
@@ -22407,7 +22407,7 @@ intermediate/snapshot-0.5990 File not found!
 Time is 0.599500
 intermediate/snapshot-0.5995 File not found!
 Time is 0.600000
-nz is 1000
+intermediate/snapshot-0.6000 File not found!
 Time is 0.600500
 intermediate/snapshot-0.6005 File not found!
 Time is 0.601000
@@ -22427,7 +22427,7 @@ intermediate/snapshot-0.6040 File not found!
 Time is 0.604500
 intermediate/snapshot-0.6045 File not found!
 Time is 0.605000
-nz is 1000
+intermediate/snapshot-0.6050 File not found!
 Time is 0.605500
 intermediate/snapshot-0.6055 File not found!
 Time is 0.606000
@@ -22447,7 +22447,7 @@ intermediate/snapshot-0.6090 File not found!
 Time is 0.609500
 intermediate/snapshot-0.6095 File not found!
 Time is 0.610000
-nz is 1000
+intermediate/snapshot-0.6100 File not found!
 Time is 0.610500
 intermediate/snapshot-0.6105 File not found!
 Time is 0.611000
@@ -22467,7 +22467,7 @@ intermediate/snapshot-0.6140 File not found!
 Time is 0.614500
 intermediate/snapshot-0.6145 File not found!
 Time is 0.615000
-nz is 1000
+intermediate/snapshot-0.6150 File not found!
 Time is 0.615500
 intermediate/snapshot-0.6155 File not found!
 Time is 0.616000
@@ -22487,7 +22487,7 @@ intermediate/snapshot-0.6190 File not found!
 Time is 0.619500
 intermediate/snapshot-0.6195 File not found!
 Time is 0.620000
-nz is 1000
+intermediate/snapshot-0.6200 File not found!
 Time is 0.620500
 intermediate/snapshot-0.6205 File not found!
 Time is 0.621000
@@ -22507,7 +22507,7 @@ intermediate/snapshot-0.6240 File not found!
 Time is 0.624500
 intermediate/snapshot-0.6245 File not found!
 Time is 0.625000
-nz is 1000
+intermediate/snapshot-0.6250 File not found!
 Time is 0.625500
 intermediate/snapshot-0.6255 File not found!
 Time is 0.626000
@@ -22527,7 +22527,7 @@ intermediate/snapshot-0.6290 File not found!
 Time is 0.629500
 intermediate/snapshot-0.6295 File not found!
 Time is 0.630000
-nz is 1000
+intermediate/snapshot-0.6300 File not found!
 Time is 0.630500
 intermediate/snapshot-0.6305 File not found!
 Time is 0.631000
@@ -22547,7 +22547,7 @@ intermediate/snapshot-0.6340 File not found!
 Time is 0.634500
 intermediate/snapshot-0.6345 File not found!
 Time is 0.635000
-nz is 1000
+intermediate/snapshot-0.6350 File not found!
 Time is 0.635500
 intermediate/snapshot-0.6355 File not found!
 Time is 0.636000
@@ -22567,7 +22567,7 @@ intermediate/snapshot-0.6390 File not found!
 Time is 0.639500
 intermediate/snapshot-0.6395 File not found!
 Time is 0.640000
-nz is 1000
+intermediate/snapshot-0.6400 File not found!
 Time is 0.640500
 intermediate/snapshot-0.6405 File not found!
 Time is 0.641000
@@ -22587,7 +22587,7 @@ intermediate/snapshot-0.6440 File not found!
 Time is 0.644500
 intermediate/snapshot-0.6445 File not found!
 Time is 0.645000
-nz is 1000
+intermediate/snapshot-0.6450 File not found!
 Time is 0.645500
 intermediate/snapshot-0.6455 File not found!
 Time is 0.646000
@@ -22607,7 +22607,7 @@ intermediate/snapshot-0.6490 File not found!
 Time is 0.649500
 intermediate/snapshot-0.6495 File not found!
 Time is 0.650000
-nz is 1000
+intermediate/snapshot-0.6500 File not found!
 Time is 0.650500
 intermediate/snapshot-0.6505 File not found!
 Time is 0.651000
@@ -22627,7 +22627,7 @@ intermediate/snapshot-0.6540 File not found!
 Time is 0.654500
 intermediate/snapshot-0.6545 File not found!
 Time is 0.655000
-nz is 1000
+intermediate/snapshot-0.6550 File not found!
 Time is 0.655500
 intermediate/snapshot-0.6555 File not found!
 Time is 0.656000
@@ -22647,7 +22647,7 @@ intermediate/snapshot-0.6590 File not found!
 Time is 0.659500
 intermediate/snapshot-0.6595 File not found!
 Time is 0.660000
-nz is 1000
+intermediate/snapshot-0.6600 File not found!
 Time is 0.660500
 intermediate/snapshot-0.6605 File not found!
 Time is 0.661000
@@ -22667,7 +22667,7 @@ intermediate/snapshot-0.6640 File not found!
 Time is 0.664500
 intermediate/snapshot-0.6645 File not found!
 Time is 0.665000
-nz is 1000
+intermediate/snapshot-0.6650 File not found!
 Time is 0.665500
 intermediate/snapshot-0.6655 File not found!
 Time is 0.666000
@@ -22687,7 +22687,7 @@ intermediate/snapshot-0.6690 File not found!
 Time is 0.669500
 intermediate/snapshot-0.6695 File not found!
 Time is 0.670000
-nz is 1000
+intermediate/snapshot-0.6700 File not found!
 Time is 0.670500
 intermediate/snapshot-0.6705 File not found!
 Time is 0.671000
@@ -22707,7 +22707,7 @@ intermediate/snapshot-0.6740 File not found!
 Time is 0.674500
 intermediate/snapshot-0.6745 File not found!
 Time is 0.675000
-nz is 1000
+intermediate/snapshot-0.6750 File not found!
 Time is 0.675500
 intermediate/snapshot-0.6755 File not found!
 Time is 0.676000
@@ -22727,7 +22727,7 @@ intermediate/snapshot-0.6790 File not found!
 Time is 0.679500
 intermediate/snapshot-0.6795 File not found!
 Time is 0.680000
-nz is 1000
+intermediate/snapshot-0.6800 File not found!
 Time is 0.680500
 intermediate/snapshot-0.6805 File not found!
 Time is 0.681000
@@ -22747,7 +22747,7 @@ intermediate/snapshot-0.6840 File not found!
 Time is 0.684500
 intermediate/snapshot-0.6845 File not found!
 Time is 0.685000
-nz is 1000
+intermediate/snapshot-0.6850 File not found!
 Time is 0.685500
 intermediate/snapshot-0.6855 File not found!
 Time is 0.686000
@@ -22767,7 +22767,7 @@ intermediate/snapshot-0.6890 File not found!
 Time is 0.689500
 intermediate/snapshot-0.6895 File not found!
 Time is 0.690000
-nz is 1000
+intermediate/snapshot-0.6900 File not found!
 Time is 0.690500
 intermediate/snapshot-0.6905 File not found!
 Time is 0.691000
@@ -22787,7 +22787,7 @@ intermediate/snapshot-0.6940 File not found!
 Time is 0.694500
 intermediate/snapshot-0.6945 File not found!
 Time is 0.695000
-nz is 1000
+intermediate/snapshot-0.6950 File not found!
 Time is 0.695500
 intermediate/snapshot-0.6955 File not found!
 Time is 0.696000
@@ -22807,7 +22807,7 @@ intermediate/snapshot-0.6990 File not found!
 Time is 0.699500
 intermediate/snapshot-0.6995 File not found!
 Time is 0.700000
-nz is 1000
+intermediate/snapshot-0.7000 File not found!
 Time is 0.700500
 intermediate/snapshot-0.7005 File not found!
 Time is 0.701000
@@ -22827,7 +22827,7 @@ intermediate/snapshot-0.7040 File not found!
 Time is 0.704500
 intermediate/snapshot-0.7045 File not found!
 Time is 0.705000
-nz is 1000
+intermediate/snapshot-0.7050 File not found!
 Time is 0.705500
 intermediate/snapshot-0.7055 File not found!
 Time is 0.706000
@@ -22847,7 +22847,7 @@ intermediate/snapshot-0.7090 File not found!
 Time is 0.709500
 intermediate/snapshot-0.7095 File not found!
 Time is 0.710000
-nz is 1000
+intermediate/snapshot-0.7100 File not found!
 Time is 0.710500
 intermediate/snapshot-0.7105 File not found!
 Time is 0.711000
@@ -22867,7 +22867,7 @@ intermediate/snapshot-0.7140 File not found!
 Time is 0.714500
 intermediate/snapshot-0.7145 File not found!
 Time is 0.715000
-nz is 1000
+intermediate/snapshot-0.7150 File not found!
 Time is 0.715500
 intermediate/snapshot-0.7155 File not found!
 Time is 0.716000
@@ -22887,7 +22887,7 @@ intermediate/snapshot-0.7190 File not found!
 Time is 0.719500
 intermediate/snapshot-0.7195 File not found!
 Time is 0.720000
-nz is 1000
+intermediate/snapshot-0.7200 File not found!
 Time is 0.720500
 intermediate/snapshot-0.7205 File not found!
 Time is 0.721000
@@ -22907,7 +22907,7 @@ intermediate/snapshot-0.7240 File not found!
 Time is 0.724500
 intermediate/snapshot-0.7245 File not found!
 Time is 0.725000
-nz is 1000
+intermediate/snapshot-0.7250 File not found!
 Time is 0.725500
 intermediate/snapshot-0.7255 File not found!
 Time is 0.726000
@@ -22927,7 +22927,7 @@ intermediate/snapshot-0.7290 File not found!
 Time is 0.729500
 intermediate/snapshot-0.7295 File not found!
 Time is 0.730000
-nz is 1000
+intermediate/snapshot-0.7300 File not found!
 Time is 0.730500
 intermediate/snapshot-0.7305 File not found!
 Time is 0.731000
@@ -22947,7 +22947,7 @@ intermediate/snapshot-0.7340 File not found!
 Time is 0.734500
 intermediate/snapshot-0.7345 File not found!
 Time is 0.735000
-nz is 1000
+intermediate/snapshot-0.7350 File not found!
 Time is 0.735500
 intermediate/snapshot-0.7355 File not found!
 Time is 0.736000
@@ -22967,7 +22967,7 @@ intermediate/snapshot-0.7390 File not found!
 Time is 0.739500
 intermediate/snapshot-0.7395 File not found!
 Time is 0.740000
-nz is 1000
+intermediate/snapshot-0.7400 File not found!
 Time is 0.740500
 intermediate/snapshot-0.7405 File not found!
 Time is 0.741000
@@ -22987,7 +22987,7 @@ intermediate/snapshot-0.7440 File not found!
 Time is 0.744500
 intermediate/snapshot-0.7445 File not found!
 Time is 0.745000
-nz is 1000
+intermediate/snapshot-0.7450 File not found!
 Time is 0.745500
 intermediate/snapshot-0.7455 File not found!
 Time is 0.746000
@@ -23007,7 +23007,7 @@ intermediate/snapshot-0.7490 File not found!
 Time is 0.749500
 intermediate/snapshot-0.7495 File not found!
 Time is 0.750000
-nz is 1000
+intermediate/snapshot-0.7500 File not found!
 Time is 0.750500
 intermediate/snapshot-0.7505 File not found!
 Time is 0.751000
@@ -23027,7 +23027,7 @@ intermediate/snapshot-0.7540 File not found!
 Time is 0.754500
 intermediate/snapshot-0.7545 File not found!
 Time is 0.755000
-nz is 1000
+intermediate/snapshot-0.7550 File not found!
 Time is 0.755500
 intermediate/snapshot-0.7555 File not found!
 Time is 0.756000
@@ -23047,7 +23047,7 @@ intermediate/snapshot-0.7590 File not found!
 Time is 0.759500
 intermediate/snapshot-0.7595 File not found!
 Time is 0.760000
-nz is 1000
+intermediate/snapshot-0.7600 File not found!
 Time is 0.760500
 intermediate/snapshot-0.7605 File not found!
 Time is 0.761000
@@ -23067,7 +23067,7 @@ intermediate/snapshot-0.7640 File not found!
 Time is 0.764500
 intermediate/snapshot-0.7645 File not found!
 Time is 0.765000
-nz is 1000
+intermediate/snapshot-0.7650 File not found!
 Time is 0.765500
 intermediate/snapshot-0.7655 File not found!
 Time is 0.766000
@@ -23087,7 +23087,7 @@ intermediate/snapshot-0.7690 File not found!
 Time is 0.769500
 intermediate/snapshot-0.7695 File not found!
 Time is 0.770000
-nz is 1000
+intermediate/snapshot-0.7700 File not found!
 Time is 0.770500
 intermediate/snapshot-0.7705 File not found!
 Time is 0.771000
@@ -23107,7 +23107,7 @@ intermediate/snapshot-0.7740 File not found!
 Time is 0.774500
 intermediate/snapshot-0.7745 File not found!
 Time is 0.775000
-nz is 1000
+intermediate/snapshot-0.7750 File not found!
 Time is 0.775500
 intermediate/snapshot-0.7755 File not found!
 Time is 0.776000
@@ -23127,7 +23127,7 @@ intermediate/snapshot-0.7790 File not found!
 Time is 0.779500
 intermediate/snapshot-0.7795 File not found!
 Time is 0.780000
-nz is 1000
+intermediate/snapshot-0.7800 File not found!
 Time is 0.780500
 intermediate/snapshot-0.7805 File not found!
 Time is 0.781000
@@ -23147,7 +23147,7 @@ intermediate/snapshot-0.7840 File not found!
 Time is 0.784500
 intermediate/snapshot-0.7845 File not found!
 Time is 0.785000
-nz is 1000
+intermediate/snapshot-0.7850 File not found!
 Time is 0.785500
 intermediate/snapshot-0.7855 File not found!
 Time is 0.786000
@@ -23167,7 +23167,7 @@ intermediate/snapshot-0.7890 File not found!
 Time is 0.789500
 intermediate/snapshot-0.7895 File not found!
 Time is 0.790000
-nz is 1000
+intermediate/snapshot-0.7900 File not found!
 Time is 0.790500
 intermediate/snapshot-0.7905 File not found!
 Time is 0.791000
@@ -23187,7 +23187,7 @@ intermediate/snapshot-0.7940 File not found!
 Time is 0.794500
 intermediate/snapshot-0.7945 File not found!
 Time is 0.795000
-nz is 1000
+intermediate/snapshot-0.7950 File not found!
 Time is 0.795500
 intermediate/snapshot-0.7955 File not found!
 Time is 0.796000
@@ -23207,7 +23207,7 @@ intermediate/snapshot-0.7990 File not found!
 Time is 0.799500
 intermediate/snapshot-0.7995 File not found!
 Time is 0.800000
-nz is 1000
+intermediate/snapshot-0.8000 File not found!
 Time is 0.800500
 intermediate/snapshot-0.8005 File not found!
 Time is 0.801000
@@ -23227,7 +23227,7 @@ intermediate/snapshot-0.8040 File not found!
 Time is 0.804500
 intermediate/snapshot-0.8045 File not found!
 Time is 0.805000
-nz is 1000
+intermediate/snapshot-0.8050 File not found!
 Time is 0.805500
 intermediate/snapshot-0.8055 File not found!
 Time is 0.806000
@@ -23247,7 +23247,7 @@ intermediate/snapshot-0.8090 File not found!
 Time is 0.809500
 intermediate/snapshot-0.8095 File not found!
 Time is 0.810000
-nz is 1000
+intermediate/snapshot-0.8100 File not found!
 Time is 0.810500
 intermediate/snapshot-0.8105 File not found!
 Time is 0.811000
@@ -23267,7 +23267,7 @@ intermediate/snapshot-0.8140 File not found!
 Time is 0.814500
 intermediate/snapshot-0.8145 File not found!
 Time is 0.815000
-nz is 1000
+intermediate/snapshot-0.8150 File not found!
 Time is 0.815500
 intermediate/snapshot-0.8155 File not found!
 Time is 0.816000
@@ -23287,7 +23287,7 @@ intermediate/snapshot-0.8190 File not found!
 Time is 0.819500
 intermediate/snapshot-0.8195 File not found!
 Time is 0.820000
-nz is 1000
+intermediate/snapshot-0.8200 File not found!
 Time is 0.820500
 intermediate/snapshot-0.8205 File not found!
 Time is 0.821000
@@ -23307,7 +23307,7 @@ intermediate/snapshot-0.8240 File not found!
 Time is 0.824500
 intermediate/snapshot-0.8245 File not found!
 Time is 0.825000
-nz is 1000
+intermediate/snapshot-0.8250 File not found!
 Time is 0.825500
 intermediate/snapshot-0.8255 File not found!
 Time is 0.826000
@@ -23327,7 +23327,7 @@ intermediate/snapshot-0.8290 File not found!
 Time is 0.829500
 intermediate/snapshot-0.8295 File not found!
 Time is 0.830000
-nz is 1000
+intermediate/snapshot-0.8300 File not found!
 Time is 0.830500
 intermediate/snapshot-0.8305 File not found!
 Time is 0.831000
@@ -23347,7 +23347,7 @@ intermediate/snapshot-0.8340 File not found!
 Time is 0.834500
 intermediate/snapshot-0.8345 File not found!
 Time is 0.835000
-nz is 1000
+intermediate/snapshot-0.8350 File not found!
 Time is 0.835500
 intermediate/snapshot-0.8355 File not found!
 Time is 0.836000
@@ -23367,7 +23367,7 @@ intermediate/snapshot-0.8390 File not found!
 Time is 0.839500
 intermediate/snapshot-0.8395 File not found!
 Time is 0.840000
-nz is 1000
+intermediate/snapshot-0.8400 File not found!
 Time is 0.840500
 intermediate/snapshot-0.8405 File not found!
 Time is 0.841000
@@ -23387,7 +23387,7 @@ intermediate/snapshot-0.8440 File not found!
 Time is 0.844500
 intermediate/snapshot-0.8445 File not found!
 Time is 0.845000
-nz is 1000
+intermediate/snapshot-0.8450 File not found!
 Time is 0.845500
 intermediate/snapshot-0.8455 File not found!
 Time is 0.846000
@@ -23407,7 +23407,7 @@ intermediate/snapshot-0.8490 File not found!
 Time is 0.849500
 intermediate/snapshot-0.8495 File not found!
 Time is 0.850000
-nz is 1000
+intermediate/snapshot-0.8500 File not found!
 Time is 0.850500
 intermediate/snapshot-0.8505 File not found!
 Time is 0.851000
@@ -23427,7 +23427,7 @@ intermediate/snapshot-0.8540 File not found!
 Time is 0.854500
 intermediate/snapshot-0.8545 File not found!
 Time is 0.855000
-nz is 1000
+intermediate/snapshot-0.8550 File not found!
 Time is 0.855500
 intermediate/snapshot-0.8555 File not found!
 Time is 0.856000
@@ -23447,7 +23447,7 @@ intermediate/snapshot-0.8590 File not found!
 Time is 0.859500
 intermediate/snapshot-0.8595 File not found!
 Time is 0.860000
-nz is 1000
+intermediate/snapshot-0.8600 File not found!
 Time is 0.860500
 intermediate/snapshot-0.8605 File not found!
 Time is 0.861000
@@ -23467,7 +23467,7 @@ intermediate/snapshot-0.8640 File not found!
 Time is 0.864500
 intermediate/snapshot-0.8645 File not found!
 Time is 0.865000
-nz is 1000
+intermediate/snapshot-0.8650 File not found!
 Time is 0.865500
 intermediate/snapshot-0.8655 File not found!
 Time is 0.866000
@@ -23487,7 +23487,7 @@ intermediate/snapshot-0.8690 File not found!
 Time is 0.869500
 intermediate/snapshot-0.8695 File not found!
 Time is 0.870000
-nz is 1000
+intermediate/snapshot-0.8700 File not found!
 Time is 0.870500
 intermediate/snapshot-0.8705 File not found!
 Time is 0.871000
@@ -23507,7 +23507,7 @@ intermediate/snapshot-0.8740 File not found!
 Time is 0.874500
 intermediate/snapshot-0.8745 File not found!
 Time is 0.875000
-nz is 1000
+intermediate/snapshot-0.8750 File not found!
 Time is 0.875500
 intermediate/snapshot-0.8755 File not found!
 Time is 0.876000
@@ -23527,7 +23527,7 @@ intermediate/snapshot-0.8790 File not found!
 Time is 0.879500
 intermediate/snapshot-0.8795 File not found!
 Time is 0.880000
-nz is 1000
+intermediate/snapshot-0.8800 File not found!
 Time is 0.880500
 intermediate/snapshot-0.8805 File not found!
 Time is 0.881000
@@ -23547,7 +23547,7 @@ intermediate/snapshot-0.8840 File not found!
 Time is 0.884500
 intermediate/snapshot-0.8845 File not found!
 Time is 0.885000
-nz is 1000
+intermediate/snapshot-0.8850 File not found!
 Time is 0.885500
 intermediate/snapshot-0.8855 File not found!
 Time is 0.886000
@@ -23567,7 +23567,7 @@ intermediate/snapshot-0.8890 File not found!
 Time is 0.889500
 intermediate/snapshot-0.8895 File not found!
 Time is 0.890000
-nz is 1000
+intermediate/snapshot-0.8900 File not found!
 Time is 0.890500
 intermediate/snapshot-0.8905 File not found!
 Time is 0.891000
@@ -23587,7 +23587,7 @@ intermediate/snapshot-0.8940 File not found!
 Time is 0.894500
 intermediate/snapshot-0.8945 File not found!
 Time is 0.895000
-nz is 1000
+intermediate/snapshot-0.8950 File not found!
 Time is 0.895500
 intermediate/snapshot-0.8955 File not found!
 Time is 0.896000
@@ -23607,7 +23607,7 @@ intermediate/snapshot-0.8990 File not found!
 Time is 0.899500
 intermediate/snapshot-0.8995 File not found!
 Time is 0.900000
-nz is 1000
+intermediate/snapshot-0.9000 File not found!
 Time is 0.900500
 intermediate/snapshot-0.9005 File not found!
 Time is 0.901000
@@ -23627,7 +23627,7 @@ intermediate/snapshot-0.9040 File not found!
 Time is 0.904500
 intermediate/snapshot-0.9045 File not found!
 Time is 0.905000
-nz is 1000
+intermediate/snapshot-0.9050 File not found!
 Time is 0.905500
 intermediate/snapshot-0.9055 File not found!
 Time is 0.906000
@@ -23647,7 +23647,7 @@ intermediate/snapshot-0.9090 File not found!
 Time is 0.909500
 intermediate/snapshot-0.9095 File not found!
 Time is 0.910000
-nz is 1000
+intermediate/snapshot-0.9100 File not found!
 Time is 0.910500
 intermediate/snapshot-0.9105 File not found!
 Time is 0.911000
@@ -23667,7 +23667,7 @@ intermediate/snapshot-0.9140 File not found!
 Time is 0.914500
 intermediate/snapshot-0.9145 File not found!
 Time is 0.915000
-nz is 1000
+intermediate/snapshot-0.9150 File not found!
 Time is 0.915500
 intermediate/snapshot-0.9155 File not found!
 Time is 0.916000
@@ -23687,7 +23687,7 @@ intermediate/snapshot-0.9190 File not found!
 Time is 0.919500
 intermediate/snapshot-0.9195 File not found!
 Time is 0.920000
-nz is 1000
+intermediate/snapshot-0.9200 File not found!
 Time is 0.920500
 intermediate/snapshot-0.9205 File not found!
 Time is 0.921000
@@ -23707,7 +23707,7 @@ intermediate/snapshot-0.9240 File not found!
 Time is 0.924500
 intermediate/snapshot-0.9245 File not found!
 Time is 0.925000
-nz is 1000
+intermediate/snapshot-0.9250 File not found!
 Time is 0.925500
 intermediate/snapshot-0.9255 File not found!
 Time is 0.926000
@@ -23727,7 +23727,7 @@ intermediate/snapshot-0.9290 File not found!
 Time is 0.929500
 intermediate/snapshot-0.9295 File not found!
 Time is 0.930000
-nz is 1000
+intermediate/snapshot-0.9300 File not found!
 Time is 0.930500
 intermediate/snapshot-0.9305 File not found!
 Time is 0.931000
@@ -23747,7 +23747,7 @@ intermediate/snapshot-0.9340 File not found!
 Time is 0.934500
 intermediate/snapshot-0.9345 File not found!
 Time is 0.935000
-nz is 1000
+intermediate/snapshot-0.9350 File not found!
 Time is 0.935500
 intermediate/snapshot-0.9355 File not found!
 Time is 0.936000
@@ -23767,7 +23767,7 @@ intermediate/snapshot-0.9390 File not found!
 Time is 0.939500
 intermediate/snapshot-0.9395 File not found!
 Time is 0.940000
-nz is 1000
+intermediate/snapshot-0.9400 File not found!
 Time is 0.940500
 intermediate/snapshot-0.9405 File not found!
 Time is 0.941000
@@ -23787,7 +23787,7 @@ intermediate/snapshot-0.9440 File not found!
 Time is 0.944500
 intermediate/snapshot-0.9445 File not found!
 Time is 0.945000
-nz is 1000
+intermediate/snapshot-0.9450 File not found!
 Time is 0.945500
 intermediate/snapshot-0.9455 File not found!
 Time is 0.946000
@@ -23807,7 +23807,7 @@ intermediate/snapshot-0.9490 File not found!
 Time is 0.949500
 intermediate/snapshot-0.9495 File not found!
 Time is 0.950000
-nz is 1000
+intermediate/snapshot-0.9500 File not found!
 Time is 0.950500
 intermediate/snapshot-0.9505 File not found!
 Time is 0.951000
@@ -23827,7 +23827,7 @@ intermediate/snapshot-0.9540 File not found!
 Time is 0.954500
 intermediate/snapshot-0.9545 File not found!
 Time is 0.955000
-nz is 1000
+intermediate/snapshot-0.9550 File not found!
 Time is 0.955500
 intermediate/snapshot-0.9555 File not found!
 Time is 0.956000
@@ -23847,7 +23847,7 @@ intermediate/snapshot-0.9590 File not found!
 Time is 0.959500
 intermediate/snapshot-0.9595 File not found!
 Time is 0.960000
-nz is 1000
+intermediate/snapshot-0.9600 File not found!
 Time is 0.960500
 intermediate/snapshot-0.9605 File not found!
 Time is 0.961000
@@ -23867,7 +23867,7 @@ intermediate/snapshot-0.9640 File not found!
 Time is 0.964500
 intermediate/snapshot-0.9645 File not found!
 Time is 0.965000
-nz is 1000
+intermediate/snapshot-0.9650 File not found!
 Time is 0.965500
 intermediate/snapshot-0.9655 File not found!
 Time is 0.966000
@@ -23887,7 +23887,7 @@ intermediate/snapshot-0.9690 File not found!
 Time is 0.969500
 intermediate/snapshot-0.9695 File not found!
 Time is 0.970000
-nz is 1000
+intermediate/snapshot-0.9700 File not found!
 Time is 0.970500
 intermediate/snapshot-0.9705 File not found!
 Time is 0.971000
@@ -23907,7 +23907,7 @@ intermediate/snapshot-0.9740 File not found!
 Time is 0.974500
 intermediate/snapshot-0.9745 File not found!
 Time is 0.975000
-nz is 1000
+intermediate/snapshot-0.9750 File not found!
 Time is 0.975500
 intermediate/snapshot-0.9755 File not found!
 Time is 0.976000
@@ -23927,7 +23927,7 @@ intermediate/snapshot-0.9790 File not found!
 Time is 0.979500
 intermediate/snapshot-0.9795 File not found!
 Time is 0.980000
-nz is 1000
+intermediate/snapshot-0.9800 File not found!
 Time is 0.980500
 intermediate/snapshot-0.9805 File not found!
 Time is 0.981000
@@ -23947,7 +23947,7 @@ intermediate/snapshot-0.9840 File not found!
 Time is 0.984500
 intermediate/snapshot-0.9845 File not found!
 Time is 0.985000
-nz is 1000
+intermediate/snapshot-0.9850 File not found!
 Time is 0.985500
 intermediate/snapshot-0.9855 File not found!
 Time is 0.986000
@@ -23967,7 +23967,7 @@ intermediate/snapshot-0.9890 File not found!
 Time is 0.989500
 intermediate/snapshot-0.9895 File not found!
 Time is 0.990000
-nz is 1000
+intermediate/snapshot-0.9900 File not found!
 Time is 0.990500
 intermediate/snapshot-0.9905 File not found!
 Time is 0.991000
@@ -23987,7 +23987,7 @@ intermediate/snapshot-0.9940 File not found!
 Time is 0.994500
 intermediate/snapshot-0.9945 File not found!
 Time is 0.995000
-nz is 1000
+intermediate/snapshot-0.9950 File not found!
 Time is 0.995500
 intermediate/snapshot-0.9955 File not found!
 Time is 0.996000
@@ -24007,7 +24007,7 @@ intermediate/snapshot-0.9990 File not found!
 Time is 0.999500
 intermediate/snapshot-0.9995 File not found!
 Time is 1.000000
-nz is 1000
+intermediate/snapshot-1.0000 File not found!
 Time is 1.000500
 intermediate/snapshot-1.0005 File not found!
 Time is 1.001000
@@ -24027,7 +24027,7 @@ intermediate/snapshot-1.0040 File not found!
 Time is 1.004500
 intermediate/snapshot-1.0045 File not found!
 Time is 1.005000
-nz is 1000
+intermediate/snapshot-1.0050 File not found!
 Time is 1.005500
 intermediate/snapshot-1.0055 File not found!
 Time is 1.006000
@@ -24047,7 +24047,7 @@ intermediate/snapshot-1.0090 File not found!
 Time is 1.009500
 intermediate/snapshot-1.0095 File not found!
 Time is 1.010000
-nz is 1000
+intermediate/snapshot-1.0100 File not found!
 Time is 1.010500
 intermediate/snapshot-1.0105 File not found!
 Time is 1.011000
@@ -24067,7 +24067,7 @@ intermediate/snapshot-1.0140 File not found!
 Time is 1.014500
 intermediate/snapshot-1.0145 File not found!
 Time is 1.015000
-nz is 1000
+intermediate/snapshot-1.0150 File not found!
 Time is 1.015500
 intermediate/snapshot-1.0155 File not found!
 Time is 1.016000
@@ -24087,7 +24087,7 @@ intermediate/snapshot-1.0190 File not found!
 Time is 1.019500
 intermediate/snapshot-1.0195 File not found!
 Time is 1.020000
-nz is 1000
+intermediate/snapshot-1.0200 File not found!
 Time is 1.020500
 intermediate/snapshot-1.0205 File not found!
 Time is 1.021000
@@ -24107,7 +24107,7 @@ intermediate/snapshot-1.0240 File not found!
 Time is 1.024500
 intermediate/snapshot-1.0245 File not found!
 Time is 1.025000
-nz is 1000
+intermediate/snapshot-1.0250 File not found!
 Time is 1.025500
 intermediate/snapshot-1.0255 File not found!
 Time is 1.026000
@@ -24127,7 +24127,7 @@ intermediate/snapshot-1.0290 File not found!
 Time is 1.029500
 intermediate/snapshot-1.0295 File not found!
 Time is 1.030000
-nz is 1000
+intermediate/snapshot-1.0300 File not found!
 Time is 1.030500
 intermediate/snapshot-1.0305 File not found!
 Time is 1.031000
@@ -24147,7 +24147,7 @@ intermediate/snapshot-1.0340 File not found!
 Time is 1.034500
 intermediate/snapshot-1.0345 File not found!
 Time is 1.035000
-nz is 1000
+intermediate/snapshot-1.0350 File not found!
 Time is 1.035500
 intermediate/snapshot-1.0355 File not found!
 Time is 1.036000
@@ -24167,7 +24167,7 @@ intermediate/snapshot-1.0390 File not found!
 Time is 1.039500
 intermediate/snapshot-1.0395 File not found!
 Time is 1.040000
-nz is 1000
+intermediate/snapshot-1.0400 File not found!
 Time is 1.040500
 intermediate/snapshot-1.0405 File not found!
 Time is 1.041000
@@ -24187,7 +24187,7 @@ intermediate/snapshot-1.0440 File not found!
 Time is 1.044500
 intermediate/snapshot-1.0445 File not found!
 Time is 1.045000
-nz is 1000
+intermediate/snapshot-1.0450 File not found!
 Time is 1.045500
 intermediate/snapshot-1.0455 File not found!
 Time is 1.046000
@@ -24207,7 +24207,7 @@ intermediate/snapshot-1.0490 File not found!
 Time is 1.049500
 intermediate/snapshot-1.0495 File not found!
 Time is 1.050000
-nz is 1000
+intermediate/snapshot-1.0500 File not found!
 Time is 1.050500
 intermediate/snapshot-1.0505 File not found!
 Time is 1.051000
@@ -24227,7 +24227,7 @@ intermediate/snapshot-1.0540 File not found!
 Time is 1.054500
 intermediate/snapshot-1.0545 File not found!
 Time is 1.055000
-nz is 1000
+intermediate/snapshot-1.0550 File not found!
 Time is 1.055500
 intermediate/snapshot-1.0555 File not found!
 Time is 1.056000
@@ -24247,7 +24247,7 @@ intermediate/snapshot-1.0590 File not found!
 Time is 1.059500
 intermediate/snapshot-1.0595 File not found!
 Time is 1.060000
-nz is 1000
+intermediate/snapshot-1.0600 File not found!
 Time is 1.060500
 intermediate/snapshot-1.0605 File not found!
 Time is 1.061000
@@ -24267,7 +24267,7 @@ intermediate/snapshot-1.0640 File not found!
 Time is 1.064500
 intermediate/snapshot-1.0645 File not found!
 Time is 1.065000
-nz is 1000
+intermediate/snapshot-1.0650 File not found!
 Time is 1.065500
 intermediate/snapshot-1.0655 File not found!
 Time is 1.066000
@@ -24287,7 +24287,7 @@ intermediate/snapshot-1.0690 File not found!
 Time is 1.069500
 intermediate/snapshot-1.0695 File not found!
 Time is 1.070000
-nz is 1000
+intermediate/snapshot-1.0700 File not found!
 Time is 1.070500
 intermediate/snapshot-1.0705 File not found!
 Time is 1.071000
@@ -24307,7 +24307,7 @@ intermediate/snapshot-1.0740 File not found!
 Time is 1.074500
 intermediate/snapshot-1.0745 File not found!
 Time is 1.075000
-nz is 1000
+intermediate/snapshot-1.0750 File not found!
 Time is 1.075500
 intermediate/snapshot-1.0755 File not found!
 Time is 1.076000
@@ -24327,7 +24327,7 @@ intermediate/snapshot-1.0790 File not found!
 Time is 1.079500
 intermediate/snapshot-1.0795 File not found!
 Time is 1.080000
-nz is 1000
+intermediate/snapshot-1.0800 File not found!
 Time is 1.080500
 intermediate/snapshot-1.0805 File not found!
 Time is 1.081000
@@ -24347,7 +24347,7 @@ intermediate/snapshot-1.0840 File not found!
 Time is 1.084500
 intermediate/snapshot-1.0845 File not found!
 Time is 1.085000
-nz is 1000
+intermediate/snapshot-1.0850 File not found!
 Time is 1.085500
 intermediate/snapshot-1.0855 File not found!
 Time is 1.086000
@@ -24367,7 +24367,7 @@ intermediate/snapshot-1.0890 File not found!
 Time is 1.089500
 intermediate/snapshot-1.0895 File not found!
 Time is 1.090000
-nz is 1000
+intermediate/snapshot-1.0900 File not found!
 Time is 1.090500
 intermediate/snapshot-1.0905 File not found!
 Time is 1.091000
@@ -24387,7 +24387,7 @@ intermediate/snapshot-1.0940 File not found!
 Time is 1.094500
 intermediate/snapshot-1.0945 File not found!
 Time is 1.095000
-nz is 1000
+intermediate/snapshot-1.0950 File not found!
 Time is 1.095500
 intermediate/snapshot-1.0955 File not found!
 Time is 1.096000
@@ -24407,7 +24407,7 @@ intermediate/snapshot-1.0990 File not found!
 Time is 1.099500
 intermediate/snapshot-1.0995 File not found!
 Time is 1.100000
-nz is 1000
+intermediate/snapshot-1.1000 File not found!
 Time is 1.100500
 intermediate/snapshot-1.1005 File not found!
 Time is 1.101000
@@ -24427,7 +24427,7 @@ intermediate/snapshot-1.1040 File not found!
 Time is 1.104500
 intermediate/snapshot-1.1045 File not found!
 Time is 1.105000
-nz is 1000
+intermediate/snapshot-1.1050 File not found!
 Time is 1.105500
 intermediate/snapshot-1.1055 File not found!
 Time is 1.106000
@@ -24447,7 +24447,7 @@ intermediate/snapshot-1.1090 File not found!
 Time is 1.109500
 intermediate/snapshot-1.1095 File not found!
 Time is 1.110000
-nz is 1000
+intermediate/snapshot-1.1100 File not found!
 Time is 1.110500
 intermediate/snapshot-1.1105 File not found!
 Time is 1.111000
@@ -24467,7 +24467,7 @@ intermediate/snapshot-1.1140 File not found!
 Time is 1.114500
 intermediate/snapshot-1.1145 File not found!
 Time is 1.115000
-nz is 1000
+intermediate/snapshot-1.1150 File not found!
 Time is 1.115500
 intermediate/snapshot-1.1155 File not found!
 Time is 1.116000
@@ -24487,7 +24487,7 @@ intermediate/snapshot-1.1190 File not found!
 Time is 1.119500
 intermediate/snapshot-1.1195 File not found!
 Time is 1.120000
-nz is 1000
+intermediate/snapshot-1.1200 File not found!
 Time is 1.120500
 intermediate/snapshot-1.1205 File not found!
 Time is 1.121000
@@ -24507,7 +24507,7 @@ intermediate/snapshot-1.1240 File not found!
 Time is 1.124500
 intermediate/snapshot-1.1245 File not found!
 Time is 1.125000
-nz is 1000
+intermediate/snapshot-1.1250 File not found!
 Time is 1.125500
 intermediate/snapshot-1.1255 File not found!
 Time is 1.126000
@@ -24527,7 +24527,7 @@ intermediate/snapshot-1.1290 File not found!
 Time is 1.129500
 intermediate/snapshot-1.1295 File not found!
 Time is 1.130000
-nz is 1000
+intermediate/snapshot-1.1300 File not found!
 Time is 1.130500
 intermediate/snapshot-1.1305 File not found!
 Time is 1.131000
@@ -24547,7 +24547,7 @@ intermediate/snapshot-1.1340 File not found!
 Time is 1.134500
 intermediate/snapshot-1.1345 File not found!
 Time is 1.135000
-nz is 1000
+intermediate/snapshot-1.1350 File not found!
 Time is 1.135500
 intermediate/snapshot-1.1355 File not found!
 Time is 1.136000
@@ -24567,7 +24567,7 @@ intermediate/snapshot-1.1390 File not found!
 Time is 1.139500
 intermediate/snapshot-1.1395 File not found!
 Time is 1.140000
-nz is 1000
+intermediate/snapshot-1.1400 File not found!
 Time is 1.140500
 intermediate/snapshot-1.1405 File not found!
 Time is 1.141000
@@ -24587,7 +24587,7 @@ intermediate/snapshot-1.1440 File not found!
 Time is 1.144500
 intermediate/snapshot-1.1445 File not found!
 Time is 1.145000
-nz is 1000
+intermediate/snapshot-1.1450 File not found!
 Time is 1.145500
 intermediate/snapshot-1.1455 File not found!
 Time is 1.146000
@@ -24607,7 +24607,7 @@ intermediate/snapshot-1.1490 File not found!
 Time is 1.149500
 intermediate/snapshot-1.1495 File not found!
 Time is 1.150000
-nz is 1000
+intermediate/snapshot-1.1500 File not found!
 Time is 1.150500
 intermediate/snapshot-1.1505 File not found!
 Time is 1.151000
@@ -24627,7 +24627,7 @@ intermediate/snapshot-1.1540 File not found!
 Time is 1.154500
 intermediate/snapshot-1.1545 File not found!
 Time is 1.155000
-nz is 1000
+intermediate/snapshot-1.1550 File not found!
 Time is 1.155500
 intermediate/snapshot-1.1555 File not found!
 Time is 1.156000
@@ -24647,7 +24647,7 @@ intermediate/snapshot-1.1590 File not found!
 Time is 1.159500
 intermediate/snapshot-1.1595 File not found!
 Time is 1.160000
-nz is 1000
+intermediate/snapshot-1.1600 File not found!
 Time is 1.160500
 intermediate/snapshot-1.1605 File not found!
 Time is 1.161000
@@ -24667,7 +24667,7 @@ intermediate/snapshot-1.1640 File not found!
 Time is 1.164500
 intermediate/snapshot-1.1645 File not found!
 Time is 1.165000
-nz is 1000
+intermediate/snapshot-1.1650 File not found!
 Time is 1.165500
 intermediate/snapshot-1.1655 File not found!
 Time is 1.166000
@@ -24687,7 +24687,7 @@ intermediate/snapshot-1.1690 File not found!
 Time is 1.169500
 intermediate/snapshot-1.1695 File not found!
 Time is 1.170000
-nz is 1000
+intermediate/snapshot-1.1700 File not found!
 Time is 1.170500
 intermediate/snapshot-1.1705 File not found!
 Time is 1.171000
@@ -24707,7 +24707,7 @@ intermediate/snapshot-1.1740 File not found!
 Time is 1.174500
 intermediate/snapshot-1.1745 File not found!
 Time is 1.175000
-nz is 1000
+intermediate/snapshot-1.1750 File not found!
 Time is 1.175500
 intermediate/snapshot-1.1755 File not found!
 Time is 1.176000
@@ -24727,7 +24727,7 @@ intermediate/snapshot-1.1790 File not found!
 Time is 1.179500
 intermediate/snapshot-1.1795 File not found!
 Time is 1.180000
-nz is 1000
+intermediate/snapshot-1.1800 File not found!
 Time is 1.180500
 intermediate/snapshot-1.1805 File not found!
 Time is 1.181000
@@ -24747,7 +24747,7 @@ intermediate/snapshot-1.1840 File not found!
 Time is 1.184500
 intermediate/snapshot-1.1845 File not found!
 Time is 1.185000
-nz is 1000
+intermediate/snapshot-1.1850 File not found!
 Time is 1.185500
 intermediate/snapshot-1.1855 File not found!
 Time is 1.186000
@@ -24767,7 +24767,7 @@ intermediate/snapshot-1.1890 File not found!
 Time is 1.189500
 intermediate/snapshot-1.1895 File not found!
 Time is 1.190000
-nz is 1000
+intermediate/snapshot-1.1900 File not found!
 Time is 1.190500
 intermediate/snapshot-1.1905 File not found!
 Time is 1.191000
@@ -24787,7 +24787,7 @@ intermediate/snapshot-1.1940 File not found!
 Time is 1.194500
 intermediate/snapshot-1.1945 File not found!
 Time is 1.195000
-nz is 1000
+intermediate/snapshot-1.1950 File not found!
 Time is 1.195500
 intermediate/snapshot-1.1955 File not found!
 Time is 1.196000
@@ -24807,7 +24807,7 @@ intermediate/snapshot-1.1990 File not found!
 Time is 1.199500
 intermediate/snapshot-1.1995 File not found!
 Time is 1.200000
-nz is 1000
+intermediate/snapshot-1.2000 File not found!
 Time is 1.200500
 intermediate/snapshot-1.2005 File not found!
 Time is 1.201000
@@ -24827,7 +24827,7 @@ intermediate/snapshot-1.2040 File not found!
 Time is 1.204500
 intermediate/snapshot-1.2045 File not found!
 Time is 1.205000
-nz is 1000
+intermediate/snapshot-1.2050 File not found!
 Time is 1.205500
 intermediate/snapshot-1.2055 File not found!
 Time is 1.206000
@@ -24847,7 +24847,7 @@ intermediate/snapshot-1.2090 File not found!
 Time is 1.209500
 intermediate/snapshot-1.2095 File not found!
 Time is 1.210000
-nz is 1000
+intermediate/snapshot-1.2100 File not found!
 Time is 1.210500
 intermediate/snapshot-1.2105 File not found!
 Time is 1.211000
@@ -24867,7 +24867,7 @@ intermediate/snapshot-1.2140 File not found!
 Time is 1.214500
 intermediate/snapshot-1.2145 File not found!
 Time is 1.215000
-nz is 1000
+intermediate/snapshot-1.2150 File not found!
 Time is 1.215500
 intermediate/snapshot-1.2155 File not found!
 Time is 1.216000
@@ -24887,7 +24887,7 @@ intermediate/snapshot-1.2190 File not found!
 Time is 1.219500
 intermediate/snapshot-1.2195 File not found!
 Time is 1.220000
-nz is 1000
+intermediate/snapshot-1.2200 File not found!
 Time is 1.220500
 intermediate/snapshot-1.2205 File not found!
 Time is 1.221000
@@ -24907,7 +24907,7 @@ intermediate/snapshot-1.2240 File not found!
 Time is 1.224500
 intermediate/snapshot-1.2245 File not found!
 Time is 1.225000
-nz is 1000
+intermediate/snapshot-1.2250 File not found!
 Time is 1.225500
 intermediate/snapshot-1.2255 File not found!
 Time is 1.226000
@@ -24927,7 +24927,7 @@ intermediate/snapshot-1.2290 File not found!
 Time is 1.229500
 intermediate/snapshot-1.2295 File not found!
 Time is 1.230000
-nz is 1000
+intermediate/snapshot-1.2300 File not found!
 Time is 1.230500
 intermediate/snapshot-1.2305 File not found!
 Time is 1.231000
@@ -24947,7 +24947,7 @@ intermediate/snapshot-1.2340 File not found!
 Time is 1.234500
 intermediate/snapshot-1.2345 File not found!
 Time is 1.235000
-nz is 1000
+intermediate/snapshot-1.2350 File not found!
 Time is 1.235500
 intermediate/snapshot-1.2355 File not found!
 Time is 1.236000
@@ -24967,7 +24967,7 @@ intermediate/snapshot-1.2390 File not found!
 Time is 1.239500
 intermediate/snapshot-1.2395 File not found!
 Time is 1.240000
-nz is 1000
+intermediate/snapshot-1.2400 File not found!
 Time is 1.240500
 intermediate/snapshot-1.2405 File not found!
 Time is 1.241000
@@ -24987,7 +24987,7 @@ intermediate/snapshot-1.2440 File not found!
 Time is 1.244500
 intermediate/snapshot-1.2445 File not found!
 Time is 1.245000
-nz is 1000
+intermediate/snapshot-1.2450 File not found!
 Time is 1.245500
 intermediate/snapshot-1.2455 File not found!
 Time is 1.246000
@@ -25007,7 +25007,7 @@ intermediate/snapshot-1.2490 File not found!
 Time is 1.249500
 intermediate/snapshot-1.2495 File not found!
 Time is 1.250000
-nz is 1000
+intermediate/snapshot-1.2500 File not found!
 Time is 1.250500
 intermediate/snapshot-1.2505 File not found!
 Time is 1.251000
@@ -25027,7 +25027,7 @@ intermediate/snapshot-1.2540 File not found!
 Time is 1.254500
 intermediate/snapshot-1.2545 File not found!
 Time is 1.255000
-nz is 1000
+intermediate/snapshot-1.2550 File not found!
 Time is 1.255500
 intermediate/snapshot-1.2555 File not found!
 Time is 1.256000
@@ -25047,7 +25047,7 @@ intermediate/snapshot-1.2590 File not found!
 Time is 1.259500
 intermediate/snapshot-1.2595 File not found!
 Time is 1.260000
-nz is 1000
+intermediate/snapshot-1.2600 File not found!
 Time is 1.260500
 intermediate/snapshot-1.2605 File not found!
 Time is 1.261000
@@ -25067,7 +25067,7 @@ intermediate/snapshot-1.2640 File not found!
 Time is 1.264500
 intermediate/snapshot-1.2645 File not found!
 Time is 1.265000
-nz is 1000
+intermediate/snapshot-1.2650 File not found!
 Time is 1.265500
 intermediate/snapshot-1.2655 File not found!
 Time is 1.266000
@@ -25087,7 +25087,7 @@ intermediate/snapshot-1.2690 File not found!
 Time is 1.269500
 intermediate/snapshot-1.2695 File not found!
 Time is 1.270000
-nz is 1000
+intermediate/snapshot-1.2700 File not found!
 Time is 1.270500
 intermediate/snapshot-1.2705 File not found!
 Time is 1.271000
@@ -25107,7 +25107,7 @@ intermediate/snapshot-1.2740 File not found!
 Time is 1.274500
 intermediate/snapshot-1.2745 File not found!
 Time is 1.275000
-nz is 1000
+intermediate/snapshot-1.2750 File not found!
 Time is 1.275500
 intermediate/snapshot-1.2755 File not found!
 Time is 1.276000
@@ -25127,7 +25127,7 @@ intermediate/snapshot-1.2790 File not found!
 Time is 1.279500
 intermediate/snapshot-1.2795 File not found!
 Time is 1.280000
-nz is 1000
+intermediate/snapshot-1.2800 File not found!
 Time is 1.280500
 intermediate/snapshot-1.2805 File not found!
 Time is 1.281000
@@ -25147,7 +25147,7 @@ intermediate/snapshot-1.2840 File not found!
 Time is 1.284500
 intermediate/snapshot-1.2845 File not found!
 Time is 1.285000
-nz is 1000
+intermediate/snapshot-1.2850 File not found!
 Time is 1.285500
 intermediate/snapshot-1.2855 File not found!
 Time is 1.286000
@@ -25167,7 +25167,7 @@ intermediate/snapshot-1.2890 File not found!
 Time is 1.289500
 intermediate/snapshot-1.2895 File not found!
 Time is 1.290000
-nz is 1000
+intermediate/snapshot-1.2900 File not found!
 Time is 1.290500
 intermediate/snapshot-1.2905 File not found!
 Time is 1.291000
@@ -25187,7 +25187,7 @@ intermediate/snapshot-1.2940 File not found!
 Time is 1.294500
 intermediate/snapshot-1.2945 File not found!
 Time is 1.295000
-nz is 1000
+intermediate/snapshot-1.2950 File not found!
 Time is 1.295500
 intermediate/snapshot-1.2955 File not found!
 Time is 1.296000
@@ -25207,7 +25207,7 @@ intermediate/snapshot-1.2990 File not found!
 Time is 1.299500
 intermediate/snapshot-1.2995 File not found!
 Time is 1.300000
-nz is 1000
+intermediate/snapshot-1.3000 File not found!
 Time is 1.300500
 intermediate/snapshot-1.3005 File not found!
 Time is 1.301000
@@ -25227,7 +25227,7 @@ intermediate/snapshot-1.3040 File not found!
 Time is 1.304500
 intermediate/snapshot-1.3045 File not found!
 Time is 1.305000
-nz is 1000
+intermediate/snapshot-1.3050 File not found!
 Time is 1.305500
 intermediate/snapshot-1.3055 File not found!
 Time is 1.306000
@@ -25247,7 +25247,7 @@ intermediate/snapshot-1.3090 File not found!
 Time is 1.309500
 intermediate/snapshot-1.3095 File not found!
 Time is 1.310000
-nz is 1000
+intermediate/snapshot-1.3100 File not found!
 Time is 1.310500
 intermediate/snapshot-1.3105 File not found!
 Time is 1.311000
@@ -25267,7 +25267,7 @@ intermediate/snapshot-1.3140 File not found!
 Time is 1.314500
 intermediate/snapshot-1.3145 File not found!
 Time is 1.315000
-nz is 1000
+intermediate/snapshot-1.3150 File not found!
 Time is 1.315500
 intermediate/snapshot-1.3155 File not found!
 Time is 1.316000
@@ -25287,7 +25287,7 @@ intermediate/snapshot-1.3190 File not found!
 Time is 1.319500
 intermediate/snapshot-1.3195 File not found!
 Time is 1.320000
-nz is 1000
+intermediate/snapshot-1.3200 File not found!
 Time is 1.320500
 intermediate/snapshot-1.3205 File not found!
 Time is 1.321000
@@ -25307,7 +25307,7 @@ intermediate/snapshot-1.3240 File not found!
 Time is 1.324500
 intermediate/snapshot-1.3245 File not found!
 Time is 1.325000
-nz is 1000
+intermediate/snapshot-1.3250 File not found!
 Time is 1.325500
 intermediate/snapshot-1.3255 File not found!
 Time is 1.326000
@@ -25327,7 +25327,7 @@ intermediate/snapshot-1.3290 File not found!
 Time is 1.329500
 intermediate/snapshot-1.3295 File not found!
 Time is 1.330000
-nz is 1000
+intermediate/snapshot-1.3300 File not found!
 Time is 1.330500
 intermediate/snapshot-1.3305 File not found!
 Time is 1.331000
@@ -25347,7 +25347,7 @@ intermediate/snapshot-1.3340 File not found!
 Time is 1.334500
 intermediate/snapshot-1.3345 File not found!
 Time is 1.335000
-nz is 1000
+intermediate/snapshot-1.3350 File not found!
 Time is 1.335500
 intermediate/snapshot-1.3355 File not found!
 Time is 1.336000
@@ -25367,7 +25367,7 @@ intermediate/snapshot-1.3390 File not found!
 Time is 1.339500
 intermediate/snapshot-1.3395 File not found!
 Time is 1.340000
-nz is 1000
+intermediate/snapshot-1.3400 File not found!
 Time is 1.340500
 intermediate/snapshot-1.3405 File not found!
 Time is 1.341000
@@ -25387,7 +25387,7 @@ intermediate/snapshot-1.3440 File not found!
 Time is 1.344500
 intermediate/snapshot-1.3445 File not found!
 Time is 1.345000
-nz is 1000
+intermediate/snapshot-1.3450 File not found!
 Time is 1.345500
 intermediate/snapshot-1.3455 File not found!
 Time is 1.346000
@@ -25407,7 +25407,7 @@ intermediate/snapshot-1.3490 File not found!
 Time is 1.349500
 intermediate/snapshot-1.3495 File not found!
 Time is 1.350000
-nz is 1000
+intermediate/snapshot-1.3500 File not found!
 Time is 1.350500
 intermediate/snapshot-1.3505 File not found!
 Time is 1.351000
@@ -25427,7 +25427,7 @@ intermediate/snapshot-1.3540 File not found!
 Time is 1.354500
 intermediate/snapshot-1.3545 File not found!
 Time is 1.355000
-nz is 1000
+intermediate/snapshot-1.3550 File not found!
 Time is 1.355500
 intermediate/snapshot-1.3555 File not found!
 Time is 1.356000
@@ -25447,7 +25447,7 @@ intermediate/snapshot-1.3590 File not found!
 Time is 1.359500
 intermediate/snapshot-1.3595 File not found!
 Time is 1.360000
-nz is 1000
+intermediate/snapshot-1.3600 File not found!
 Time is 1.360500
 intermediate/snapshot-1.3605 File not found!
 Time is 1.361000
@@ -25467,7 +25467,7 @@ intermediate/snapshot-1.3640 File not found!
 Time is 1.364500
 intermediate/snapshot-1.3645 File not found!
 Time is 1.365000
-nz is 1000
+intermediate/snapshot-1.3650 File not found!
 Time is 1.365500
 intermediate/snapshot-1.3655 File not found!
 Time is 1.366000
@@ -25487,7 +25487,7 @@ intermediate/snapshot-1.3690 File not found!
 Time is 1.369500
 intermediate/snapshot-1.3695 File not found!
 Time is 1.370000
-nz is 1000
+intermediate/snapshot-1.3700 File not found!
 Time is 1.370500
 intermediate/snapshot-1.3705 File not found!
 Time is 1.371000
@@ -25507,7 +25507,7 @@ intermediate/snapshot-1.3740 File not found!
 Time is 1.374500
 intermediate/snapshot-1.3745 File not found!
 Time is 1.375000
-nz is 1000
+intermediate/snapshot-1.3750 File not found!
 Time is 1.375500
 intermediate/snapshot-1.3755 File not found!
 Time is 1.376000
@@ -25527,7 +25527,7 @@ intermediate/snapshot-1.3790 File not found!
 Time is 1.379500
 intermediate/snapshot-1.3795 File not found!
 Time is 1.380000
-nz is 1000
+intermediate/snapshot-1.3800 File not found!
 Time is 1.380500
 intermediate/snapshot-1.3805 File not found!
 Time is 1.381000
@@ -25547,7 +25547,7 @@ intermediate/snapshot-1.3840 File not found!
 Time is 1.384500
 intermediate/snapshot-1.3845 File not found!
 Time is 1.385000
-nz is 1000
+intermediate/snapshot-1.3850 File not found!
 Time is 1.385500
 intermediate/snapshot-1.3855 File not found!
 Time is 1.386000
@@ -25567,7 +25567,7 @@ intermediate/snapshot-1.3890 File not found!
 Time is 1.389500
 intermediate/snapshot-1.3895 File not found!
 Time is 1.390000
-nz is 1000
+intermediate/snapshot-1.3900 File not found!
 Time is 1.390500
 intermediate/snapshot-1.3905 File not found!
 Time is 1.391000
@@ -25587,7 +25587,7 @@ intermediate/snapshot-1.3940 File not found!
 Time is 1.394500
 intermediate/snapshot-1.3945 File not found!
 Time is 1.395000
-nz is 1000
+intermediate/snapshot-1.3950 File not found!
 Time is 1.395500
 intermediate/snapshot-1.3955 File not found!
 Time is 1.396000
@@ -25607,7 +25607,7 @@ intermediate/snapshot-1.3990 File not found!
 Time is 1.399500
 intermediate/snapshot-1.3995 File not found!
 Time is 1.400000
-nz is 1000
+intermediate/snapshot-1.4000 File not found!
 Time is 1.400500
 intermediate/snapshot-1.4005 File not found!
 Time is 1.401000
@@ -25627,7 +25627,7 @@ intermediate/snapshot-1.4040 File not found!
 Time is 1.404500
 intermediate/snapshot-1.4045 File not found!
 Time is 1.405000
-nz is 1000
+intermediate/snapshot-1.4050 File not found!
 Time is 1.405500
 intermediate/snapshot-1.4055 File not found!
 Time is 1.406000
@@ -25647,7 +25647,7 @@ intermediate/snapshot-1.4090 File not found!
 Time is 1.409500
 intermediate/snapshot-1.4095 File not found!
 Time is 1.410000
-nz is 1000
+intermediate/snapshot-1.4100 File not found!
 Time is 1.410500
 intermediate/snapshot-1.4105 File not found!
 Time is 1.411000
@@ -25667,7 +25667,7 @@ intermediate/snapshot-1.4140 File not found!
 Time is 1.414500
 intermediate/snapshot-1.4145 File not found!
 Time is 1.415000
-nz is 1000
+intermediate/snapshot-1.4150 File not found!
 Time is 1.415500
 intermediate/snapshot-1.4155 File not found!
 Time is 1.416000
@@ -25687,7 +25687,7 @@ intermediate/snapshot-1.4190 File not found!
 Time is 1.419500
 intermediate/snapshot-1.4195 File not found!
 Time is 1.420000
-nz is 1000
+intermediate/snapshot-1.4200 File not found!
 Time is 1.420500
 intermediate/snapshot-1.4205 File not found!
 Time is 1.421000
@@ -25707,7 +25707,7 @@ intermediate/snapshot-1.4240 File not found!
 Time is 1.424500
 intermediate/snapshot-1.4245 File not found!
 Time is 1.425000
-nz is 1000
+intermediate/snapshot-1.4250 File not found!
 Time is 1.425500
 intermediate/snapshot-1.4255 File not found!
 Time is 1.426000
@@ -25727,7 +25727,7 @@ intermediate/snapshot-1.4290 File not found!
 Time is 1.429500
 intermediate/snapshot-1.4295 File not found!
 Time is 1.430000
-nz is 1000
+intermediate/snapshot-1.4300 File not found!
 Time is 1.430500
 intermediate/snapshot-1.4305 File not found!
 Time is 1.431000
@@ -25747,7 +25747,7 @@ intermediate/snapshot-1.4340 File not found!
 Time is 1.434500
 intermediate/snapshot-1.4345 File not found!
 Time is 1.435000
-nz is 1000
+intermediate/snapshot-1.4350 File not found!
 Time is 1.435500
 intermediate/snapshot-1.4355 File not found!
 Time is 1.436000
@@ -25767,7 +25767,7 @@ intermediate/snapshot-1.4390 File not found!
 Time is 1.439500
 intermediate/snapshot-1.4395 File not found!
 Time is 1.440000
-nz is 1000
+intermediate/snapshot-1.4400 File not found!
 Time is 1.440500
 intermediate/snapshot-1.4405 File not found!
 Time is 1.441000
@@ -25787,7 +25787,7 @@ intermediate/snapshot-1.4440 File not found!
 Time is 1.444500
 intermediate/snapshot-1.4445 File not found!
 Time is 1.445000
-nz is 1000
+intermediate/snapshot-1.4450 File not found!
 Time is 1.445500
 intermediate/snapshot-1.4455 File not found!
 Time is 1.446000
@@ -25807,7 +25807,7 @@ intermediate/snapshot-1.4490 File not found!
 Time is 1.449500
 intermediate/snapshot-1.4495 File not found!
 Time is 1.450000
-nz is 1000
+intermediate/snapshot-1.4500 File not found!
 Time is 1.450500
 intermediate/snapshot-1.4505 File not found!
 Time is 1.451000
@@ -25827,7 +25827,7 @@ intermediate/snapshot-1.4540 File not found!
 Time is 1.454500
 intermediate/snapshot-1.4545 File not found!
 Time is 1.455000
-nz is 1000
+intermediate/snapshot-1.4550 File not found!
 Time is 1.455500
 intermediate/snapshot-1.4555 File not found!
 Time is 1.456000
@@ -25847,7 +25847,7 @@ intermediate/snapshot-1.4590 File not found!
 Time is 1.459500
 intermediate/snapshot-1.4595 File not found!
 Time is 1.460000
-nz is 1000
+intermediate/snapshot-1.4600 File not found!
 Time is 1.460500
 intermediate/snapshot-1.4605 File not found!
 Time is 1.461000
@@ -25867,7 +25867,7 @@ intermediate/snapshot-1.4640 File not found!
 Time is 1.464500
 intermediate/snapshot-1.4645 File not found!
 Time is 1.465000
-nz is 1000
+intermediate/snapshot-1.4650 File not found!
 Time is 1.465500
 intermediate/snapshot-1.4655 File not found!
 Time is 1.466000
@@ -25887,7 +25887,7 @@ intermediate/snapshot-1.4690 File not found!
 Time is 1.469500
 intermediate/snapshot-1.4695 File not found!
 Time is 1.470000
-nz is 1000
+intermediate/snapshot-1.4700 File not found!
 Time is 1.470500
 intermediate/snapshot-1.4705 File not found!
 Time is 1.471000
@@ -25907,7 +25907,7 @@ intermediate/snapshot-1.4740 File not found!
 Time is 1.474500
 intermediate/snapshot-1.4745 File not found!
 Time is 1.475000
-nz is 1000
+intermediate/snapshot-1.4750 File not found!
 Time is 1.475500
 intermediate/snapshot-1.4755 File not found!
 Time is 1.476000
@@ -25927,7 +25927,7 @@ intermediate/snapshot-1.4790 File not found!
 Time is 1.479500
 intermediate/snapshot-1.4795 File not found!
 Time is 1.480000
-nz is 1000
+intermediate/snapshot-1.4800 File not found!
 Time is 1.480500
 intermediate/snapshot-1.4805 File not found!
 Time is 1.481000
@@ -25947,7 +25947,7 @@ intermediate/snapshot-1.4840 File not found!
 Time is 1.484500
 intermediate/snapshot-1.4845 File not found!
 Time is 1.485000
-nz is 1000
+intermediate/snapshot-1.4850 File not found!
 Time is 1.485500
 intermediate/snapshot-1.4855 File not found!
 Time is 1.486000
@@ -25967,7 +25967,7 @@ intermediate/snapshot-1.4890 File not found!
 Time is 1.489500
 intermediate/snapshot-1.4895 File not found!
 Time is 1.490000
-nz is 1000
+intermediate/snapshot-1.4900 File not found!
 Time is 1.490500
 intermediate/snapshot-1.4905 File not found!
 Time is 1.491000
@@ -25987,7 +25987,7 @@ intermediate/snapshot-1.4940 File not found!
 Time is 1.494500
 intermediate/snapshot-1.4945 File not found!
 Time is 1.495000
-nz is 1000
+intermediate/snapshot-1.4950 File not found!
 Time is 1.495500
 intermediate/snapshot-1.4955 File not found!
 Time is 1.496000
@@ -26007,7 +26007,7 @@ intermediate/snapshot-1.4990 File not found!
 Time is 1.499500
 intermediate/snapshot-1.4995 File not found!
 Time is 1.500000
-nz is 1000
+intermediate/snapshot-1.5000 File not found!
 Time is 1.500500
 intermediate/snapshot-1.5005 File not found!
 Time is 1.501000
@@ -26027,7 +26027,7 @@ intermediate/snapshot-1.5040 File not found!
 Time is 1.504500
 intermediate/snapshot-1.5045 File not found!
 Time is 1.505000
-nz is 1000
+intermediate/snapshot-1.5050 File not found!
 Time is 1.505500
 intermediate/snapshot-1.5055 File not found!
 Time is 1.506000
@@ -26047,7 +26047,7 @@ intermediate/snapshot-1.5090 File not found!
 Time is 1.509500
 intermediate/snapshot-1.5095 File not found!
 Time is 1.510000
-nz is 1000
+intermediate/snapshot-1.5100 File not found!
 Time is 1.510500
 intermediate/snapshot-1.5105 File not found!
 Time is 1.511000
@@ -26067,7 +26067,7 @@ intermediate/snapshot-1.5140 File not found!
 Time is 1.514500
 intermediate/snapshot-1.5145 File not found!
 Time is 1.515000
-nz is 1000
+intermediate/snapshot-1.5150 File not found!
 Time is 1.515500
 intermediate/snapshot-1.5155 File not found!
 Time is 1.516000
@@ -26087,7 +26087,7 @@ intermediate/snapshot-1.5190 File not found!
 Time is 1.519500
 intermediate/snapshot-1.5195 File not found!
 Time is 1.520000
-nz is 1000
+intermediate/snapshot-1.5200 File not found!
 Time is 1.520500
 intermediate/snapshot-1.5205 File not found!
 Time is 1.521000
@@ -26107,7 +26107,7 @@ intermediate/snapshot-1.5240 File not found!
 Time is 1.524500
 intermediate/snapshot-1.5245 File not found!
 Time is 1.525000
-nz is 1000
+intermediate/snapshot-1.5250 File not found!
 Time is 1.525500
 intermediate/snapshot-1.5255 File not found!
 Time is 1.526000
@@ -26127,7 +26127,7 @@ intermediate/snapshot-1.5290 File not found!
 Time is 1.529500
 intermediate/snapshot-1.5295 File not found!
 Time is 1.530000
-nz is 1000
+intermediate/snapshot-1.5300 File not found!
 Time is 1.530500
 intermediate/snapshot-1.5305 File not found!
 Time is 1.531000
@@ -26147,7 +26147,7 @@ intermediate/snapshot-1.5340 File not found!
 Time is 1.534500
 intermediate/snapshot-1.5345 File not found!
 Time is 1.535000
-nz is 1000
+intermediate/snapshot-1.5350 File not found!
 Time is 1.535500
 intermediate/snapshot-1.5355 File not found!
 Time is 1.536000
@@ -26167,7 +26167,7 @@ intermediate/snapshot-1.5390 File not found!
 Time is 1.539500
 intermediate/snapshot-1.5395 File not found!
 Time is 1.540000
-nz is 1000
+intermediate/snapshot-1.5400 File not found!
 Time is 1.540500
 intermediate/snapshot-1.5405 File not found!
 Time is 1.541000
@@ -26187,7 +26187,7 @@ intermediate/snapshot-1.5440 File not found!
 Time is 1.544500
 intermediate/snapshot-1.5445 File not found!
 Time is 1.545000
-nz is 1000
+intermediate/snapshot-1.5450 File not found!
 Time is 1.545500
 intermediate/snapshot-1.5455 File not found!
 Time is 1.546000
@@ -26207,7 +26207,7 @@ intermediate/snapshot-1.5490 File not found!
 Time is 1.549500
 intermediate/snapshot-1.5495 File not found!
 Time is 1.550000
-nz is 1000
+intermediate/snapshot-1.5500 File not found!
 Time is 1.550500
 intermediate/snapshot-1.5505 File not found!
 Time is 1.551000
@@ -26227,7 +26227,7 @@ intermediate/snapshot-1.5540 File not found!
 Time is 1.554500
 intermediate/snapshot-1.5545 File not found!
 Time is 1.555000
-nz is 1000
+intermediate/snapshot-1.5550 File not found!
 Time is 1.555500
 intermediate/snapshot-1.5555 File not found!
 Time is 1.556000
@@ -26247,7 +26247,7 @@ intermediate/snapshot-1.5590 File not found!
 Time is 1.559500
 intermediate/snapshot-1.5595 File not found!
 Time is 1.560000
-nz is 1000
+intermediate/snapshot-1.5600 File not found!
 Time is 1.560500
 intermediate/snapshot-1.5605 File not found!
 Time is 1.561000
@@ -26267,7 +26267,7 @@ intermediate/snapshot-1.5640 File not found!
 Time is 1.564500
 intermediate/snapshot-1.5645 File not found!
 Time is 1.565000
-nz is 1000
+intermediate/snapshot-1.5650 File not found!
 Time is 1.565500
 intermediate/snapshot-1.5655 File not found!
 Time is 1.566000
@@ -26287,7 +26287,7 @@ intermediate/snapshot-1.5690 File not found!
 Time is 1.569500
 intermediate/snapshot-1.5695 File not found!
 Time is 1.570000
-nz is 1000
+intermediate/snapshot-1.5700 File not found!
 Time is 1.570500
 intermediate/snapshot-1.5705 File not found!
 Time is 1.571000
@@ -26307,7 +26307,7 @@ intermediate/snapshot-1.5740 File not found!
 Time is 1.574500
 intermediate/snapshot-1.5745 File not found!
 Time is 1.575000
-nz is 1000
+intermediate/snapshot-1.5750 File not found!
 Time is 1.575500
 intermediate/snapshot-1.5755 File not found!
 Time is 1.576000
@@ -26327,7 +26327,7 @@ intermediate/snapshot-1.5790 File not found!
 Time is 1.579500
 intermediate/snapshot-1.5795 File not found!
 Time is 1.580000
-nz is 1000
+intermediate/snapshot-1.5800 File not found!
 Time is 1.580500
 intermediate/snapshot-1.5805 File not found!
 Time is 1.581000
@@ -26347,7 +26347,7 @@ intermediate/snapshot-1.5840 File not found!
 Time is 1.584500
 intermediate/snapshot-1.5845 File not found!
 Time is 1.585000
-nz is 1000
+intermediate/snapshot-1.5850 File not found!
 Time is 1.585500
 intermediate/snapshot-1.5855 File not found!
 Time is 1.586000
@@ -26367,7 +26367,7 @@ intermediate/snapshot-1.5890 File not found!
 Time is 1.589500
 intermediate/snapshot-1.5895 File not found!
 Time is 1.590000
-nz is 1000
+intermediate/snapshot-1.5900 File not found!
 Time is 1.590500
 intermediate/snapshot-1.5905 File not found!
 Time is 1.591000
@@ -26387,7 +26387,7 @@ intermediate/snapshot-1.5940 File not found!
 Time is 1.594500
 intermediate/snapshot-1.5945 File not found!
 Time is 1.595000
-nz is 1000
+intermediate/snapshot-1.5950 File not found!
 Time is 1.595500
 intermediate/snapshot-1.5955 File not found!
 Time is 1.596000
@@ -26407,7 +26407,7 @@ intermediate/snapshot-1.5990 File not found!
 Time is 1.599500
 intermediate/snapshot-1.5995 File not found!
 Time is 1.600000
-nz is 1000
+intermediate/snapshot-1.6000 File not found!
 Time is 1.600500
 intermediate/snapshot-1.6005 File not found!
 Time is 1.601000
@@ -26427,7 +26427,7 @@ intermediate/snapshot-1.6040 File not found!
 Time is 1.604500
 intermediate/snapshot-1.6045 File not found!
 Time is 1.605000
-nz is 1000
+intermediate/snapshot-1.6050 File not found!
 Time is 1.605500
 intermediate/snapshot-1.6055 File not found!
 Time is 1.606000
@@ -26447,7 +26447,7 @@ intermediate/snapshot-1.6090 File not found!
 Time is 1.609500
 intermediate/snapshot-1.6095 File not found!
 Time is 1.610000
-nz is 1000
+intermediate/snapshot-1.6100 File not found!
 Time is 1.610500
 intermediate/snapshot-1.6105 File not found!
 Time is 1.611000
@@ -26467,7 +26467,7 @@ intermediate/snapshot-1.6140 File not found!
 Time is 1.614500
 intermediate/snapshot-1.6145 File not found!
 Time is 1.615000
-nz is 1000
+intermediate/snapshot-1.6150 File not found!
 Time is 1.615500
 intermediate/snapshot-1.6155 File not found!
 Time is 1.616000
@@ -26487,7 +26487,7 @@ intermediate/snapshot-1.6190 File not found!
 Time is 1.619500
 intermediate/snapshot-1.6195 File not found!
 Time is 1.620000
-nz is 1000
+intermediate/snapshot-1.6200 File not found!
 Time is 1.620500
 intermediate/snapshot-1.6205 File not found!
 Time is 1.621000
@@ -26507,7 +26507,7 @@ intermediate/snapshot-1.6240 File not found!
 Time is 1.624500
 intermediate/snapshot-1.6245 File not found!
 Time is 1.625000
-nz is 1000
+intermediate/snapshot-1.6250 File not found!
 Time is 1.625500
 intermediate/snapshot-1.6255 File not found!
 Time is 1.626000
@@ -26527,7 +26527,7 @@ intermediate/snapshot-1.6290 File not found!
 Time is 1.629500
 intermediate/snapshot-1.6295 File not found!
 Time is 1.630000
-nz is 1000
+intermediate/snapshot-1.6300 File not found!
 Time is 1.630500
 intermediate/snapshot-1.6305 File not found!
 Time is 1.631000
@@ -26547,7 +26547,7 @@ intermediate/snapshot-1.6340 File not found!
 Time is 1.634500
 intermediate/snapshot-1.6345 File not found!
 Time is 1.635000
-nz is 1000
+intermediate/snapshot-1.6350 File not found!
 Time is 1.635500
 intermediate/snapshot-1.6355 File not found!
 Time is 1.636000
@@ -26567,7 +26567,7 @@ intermediate/snapshot-1.6390 File not found!
 Time is 1.639500
 intermediate/snapshot-1.6395 File not found!
 Time is 1.640000
-nz is 1000
+intermediate/snapshot-1.6400 File not found!
 Time is 1.640500
 intermediate/snapshot-1.6405 File not found!
 Time is 1.641000
@@ -26587,7 +26587,7 @@ intermediate/snapshot-1.6440 File not found!
 Time is 1.644500
 intermediate/snapshot-1.6445 File not found!
 Time is 1.645000
-nz is 1000
+intermediate/snapshot-1.6450 File not found!
 Time is 1.645500
 intermediate/snapshot-1.6455 File not found!
 Time is 1.646000
@@ -26607,7 +26607,7 @@ intermediate/snapshot-1.6490 File not found!
 Time is 1.649500
 intermediate/snapshot-1.6495 File not found!
 Time is 1.650000
-nz is 1000
+intermediate/snapshot-1.6500 File not found!
 Time is 1.650500
 intermediate/snapshot-1.6505 File not found!
 Time is 1.651000
@@ -26627,7 +26627,7 @@ intermediate/snapshot-1.6540 File not found!
 Time is 1.654500
 intermediate/snapshot-1.6545 File not found!
 Time is 1.655000
-nz is 1000
+intermediate/snapshot-1.6550 File not found!
 Time is 1.655500
 intermediate/snapshot-1.6555 File not found!
 Time is 1.656000
@@ -26647,7 +26647,7 @@ intermediate/snapshot-1.6590 File not found!
 Time is 1.659500
 intermediate/snapshot-1.6595 File not found!
 Time is 1.660000
-nz is 1000
+intermediate/snapshot-1.6600 File not found!
 Time is 1.660500
 intermediate/snapshot-1.6605 File not found!
 Time is 1.661000
@@ -26667,7 +26667,7 @@ intermediate/snapshot-1.6640 File not found!
 Time is 1.664500
 intermediate/snapshot-1.6645 File not found!
 Time is 1.665000
-nz is 1000
+intermediate/snapshot-1.6650 File not found!
 Time is 1.665500
 intermediate/snapshot-1.6655 File not found!
 Time is 1.666000
@@ -26687,7 +26687,7 @@ intermediate/snapshot-1.6690 File not found!
 Time is 1.669500
 intermediate/snapshot-1.6695 File not found!
 Time is 1.670000
-nz is 1000
+intermediate/snapshot-1.6700 File not found!
 Time is 1.670500
 intermediate/snapshot-1.6705 File not found!
 Time is 1.671000
@@ -26707,7 +26707,7 @@ intermediate/snapshot-1.6740 File not found!
 Time is 1.674500
 intermediate/snapshot-1.6745 File not found!
 Time is 1.675000
-nz is 1000
+intermediate/snapshot-1.6750 File not found!
 Time is 1.675500
 intermediate/snapshot-1.6755 File not found!
 Time is 1.676000
@@ -26727,7 +26727,7 @@ intermediate/snapshot-1.6790 File not found!
 Time is 1.679500
 intermediate/snapshot-1.6795 File not found!
 Time is 1.680000
-nz is 1000
+intermediate/snapshot-1.6800 File not found!
 Time is 1.680500
 intermediate/snapshot-1.6805 File not found!
 Time is 1.681000
@@ -26747,7 +26747,7 @@ intermediate/snapshot-1.6840 File not found!
 Time is 1.684500
 intermediate/snapshot-1.6845 File not found!
 Time is 1.685000
-nz is 1000
+intermediate/snapshot-1.6850 File not found!
 Time is 1.685500
 intermediate/snapshot-1.6855 File not found!
 Time is 1.686000
@@ -26767,7 +26767,7 @@ intermediate/snapshot-1.6890 File not found!
 Time is 1.689500
 intermediate/snapshot-1.6895 File not found!
 Time is 1.690000
-nz is 1000
+intermediate/snapshot-1.6900 File not found!
 Time is 1.690500
 intermediate/snapshot-1.6905 File not found!
 Time is 1.691000
@@ -26787,7 +26787,7 @@ intermediate/snapshot-1.6940 File not found!
 Time is 1.694500
 intermediate/snapshot-1.6945 File not found!
 Time is 1.695000
-nz is 1000
+intermediate/snapshot-1.6950 File not found!
 Time is 1.695500
 intermediate/snapshot-1.6955 File not found!
 Time is 1.696000
@@ -26807,7 +26807,7 @@ intermediate/snapshot-1.6990 File not found!
 Time is 1.699500
 intermediate/snapshot-1.6995 File not found!
 Time is 1.700000
-nz is 1000
+intermediate/snapshot-1.7000 File not found!
 Time is 1.700500
 intermediate/snapshot-1.7005 File not found!
 Time is 1.701000
@@ -26827,7 +26827,7 @@ intermediate/snapshot-1.7040 File not found!
 Time is 1.704500
 intermediate/snapshot-1.7045 File not found!
 Time is 1.705000
-nz is 1000
+intermediate/snapshot-1.7050 File not found!
 Time is 1.705500
 intermediate/snapshot-1.7055 File not found!
 Time is 1.706000
@@ -26847,7 +26847,7 @@ intermediate/snapshot-1.7090 File not found!
 Time is 1.709500
 intermediate/snapshot-1.7095 File not found!
 Time is 1.710000
-nz is 1000
+intermediate/snapshot-1.7100 File not found!
 Time is 1.710500
 intermediate/snapshot-1.7105 File not found!
 Time is 1.711000
@@ -26867,7 +26867,7 @@ intermediate/snapshot-1.7140 File not found!
 Time is 1.714500
 intermediate/snapshot-1.7145 File not found!
 Time is 1.715000
-nz is 1000
+intermediate/snapshot-1.7150 File not found!
 Time is 1.715500
 intermediate/snapshot-1.7155 File not found!
 Time is 1.716000
@@ -26887,7 +26887,7 @@ intermediate/snapshot-1.7190 File not found!
 Time is 1.719500
 intermediate/snapshot-1.7195 File not found!
 Time is 1.720000
-nz is 1000
+intermediate/snapshot-1.7200 File not found!
 Time is 1.720500
 intermediate/snapshot-1.7205 File not found!
 Time is 1.721000
@@ -26907,7 +26907,7 @@ intermediate/snapshot-1.7240 File not found!
 Time is 1.724500
 intermediate/snapshot-1.7245 File not found!
 Time is 1.725000
-nz is 1000
+intermediate/snapshot-1.7250 File not found!
 Time is 1.725500
 intermediate/snapshot-1.7255 File not found!
 Time is 1.726000
@@ -26927,7 +26927,7 @@ intermediate/snapshot-1.7290 File not found!
 Time is 1.729500
 intermediate/snapshot-1.7295 File not found!
 Time is 1.730000
-nz is 1000
+intermediate/snapshot-1.7300 File not found!
 Time is 1.730500
 intermediate/snapshot-1.7305 File not found!
 Time is 1.731000
@@ -26947,7 +26947,7 @@ intermediate/snapshot-1.7340 File not found!
 Time is 1.734500
 intermediate/snapshot-1.7345 File not found!
 Time is 1.735000
-nz is 1000
+intermediate/snapshot-1.7350 File not found!
 Time is 1.735500
 intermediate/snapshot-1.7355 File not found!
 Time is 1.736000
@@ -26967,7 +26967,7 @@ intermediate/snapshot-1.7390 File not found!
 Time is 1.739500
 intermediate/snapshot-1.7395 File not found!
 Time is 1.740000
-nz is 1000
+intermediate/snapshot-1.7400 File not found!
 Time is 1.740500
 intermediate/snapshot-1.7405 File not found!
 Time is 1.741000
@@ -26987,7 +26987,7 @@ intermediate/snapshot-1.7440 File not found!
 Time is 1.744500
 intermediate/snapshot-1.7445 File not found!
 Time is 1.745000
-nz is 1000
+intermediate/snapshot-1.7450 File not found!
 Time is 1.745500
 intermediate/snapshot-1.7455 File not found!
 Time is 1.746000
@@ -27007,7 +27007,7 @@ intermediate/snapshot-1.7490 File not found!
 Time is 1.749500
 intermediate/snapshot-1.7495 File not found!
 Time is 1.750000
-nz is 1000
+intermediate/snapshot-1.7500 File not found!
 Time is 1.750500
 intermediate/snapshot-1.7505 File not found!
 Time is 1.751000
@@ -27027,7 +27027,7 @@ intermediate/snapshot-1.7540 File not found!
 Time is 1.754500
 intermediate/snapshot-1.7545 File not found!
 Time is 1.755000
-nz is 1000
+intermediate/snapshot-1.7550 File not found!
 Time is 1.755500
 intermediate/snapshot-1.7555 File not found!
 Time is 1.756000
@@ -27047,7 +27047,7 @@ intermediate/snapshot-1.7590 File not found!
 Time is 1.759500
 intermediate/snapshot-1.7595 File not found!
 Time is 1.760000
-nz is 1000
+intermediate/snapshot-1.7600 File not found!
 Time is 1.760500
 intermediate/snapshot-1.7605 File not found!
 Time is 1.761000
@@ -27067,7 +27067,7 @@ intermediate/snapshot-1.7640 File not found!
 Time is 1.764500
 intermediate/snapshot-1.7645 File not found!
 Time is 1.765000
-nz is 1000
+intermediate/snapshot-1.7650 File not found!
 Time is 1.765500
 intermediate/snapshot-1.7655 File not found!
 Time is 1.766000
@@ -27087,7 +27087,7 @@ intermediate/snapshot-1.7690 File not found!
 Time is 1.769500
 intermediate/snapshot-1.7695 File not found!
 Time is 1.770000
-nz is 1000
+intermediate/snapshot-1.7700 File not found!
 Time is 1.770500
 intermediate/snapshot-1.7705 File not found!
 Time is 1.771000
@@ -27107,7 +27107,7 @@ intermediate/snapshot-1.7740 File not found!
 Time is 1.774500
 intermediate/snapshot-1.7745 File not found!
 Time is 1.775000
-nz is 1000
+intermediate/snapshot-1.7750 File not found!
 Time is 1.775500
 intermediate/snapshot-1.7755 File not found!
 Time is 1.776000
@@ -27127,7 +27127,7 @@ intermediate/snapshot-1.7790 File not found!
 Time is 1.779500
 intermediate/snapshot-1.7795 File not found!
 Time is 1.780000
-nz is 1000
+intermediate/snapshot-1.7800 File not found!
 Time is 1.780500
 intermediate/snapshot-1.7805 File not found!
 Time is 1.781000
@@ -27147,7 +27147,7 @@ intermediate/snapshot-1.7840 File not found!
 Time is 1.784500
 intermediate/snapshot-1.7845 File not found!
 Time is 1.785000
-nz is 1000
+intermediate/snapshot-1.7850 File not found!
 Time is 1.785500
 intermediate/snapshot-1.7855 File not found!
 Time is 1.786000
@@ -27167,7 +27167,7 @@ intermediate/snapshot-1.7890 File not found!
 Time is 1.789500
 intermediate/snapshot-1.7895 File not found!
 Time is 1.790000
-nz is 1000
+intermediate/snapshot-1.7900 File not found!
 Time is 1.790500
 intermediate/snapshot-1.7905 File not found!
 Time is 1.791000
@@ -27187,7 +27187,7 @@ intermediate/snapshot-1.7940 File not found!
 Time is 1.794500
 intermediate/snapshot-1.7945 File not found!
 Time is 1.795000
-nz is 1000
+intermediate/snapshot-1.7950 File not found!
 Time is 1.795500
 intermediate/snapshot-1.7955 File not found!
 Time is 1.796000
@@ -27207,7 +27207,7 @@ intermediate/snapshot-1.7990 File not found!
 Time is 1.799500
 intermediate/snapshot-1.7995 File not found!
 Time is 1.800000
-nz is 1000
+intermediate/snapshot-1.8000 File not found!
 Time is 1.800500
 intermediate/snapshot-1.8005 File not found!
 Time is 1.801000
@@ -27227,7 +27227,7 @@ intermediate/snapshot-1.8040 File not found!
 Time is 1.804500
 intermediate/snapshot-1.8045 File not found!
 Time is 1.805000
-nz is 1000
+intermediate/snapshot-1.8050 File not found!
 Time is 1.805500
 intermediate/snapshot-1.8055 File not found!
 Time is 1.806000
@@ -27247,7 +27247,7 @@ intermediate/snapshot-1.8090 File not found!
 Time is 1.809500
 intermediate/snapshot-1.8095 File not found!
 Time is 1.810000
-nz is 1000
+intermediate/snapshot-1.8100 File not found!
 Time is 1.810500
 intermediate/snapshot-1.8105 File not found!
 Time is 1.811000
@@ -27267,7 +27267,7 @@ intermediate/snapshot-1.8140 File not found!
 Time is 1.814500
 intermediate/snapshot-1.8145 File not found!
 Time is 1.815000
-nz is 1000
+intermediate/snapshot-1.8150 File not found!
 Time is 1.815500
 intermediate/snapshot-1.8155 File not found!
 Time is 1.816000
@@ -27287,7 +27287,7 @@ intermediate/snapshot-1.8190 File not found!
 Time is 1.819500
 intermediate/snapshot-1.8195 File not found!
 Time is 1.820000
-nz is 1000
+intermediate/snapshot-1.8200 File not found!
 Time is 1.820500
 intermediate/snapshot-1.8205 File not found!
 Time is 1.821000
@@ -27307,7 +27307,7 @@ intermediate/snapshot-1.8240 File not found!
 Time is 1.824500
 intermediate/snapshot-1.8245 File not found!
 Time is 1.825000
-nz is 1000
+intermediate/snapshot-1.8250 File not found!
 Time is 1.825500
 intermediate/snapshot-1.8255 File not found!
 Time is 1.826000
@@ -27327,7 +27327,7 @@ intermediate/snapshot-1.8290 File not found!
 Time is 1.829500
 intermediate/snapshot-1.8295 File not found!
 Time is 1.830000
-nz is 1000
+intermediate/snapshot-1.8300 File not found!
 Time is 1.830500
 intermediate/snapshot-1.8305 File not found!
 Time is 1.831000
@@ -27347,7 +27347,7 @@ intermediate/snapshot-1.8340 File not found!
 Time is 1.834500
 intermediate/snapshot-1.8345 File not found!
 Time is 1.835000
-nz is 1000
+intermediate/snapshot-1.8350 File not found!
 Time is 1.835500
 intermediate/snapshot-1.8355 File not found!
 Time is 1.836000
@@ -27367,7 +27367,7 @@ intermediate/snapshot-1.8390 File not found!
 Time is 1.839500
 intermediate/snapshot-1.8395 File not found!
 Time is 1.840000
-nz is 1000
+intermediate/snapshot-1.8400 File not found!
 Time is 1.840500
 intermediate/snapshot-1.8405 File not found!
 Time is 1.841000
@@ -27387,7 +27387,7 @@ intermediate/snapshot-1.8440 File not found!
 Time is 1.844500
 intermediate/snapshot-1.8445 File not found!
 Time is 1.845000
-nz is 1000
+intermediate/snapshot-1.8450 File not found!
 Time is 1.845500
 intermediate/snapshot-1.8455 File not found!
 Time is 1.846000
@@ -27407,7 +27407,7 @@ intermediate/snapshot-1.8490 File not found!
 Time is 1.849500
 intermediate/snapshot-1.8495 File not found!
 Time is 1.850000
-nz is 1000
+intermediate/snapshot-1.8500 File not found!
 Time is 1.850500
 intermediate/snapshot-1.8505 File not found!
 Time is 1.851000
@@ -27427,7 +27427,7 @@ intermediate/snapshot-1.8540 File not found!
 Time is 1.854500
 intermediate/snapshot-1.8545 File not found!
 Time is 1.855000
-nz is 1000
+intermediate/snapshot-1.8550 File not found!
 Time is 1.855500
 intermediate/snapshot-1.8555 File not found!
 Time is 1.856000
@@ -27447,7 +27447,7 @@ intermediate/snapshot-1.8590 File not found!
 Time is 1.859500
 intermediate/snapshot-1.8595 File not found!
 Time is 1.860000
-nz is 1000
+intermediate/snapshot-1.8600 File not found!
 Time is 1.860500
 intermediate/snapshot-1.8605 File not found!
 Time is 1.861000
@@ -27467,7 +27467,7 @@ intermediate/snapshot-1.8640 File not found!
 Time is 1.864500
 intermediate/snapshot-1.8645 File not found!
 Time is 1.865000
-nz is 1000
+intermediate/snapshot-1.8650 File not found!
 Time is 1.865500
 intermediate/snapshot-1.8655 File not found!
 Time is 1.866000
@@ -27487,7 +27487,7 @@ intermediate/snapshot-1.8690 File not found!
 Time is 1.869500
 intermediate/snapshot-1.8695 File not found!
 Time is 1.870000
-nz is 1000
+intermediate/snapshot-1.8700 File not found!
 Time is 1.870500
 intermediate/snapshot-1.8705 File not found!
 Time is 1.871000
@@ -27507,7 +27507,7 @@ intermediate/snapshot-1.8740 File not found!
 Time is 1.874500
 intermediate/snapshot-1.8745 File not found!
 Time is 1.875000
-nz is 1000
+intermediate/snapshot-1.8750 File not found!
 Time is 1.875500
 intermediate/snapshot-1.8755 File not found!
 Time is 1.876000
@@ -27527,7 +27527,7 @@ intermediate/snapshot-1.8790 File not found!
 Time is 1.879500
 intermediate/snapshot-1.8795 File not found!
 Time is 1.880000
-nz is 1000
+intermediate/snapshot-1.8800 File not found!
 Time is 1.880500
 intermediate/snapshot-1.8805 File not found!
 Time is 1.881000
@@ -27547,7 +27547,7 @@ intermediate/snapshot-1.8840 File not found!
 Time is 1.884500
 intermediate/snapshot-1.8845 File not found!
 Time is 1.885000
-nz is 1000
+intermediate/snapshot-1.8850 File not found!
 Time is 1.885500
 intermediate/snapshot-1.8855 File not found!
 Time is 1.886000
@@ -27567,7 +27567,7 @@ intermediate/snapshot-1.8890 File not found!
 Time is 1.889500
 intermediate/snapshot-1.8895 File not found!
 Time is 1.890000
-nz is 1000
+intermediate/snapshot-1.8900 File not found!
 Time is 1.890500
 intermediate/snapshot-1.8905 File not found!
 Time is 1.891000
@@ -27587,7 +27587,7 @@ intermediate/snapshot-1.8940 File not found!
 Time is 1.894500
 intermediate/snapshot-1.8945 File not found!
 Time is 1.895000
-nz is 1000
+intermediate/snapshot-1.8950 File not found!
 Time is 1.895500
 intermediate/snapshot-1.8955 File not found!
 Time is 1.896000
@@ -27607,7 +27607,7 @@ intermediate/snapshot-1.8990 File not found!
 Time is 1.899500
 intermediate/snapshot-1.8995 File not found!
 Time is 1.900000
-nz is 1000
+intermediate/snapshot-1.9000 File not found!
 Time is 1.900500
 intermediate/snapshot-1.9005 File not found!
 Time is 1.901000
@@ -27627,7 +27627,7 @@ intermediate/snapshot-1.9040 File not found!
 Time is 1.904500
 intermediate/snapshot-1.9045 File not found!
 Time is 1.905000
-nz is 1000
+intermediate/snapshot-1.9050 File not found!
 Time is 1.905500
 intermediate/snapshot-1.9055 File not found!
 Time is 1.906000
@@ -27647,7 +27647,7 @@ intermediate/snapshot-1.9090 File not found!
 Time is 1.909500
 intermediate/snapshot-1.9095 File not found!
 Time is 1.910000
-nz is 1000
+intermediate/snapshot-1.9100 File not found!
 Time is 1.910500
 intermediate/snapshot-1.9105 File not found!
 Time is 1.911000
@@ -27667,7 +27667,7 @@ intermediate/snapshot-1.9140 File not found!
 Time is 1.914500
 intermediate/snapshot-1.9145 File not found!
 Time is 1.915000
-nz is 1000
+intermediate/snapshot-1.9150 File not found!
 Time is 1.915500
 intermediate/snapshot-1.9155 File not found!
 Time is 1.916000
@@ -27687,7 +27687,7 @@ intermediate/snapshot-1.9190 File not found!
 Time is 1.919500
 intermediate/snapshot-1.9195 File not found!
 Time is 1.920000
-nz is 1000
+intermediate/snapshot-1.9200 File not found!
 Time is 1.920500
 intermediate/snapshot-1.9205 File not found!
 Time is 1.921000
@@ -27707,7 +27707,7 @@ intermediate/snapshot-1.9240 File not found!
 Time is 1.924500
 intermediate/snapshot-1.9245 File not found!
 Time is 1.925000
-nz is 1000
+intermediate/snapshot-1.9250 File not found!
 Time is 1.925500
 intermediate/snapshot-1.9255 File not found!
 Time is 1.926000
@@ -27727,7 +27727,7 @@ intermediate/snapshot-1.9290 File not found!
 Time is 1.929500
 intermediate/snapshot-1.9295 File not found!
 Time is 1.930000
-nz is 1000
+intermediate/snapshot-1.9300 File not found!
 Time is 1.930500
 intermediate/snapshot-1.9305 File not found!
 Time is 1.931000
@@ -27747,7 +27747,7 @@ intermediate/snapshot-1.9340 File not found!
 Time is 1.934500
 intermediate/snapshot-1.9345 File not found!
 Time is 1.935000
-nz is 1000
+intermediate/snapshot-1.9350 File not found!
 Time is 1.935500
 intermediate/snapshot-1.9355 File not found!
 Time is 1.936000
@@ -27767,7 +27767,7 @@ intermediate/snapshot-1.9390 File not found!
 Time is 1.939500
 intermediate/snapshot-1.9395 File not found!
 Time is 1.940000
-nz is 1000
+intermediate/snapshot-1.9400 File not found!
 Time is 1.940500
 intermediate/snapshot-1.9405 File not found!
 Time is 1.941000
@@ -27787,7 +27787,7 @@ intermediate/snapshot-1.9440 File not found!
 Time is 1.944500
 intermediate/snapshot-1.9445 File not found!
 Time is 1.945000
-nz is 1000
+intermediate/snapshot-1.9450 File not found!
 Time is 1.945500
 intermediate/snapshot-1.9455 File not found!
 Time is 1.946000
@@ -27807,7 +27807,7 @@ intermediate/snapshot-1.9490 File not found!
 Time is 1.949500
 intermediate/snapshot-1.9495 File not found!
 Time is 1.950000
-nz is 1000
+intermediate/snapshot-1.9500 File not found!
 Time is 1.950500
 intermediate/snapshot-1.9505 File not found!
 Time is 1.951000
@@ -27827,7 +27827,7 @@ intermediate/snapshot-1.9540 File not found!
 Time is 1.954500
 intermediate/snapshot-1.9545 File not found!
 Time is 1.955000
-nz is 1000
+intermediate/snapshot-1.9550 File not found!
 Time is 1.955500
 intermediate/snapshot-1.9555 File not found!
 Time is 1.956000
@@ -27847,7 +27847,7 @@ intermediate/snapshot-1.9590 File not found!
 Time is 1.959500
 intermediate/snapshot-1.9595 File not found!
 Time is 1.960000
-nz is 1000
+intermediate/snapshot-1.9600 File not found!
 Time is 1.960500
 intermediate/snapshot-1.9605 File not found!
 Time is 1.961000
@@ -27867,7 +27867,7 @@ intermediate/snapshot-1.9640 File not found!
 Time is 1.964500
 intermediate/snapshot-1.9645 File not found!
 Time is 1.965000
-nz is 1000
+intermediate/snapshot-1.9650 File not found!
 Time is 1.965500
 intermediate/snapshot-1.9655 File not found!
 Time is 1.966000
@@ -27887,7 +27887,7 @@ intermediate/snapshot-1.9690 File not found!
 Time is 1.969500
 intermediate/snapshot-1.9695 File not found!
 Time is 1.970000
-nz is 1000
+intermediate/snapshot-1.9700 File not found!
 Time is 1.970500
 intermediate/snapshot-1.9705 File not found!
 Time is 1.971000
@@ -27907,7 +27907,7 @@ intermediate/snapshot-1.9740 File not found!
 Time is 1.974500
 intermediate/snapshot-1.9745 File not found!
 Time is 1.975000
-nz is 1000
+intermediate/snapshot-1.9750 File not found!
 Time is 1.975500
 intermediate/snapshot-1.9755 File not found!
 Time is 1.976000
@@ -27927,7 +27927,7 @@ intermediate/snapshot-1.9790 File not found!
 Time is 1.979500
 intermediate/snapshot-1.9795 File not found!
 Time is 1.980000
-nz is 1000
+intermediate/snapshot-1.9800 File not found!
 Time is 1.980500
 intermediate/snapshot-1.9805 File not found!
 Time is 1.981000
@@ -27947,7 +27947,7 @@ intermediate/snapshot-1.9840 File not found!
 Time is 1.984500
 intermediate/snapshot-1.9845 File not found!
 Time is 1.985000
-nz is 1000
+intermediate/snapshot-1.9850 File not found!
 Time is 1.985500
 intermediate/snapshot-1.9855 File not found!
 Time is 1.986000
@@ -27967,7 +27967,7 @@ intermediate/snapshot-1.9890 File not found!
 Time is 1.989500
 intermediate/snapshot-1.9895 File not found!
 Time is 1.990000
-nz is 1000
+intermediate/snapshot-1.9900 File not found!
 Time is 1.990500
 intermediate/snapshot-1.9905 File not found!
 Time is 1.991000
@@ -27987,7 +27987,7 @@ intermediate/snapshot-1.9940 File not found!
 Time is 1.994500
 intermediate/snapshot-1.9945 File not found!
 Time is 1.995000
-nz is 1000
+intermediate/snapshot-1.9950 File not found!
 Time is 1.995500
 intermediate/snapshot-1.9955 File not found!
 Time is 1.996000
@@ -28007,7 +28007,7 @@ intermediate/snapshot-1.9990 File not found!
 Time is 1.999500
 intermediate/snapshot-1.9995 File not found!
 Time is 2.000000
-nz is 1000
+intermediate/snapshot-2.0000 File not found!
 Time is 2.000500
 intermediate/snapshot-2.0005 File not found!
 Time is 2.001000

@@ -29,7 +29,7 @@ event defaults (i = 0) {
   If the viscosity is non-zero, we need to allocate the face-centered
   viscosity field. */
 
-  if (mu_drop || mu_film)
+  if (mu_drop || mu_film|| mu_env)
     mu = new face vector;
 }
 

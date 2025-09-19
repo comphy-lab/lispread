@@ -48,15 +48,45 @@ u.t[left] = dirichlet(0.0);
 // you can also define a variable that is dependent on variables to for example give a contact angle that is dependent on the veloicyt of the droplet Can also give it if else statements and play around with it to see what basilisk recognizes
 
 double Oh_d, Oh_f, Oh_e, rho_d, rho_f, rho_e, sigma_1, sigma_2, hf, tmax, Ldomain, delta;
+char savefolder[256], dumpfile[256], logfile[256];
 int MAXlevel;
 
 int main(int argc, char const *argv[]) {
 
-  if (argc < 14) {
-    fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, rho_d, rho_f, rho_e,sigma_1, sigma_2, hf, tmax, Ldomain, delta, MAXlevel\n", 9-argc);
+  if (argc != 14&& argc != 15) {
+    fprintf(ferr, "%d\n", argc);
+    fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, rho_d, rho_f, rho_e,sigma_1, sigma_2, hf, tmax, Ldomain, delta, MAXlevel\n", 14-argc);
     return 1;
   }
-  
+
+// Set up savefolders and files
+ if (argc == 15) {
+    snprintf(savefolder, sizeof(savefolder), "%s", argv[14]);
+  } else {
+    savefolder[0] = '\0';  // empty string
+  }
+
+fprintf(ferr, "Saving in folder: %s\n", savefolder[0] ? savefolder : "(current dir)");
+
+char comm[256];
+if (savefolder[0] != '\0') {
+    snprintf(comm, sizeof(comm), "mkdir -p %s", savefolder);  // make savefolder itself first
+    system(comm);
+
+    snprintf(comm, sizeof(comm), "mkdir -p %s/intermediate", savefolder);     // then make savefolder/intermediate
+    system(comm);
+
+    snprintf(dumpfile, sizeof(dumpfile), "%s/dump", savefolder); // create dumpfilename and logfilename
+    snprintf(logfile, sizeof(logfile), "%s/log", savefolder);
+} else {
+    snprintf(comm, sizeof(comm), "mkdir -p intermediate");      // default: just make intermediate in current dir
+    system(comm);
+
+    snprintf(dumpfile, sizeof(dumpfile), "dump");               // create dumpfilename and logfilename
+    snprintf(logfile, sizeof(logfile), "log");
+}
+
+
   Oh_d = atof(argv[1]);
   Oh_f = atof(argv[2]);
   Oh_e = atof(argv[3]);
@@ -75,18 +105,16 @@ int main(int argc, char const *argv[]) {
   X0=-hf*1.001; Y0=0.;          // define origin, you can also define LD/2, can be easier
   init_grid (1 << 4);       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
   
-  char comm[80];
-  sprintf (comm, "mkdir -p intermediate");
-  system(comm);
 
-  rho_drop = rho_d; mu_drop = Oh_drop;
-  rho_film = rho_f; mu_film = Oh_film;
-  rho_env = rho_e; mu_env = Oh_env;
+
+  rho_drop = rho_d; mu_drop = Oh_d;
+  rho_film = rho_f; mu_film = Oh_f;
+  rho_env = rho_e; mu_env = Oh_e;
 
   f1.sigma = sigma_1;    
   f2.sigma = sigma_2;   
-  fprintf(ferr, "Level %d tmax %g. Oho %3.2e, Ohw %3.2e, Oha %3.2e, hf %3.2f\n", 
-                MAXlevel, tmax, Oh_drop, Oh_film, Oh_env, hf);
+  fprintf(ferr, "Level %d tmax %g. Oh_d %3.2e, Oh_f %3.2e, Oh_e %3.2e, rho_d %3.2e, rho_f %3.2e,rho_e %3.2e, hf %3.2f\n", 
+                MAXlevel, tmax, Oh_d, Oh_f, Oh_e, rho_d, rho_f, rho_e, hf);
   run();
 }
 
@@ -101,7 +129,7 @@ int refRegion(double x, double y, double z){
 }
 
 event init(t = 0){
-  if(!restore (file = "dump")){   // it checks if it starts from a dump file, if no dump file, it initiates
+  if(!restore (file = dumpfile)){   // it checks if it starts from a dump file, if no dump file, it initiates
     fprintf(ferr, "No dump file found, start initialization ..." );
     char filename1[60], filename2[60];
     /**
@@ -152,7 +180,7 @@ event init(t = 0){
     fractions (phi2, f2);
     fprintf(ferr, " done\n" );
   }
-  dump (file = "dump");
+  dump (file = dumpfile);
   // return 1;
 }
 
@@ -171,11 +199,23 @@ event adapt(i++) {
 }
 
 event writingFiles (t = 0; t += tsnap * 10; t <= tmax + tsnap) {
-  dump (file = "dump");
-  char nameOut[80];
-  sprintf (nameOut, "intermediate/snapshot-%5.4f", t);
-  dump (file = nameOut);
+  // always write a plain dump for restart
+  dump(file = dumpfile);
+
+  char nameOut[1024];
+  if (savefolder[0] != '\0') {
+    // save into savefolder/intermediate/
+    snprintf(nameOut, sizeof(nameOut),
+             "%s/intermediate/snapshot-%5.4f", savefolder, t);
+  } else {
+    // fallback: just into intermediate/
+    snprintf(nameOut, sizeof(nameOut),
+             "intermediate/snapshot-%5.4f", t);
+  }
+
+  dump(file = nameOut);
 }
+
 
 event logWriting (i++) {
   double ke = 0.;
@@ -185,12 +225,12 @@ event logWriting (i++) {
   static FILE * fp;
   if (i == 0) {
     // fprintf (ferr, "i dt t ke\n");
-    fp = fopen ("log", "w");
+    fp = fopen (logfile, "w");
     fprintf (fp, "i dt t ke\n");
     fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
     fclose(fp);
   } else {
-    fp = fopen ("log", "a");
+    fp = fopen (logfile, "a");
     fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
     fclose(fp);
   }

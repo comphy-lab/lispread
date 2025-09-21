@@ -39,11 +39,15 @@ default. The user can overload these definitions to use other types of
 averages (i.e. harmonic). */
 
 #ifndef rho
-#define rho(f1, f2) (clamp(f1*(1-f2), 0., 1.) * rho_film + clamp(f1*f2, 0., 1.) * rho_drop\
+// #define rho(f1, f2) (clamp(f1*(1-f2), 0., 1.) * rho_film + clamp(f1*f2, 0., 1.) * rho_drop\
+//         + clamp((1-f1), 0., 1.) * rho_env)
+#define rho(f1, f2) (clamp((f1-f2), 0., 1.) * rho_film + clamp(f2, 0., 1.) * rho_drop\
         + clamp((1-f1), 0., 1.) * rho_env)
 #endif
 #ifndef mu
-#define mu(f1, f2) (clamp(f1*(1-f2), 0., 1.) * mu_film + clamp(f1*f2, 0., 1.) * mu_drop \
+// #define mu(f1, f2) (clamp(f1*(1-f2), 0., 1.) * mu_film + clamp(f1*f2, 0., 1.) * mu_drop \
+//         + clamp((1-f1), 0., 1.) * mu_env)
+#define mu(f1, f2) (clamp((f1-f2), 0., 1.) * mu_film + clamp(f2, 0., 1.) * mu_drop \
         + clamp((1-f1), 0., 1.) * mu_env)
 #endif
 

@@ -7,7 +7,7 @@ rhod="1"
 rhof="0.9"
 rhoe="1.2e-3"
 hf="0.25"
-tmax="2.0"
+tmax="4.0"
 Ldomain="4"
 delta="0.01"
 MAXlevel="10"
@@ -102,4 +102,3 @@ done
 
 # Wait for all to finish
 wait
-echo "All simulations + post-processing done."

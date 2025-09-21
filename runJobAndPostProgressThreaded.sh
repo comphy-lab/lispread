@@ -7,7 +7,7 @@ rhod="1"
 rhof="0.9"
 rhoe="1.2e-3"
 hf="0.25"
-tmax="0.5"
+tmax="2.0"
 Ldomain="4"
 delta="0.01"
 MAXlevel="10"
@@ -22,6 +22,7 @@ qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
 qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
 qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
 qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
+qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
@@ -29,7 +30,7 @@ Ohd_list=( "4.3e-3" )
 Ohf_list=( "0.023" "0.2" "0.4" "0.6" "0.8" "1." "2." "3." "4.6" )
 Ohe_list=( "8.4e-5" )
 sigma1_list=( "0.28" )
-sigma2_list=( "0.72" )
+sigma2_list=( "0.56" )
 
 # Concurrency control
 MAX_PAR=9           # how many sims to run at once

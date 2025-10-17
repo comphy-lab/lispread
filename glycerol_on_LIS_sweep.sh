@@ -4,8 +4,8 @@ set -euo pipefail
 
 # ---------- Base parameters (shared across runs) ----------
 rhod="1"
-rhof="0.9"
-rhoe="1.2e-3"
+rhof="0.75"
+rhoe="1.e-3"
 Ldomain="5"
 delta="0.01"
 year=$(date +%Y)
@@ -23,12 +23,12 @@ qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
-Ohd_list=( "5" )
+Ohd_list=( "4.3" )
 Ohf_list=( "1e-3" "1e-2" "6e-2" "0.2" "0.5" "1"  "2.5" "5" "20")
 tmax_list=("20"  "20"  "20"  "20" "20" "20" "20"  "20" "30")
-Ohe_list=( "9.1e-5" )
-sigma1_list=( "0.33" )
-sigma2_list=( "0.67" )
+Ohe_list=( "7.77e-5" )
+sigma1_list=( "0.43" )
+sigma2_list=( "0.57" )
 MAXlevel_list=("11" "12")
 hf_list=("0.03" "0.05" "0.1")
 # Concurrency control

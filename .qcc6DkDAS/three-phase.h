@@ -1,3 +1,6 @@
+#ifndef BASILISK_HEADER_28
+#define BASILISK_HEADER_28
+#line 1 "./three-phase.h"
 /**
 # Three-phase interfacial flows
 
@@ -142,3 +145,5 @@ event properties (i++) {
   }
 #endif
 }
+
+#endif

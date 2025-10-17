@@ -23,10 +23,10 @@ qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
-Ohd_list=( "4.6e-3" )
+Ohd_list=( "5.08e-3" )
 Ohf_list=( "1e-3" "1e-2" "6e-2" "0.2" "0.5" "1"  "2.5" "5" "20")
 tmax_list=("1.1"  "1.1"  "1.1"  "1.1" "1.5" "10" "10"  "20" "25")
-Ohe_list=( "8.4e-5" )
+Ohe_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
 MAXlevel_list=("11" "12")
@@ -52,7 +52,6 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
     export OMP_NUM_THREADS="${THREADS_PER_SIM}"
 
     # Calculate_tmax
-    # tmax=$(echo "$tmax_normal * $Ohf / 0.023" | bc -l)
 
     # Run simulation
 
@@ -100,7 +99,7 @@ for MAXlevel in "${MAXlevel_list[@]}"; do
           for sigma_1 in "${sigma1_list[@]}"; do
             for sigma_2 in "${sigma2_list[@]}"; do
               wait_for_slot
-              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2", "$MAXlevel", "$hf", "$tmax"
+              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax"
             done
           done
         done

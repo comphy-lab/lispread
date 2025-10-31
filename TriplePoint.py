@@ -20,8 +20,10 @@ matplotlib.rcParams['font.family'] = 'serif'
 def gettingFacets(filename, Tracer):
     if Tracer == 1:
         exe = ["./getFacet1", filename]
-    else:
+    elif Tracer == 2:
         exe = ["./getFacet2", filename]
+    else:
+        assert False, "Tracer argument wrongly defined"
     p = sp.Popen(exe, stdout=sp.PIPE, stderr=sp.PIPE)
     stdout, stderr = p.communicate()
     temp1 = stderr.decode("utf-8")
@@ -45,13 +47,13 @@ def gettingFacets(filename, Tracer):
     return segs
 
 def gettingTriplePoint(filename, name1, DistCutoff):
-    exe = ["./getX0Y0V0", filename, name1, str(DistCutoff)]
+    exe = ["./getX0Y0V0", filename, str(DistCutoff)]
     p = sp.Popen(exe, stdout=sp.PIPE, stderr=sp.PIPE)
     stdout, stderr = p.communicate()
     temp1 = stderr.decode("utf-8")
     temp2 = temp1.split("\n")
     temp3 = temp2[0].split(" ")
-    return float(temp3[0]), float(temp3[1]), float(temp3[2]), float(temp3[3])
+    return float(temp3[0]), float(temp3[1]), float(temp3[2]), float(temp3[3]), float(temp3[4]), float(temp3[5])
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -76,7 +78,7 @@ DistCutoff, BoxSize = 1e-4, 0.1
 
 rmin, rmax, zmin, zmax = [-Ldomain/2., Ldomain/2., -hf*1.001, Ldomain-hf]
 
-name1 = "%4.4d_X0Y0V0.dat" % ci
+name1 = save_folder + "/%4.4d_X0Y0V0.dat" % ci
 
 if os.path.exists(name1):
     print("File %s found! New data will be appended to the file" % name1)
@@ -99,9 +101,9 @@ for ti in range(nGFS):
             if (len(facets1) == 0 or len(facets2) == 0):
                 print("Problem in the available file %s" % place)
             else:
-                tp, zTP, rTP, vTP  = gettingTriplePoint(place, name1, DistCutoff)
+                tp, zTP, rTP, vTP, theta1, theta2  = gettingTriplePoint(place, name1, DistCutoff)
                 print("t %5.4f zTP %4.3f rTP %4.3f vTP %4.3e" % (tp, zTP, rTP, vTP))
-                tp_list.append([tp, zTP, rTP, vTP]) # appending tp data to the list
+                tp_list.append([tp, zTP, rTP, vTP, theta1, theta2]) # appending tp data to the list
                 ## Part to plot
                 AxesLabel, TickLabel = [30, 25]
                 fig, (ax, ax2) = plt.subplots(1,2)
@@ -153,4 +155,4 @@ for ti in range(nGFS):
                 plt.savefig(ImageName,bbox_inches='tight')
                 plt.close()
 
-np.savetxt(save_folder +"/tp_data.npz", np.array(tp_list), header='t zTP rTP vTP')
+np.savetxt(save_folder +"/tp_data.csv", np.array(tp_list), header='t zTP rTP vTP theta1 theta2')

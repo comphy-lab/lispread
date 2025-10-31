@@ -10,7 +10,7 @@
 scalar f1[], f2[];
 char filename[1024], nameTrack[1024];
 double DistCutoff;
-double wt, xTP, yTP, vTP;
+double wt, xTP, yTP, vTP, angle1, angle2;
 
 int main(int a, char const *arguments[])
 {
@@ -30,7 +30,7 @@ int main(int a, char const *arguments[])
   // double x0 = -4., y0 = 0.;
   face vector s[];
   s.x.i = -1;
-  wt = 0., xTP = 0., yTP = 0., vTP = 0.;
+  wt = 0., xTP = 0., yTP = 0., vTP = 0., angle1 = 0., angle2 = 0.;
   foreach(){
     if (f2[] > 1e-6 && f2[] < 1. - 1e-6) {
       coord n2 = facet_normal (point, f2, s);
@@ -54,6 +54,8 @@ int main(int a, char const *arguments[])
               xTP += xc/dist;
               yTP += yc/dist;
               vTP += u.y[]/dist;
+              angle1 += atan2(n1.y, n1.x)/dist;
+              angle2 += atan2(n2.y, n2.x)/dist;
             }
           }
         }
@@ -69,11 +71,13 @@ int main(int a, char const *arguments[])
     xTP /= wt;
     yTP /= wt;
     vTP /= wt;
+    angle1 /= wt;
+    angle2 /= wt;
   } 
-  fprintf(ferr, "%f %f %f %4.3e\n", t, xTP, yTP, vTP);
+  fprintf(ferr, "%f %f %f %4.3e %f %f\n", t, xTP, yTP, vTP, angle1, angle2);
   FILE *fp2;
   fp2 = fopen (nameTrack, "a");
-  fprintf(fp2, "%f %f %f %4.3e\n", t, xTP, yTP, vTP);
+  fprintf(ferr, "%f %f %f %4.3e %f %f\n", t, xTP, yTP, vTP, angle1, angle2);
   fclose(fp2);
   // fprintf(ferr, "%f %f\n", x0, y0);
 }

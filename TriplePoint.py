@@ -47,7 +47,7 @@ def gettingFacets(filename, Tracer):
     return segs
 
 def gettingTriplePoint(filename, name1, DistCutoff):
-    exe = ["./getX0Y0V0", filename, str(DistCutoff)]
+    exe = ["./getX0Y0V0", filename, name1, str(DistCutoff)]
     p = sp.Popen(exe, stdout=sp.PIPE, stderr=sp.PIPE)
     stdout, stderr = p.communicate()
     temp1 = stderr.decode("utf-8")
@@ -78,11 +78,12 @@ DistCutoff, BoxSize = 1e-4, 0.1
 
 rmin, rmax, zmin, zmax = [-Ldomain/2., Ldomain/2., -hf*1.001, Ldomain-hf]
 
-name1 = save_folder + "/%4.4d_X0Y0V0.dat" % ci
-
+name1 = save_folder + "/X0Y0V0.dat"
+print(name1)
 if os.path.exists(name1):
     print("File %s found! New data will be appended to the file" % name1)
 if not os.path.isdir(folder):
+    print("Folder %s not found! New data folder created" % name1)
     os.makedirs(folder)
 
 for ti in range(nGFS):
@@ -92,18 +93,18 @@ for ti in range(nGFS):
     # if not os.path.exists(place):
     #     print("%s File not found!" % place)
     if os.path.exists(place):
-        if os.path.exists(ImageName):
-            print("%s Image present!" % ImageName)
-            print(("Starting %d of %d" % (ti+1, nGFS)))
+        facets1 = gettingFacets(place, 1)
+        facets2 = gettingFacets(place, 2)
+        if (len(facets1) == 0 or len(facets2) == 0):
+            print("Problem in the available file %s" % place)
         else:
-            facets1 = gettingFacets(place, 1)
-            facets2 = gettingFacets(place, 2)
-            if (len(facets1) == 0 or len(facets2) == 0):
-                print("Problem in the available file %s" % place)
+            tp, zTP, rTP, vTP, theta1, theta2  = gettingTriplePoint(place, name1, DistCutoff)
+            # print("t %5.4f zTP %4.3f rTP %4.3f vTP %4.3e" % (tp, zTP, rTP, vTP))
+            tp_list.append([tp, zTP, rTP, vTP, theta1, theta2]) # appending tp data to the list
+            if os.path.exists(ImageName):
+                print("%s Image present!" % ImageName.split("/")[-1])
+                print(("Starting %d of %d" % (ti+1, nGFS)))
             else:
-                tp, zTP, rTP, vTP, theta1, theta2  = gettingTriplePoint(place, name1, DistCutoff)
-                print("t %5.4f zTP %4.3f rTP %4.3f vTP %4.3e" % (tp, zTP, rTP, vTP))
-                tp_list.append([tp, zTP, rTP, vTP, theta1, theta2]) # appending tp data to the list
                 ## Part to plot
                 AxesLabel, TickLabel = [30, 25]
                 fig, (ax, ax2) = plt.subplots(1,2)

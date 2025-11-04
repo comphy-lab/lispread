@@ -14,6 +14,12 @@ double wt, xTP, yTP, vTP, angle1, angle2;
 
 int main(int a, char const *arguments[])
 {
+  // check if all arguments are given
+  if (a < 4) {
+    fprintf(stderr, "Error: Missing arguments.\n");
+    fprintf(stderr, "Usage: %s <filename> <nameTrack> <DistCutoff>\n", arguments[0]);
+    return 1; 
+  }
   // boundary conditions
   f1[left] = dirichlet(1.0);
   f2[left] = dirichlet(0.0);

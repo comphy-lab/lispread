@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=bubble on LIS sweep
+#SBATCH --job-name=bubble_on_LIS_sweep
 # generated with the help of ChatGPT
 set -euo pipefail
 # ---------- Base parameters (shared across runs) ----------

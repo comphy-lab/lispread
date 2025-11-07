@@ -1,7 +1,7 @@
 #!/bin/bash
-# generated with ChatGPT
+#SBATCH --job-name=bubble on LIS sweep
+# generated with the help of ChatGPT
 set -euo pipefail
-
 # ---------- Base parameters (shared across runs) ----------
 rhoe="1"
 rhof="0.9"
@@ -24,16 +24,16 @@ qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
 Ohe_list=( "5.08e-3" )
-Ohf_list=( "1e-3" "1e-2" "6e-2" "0.2" "0.5" "1"  "2.5" "5" "20")
-tmax_list=("1.1"  "1.1"  "1.1"  "1.1" "1.5" "10" "10"  "20" "25")
+Ohf_list=( "20" "5" "2.5" "1" "0.5" "0.2" "6e-2" "1e-2" "1e-3" )
+tmax_list=( "20" "10" "5" "5" "3" "2" "2" "2" "2" )
 Ohd_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
-MAXlevel_list=("11" "12")
-hf_list=("0.03" "0.05" "0.1")
-# Concurrency control
-MAX_PAR=2           # how many sims to run at once
-THREADS_PER_SIM=10   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
+MAXlevel_list=( "12", "13" )
+hf_list=( "0.05" )
+
+MAX_PAR=8           # how many sims to run at once
+THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits available cores)
 
 run_one() {
   local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8"
@@ -54,34 +54,32 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
     # Calculate_tmax
 
     # Run simulation
-
     ./bubbleAtLubis "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
                     "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \
                     > "${savefolder}/logTerminal" 2>&1
+    # # Post-processing
+    # {
+    #   python3 Video.py "$hf" "$Ldomain" "$Ohd" "$Ohf" "$Ohe" "$savefolder" &
+    #   python3 TriplePoint.py "0" "$Ldomain" "$hf" "$savefolder" &
+    #   wait
+    # } > "${savefolder}/logPostProcessingTerminal" 2>&1
 
-    # Post-process (each in its own folder)
-    {
-      python3 Video.py "$hf" "$Ldomain" "$Ohd" "$Ohf" "$Ohe" "$savefolder" &
-      python3 TriplePoint.py "0" "$Ldomain" "$hf" "$savefolder" &
-      wait
-    } > "${savefolder}/logPostProcessingTerminal" 2>&1
-
-    # Make videos (paths relative to savefolder)
-    if [[ -d "$savefolder" ]]; then
-      (
-        cd "$savefolder"
-        ffmpeg -y -framerate 60 -pattern_type glob -i 'TrackingTP/*.png' \
-               -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p TPsim.mp4 \
-               > ffmpeg_TP.log 2>&1 || true
-        ffmpeg -y -framerate 60 -pattern_type glob -i 'Video/*.png' \
-               -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p video.mp4 \
-               > ffmpeg_video.log 2>&1 || true
-      )
-    fi
+    # # Make videos
+    # if [[ -d "$savefolder" ]]; then
+    #   (
+    #     cd "$savefolder"
+    #     ffmpeg -y -framerate 60 -pattern_type glob -i 'TrackingTP/*.png' \
+    #            -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p TPsim.mp4 \
+    #            > ffmpeg_TP.log 2>&1 || true
+    #     ffmpeg -y -framerate 60 -pattern_type glob -i 'Video/*.png' \
+    #            -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p video.mp4 \
+    #            > ffmpeg_video.log 2>&1 || true
+    #   )
+    # fi
   ) &
 }
 
-# Simple semaphore: cap the number of background jobs
+# Cap the number of background jobs
 wait_for_slot() {
   while (( $(jobs -rp | wc -l) >= MAX_PAR )); do
     wait -n

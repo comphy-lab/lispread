@@ -14,6 +14,7 @@
 #include "tension.h"   // add surface tension
 #include "distance.h"   // some geometry
 #include "adapt_wavelet_limited_v2.h" // adaptive mesh refinement
+#include "end_run_on_no_movement.h" // ends run on no movement
 
 #define MINlevel 3                                              // maximum grid size, opposite of MAXlevel
 
@@ -104,7 +105,7 @@ if (savefolder[0] != '\0') {
 
   L0=Ldomain;
   X0=-hf*1.001; Y0=0.;          // define origin, you can also define LD/2, can be easier
-  init_grid (1 << 4);       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
+  init_grid (1 << MINlevel);       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
   
 
 
@@ -181,6 +182,9 @@ event init(t = 0){
     fractions (phi2, f2);
     fprintf(ferr, " done\n" );
   }
+  else{
+    fprintf(ferr, "Dump file found, restart from dump file\n" );
+  }
   dump (file = dumpfile);
   // return 1;
 }
@@ -192,14 +196,14 @@ event adapt(i++) {
   curvature(f1, KAPPA1);
   curvature(f2, KAPPA2);
   foreach(){
-    omega[] *= f1[]*(1-f2[]);
+    omega[] *= f1[] * (1 - f2[]);
   }
   adapt_wavelet_limited ((scalar *){f1, f2, u.x, u.y, KAPPA1, KAPPA2, omega},
     (double[]){fErr, fErr, VelErr, VelErr, KErr, KErr, OmegaErr},
     refRegion, MINlevel);
 }
 
-event writingFiles (t = 0; t += tsnap * 10; t <= tmax + tsnap) {
+event writingFiles (t = 0; t += tsnap; t <= tmax + tsnap) {
   // always write a plain dump for restart
   dump(file = dumpfile);
 

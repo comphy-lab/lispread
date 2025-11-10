@@ -14,25 +14,25 @@ day=$(date +%d)
 # Build tag with underscores between date parts and parameters
 
 # Compile once
-qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
-qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
-qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
-qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
-qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
+# qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
+# qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
+# qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
+# qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
+# qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
 Ohe_list=( "5.08e-3" )
-Ohf_list=( "20" "5" "2.5" "1" "0.5" "0.2" "6e-2" "1e-2" "1e-3" )
-tmax_list=( "20" "10" "5" "5" "3" "2" "2" "2" "2" )
+Ohf_list=( "0.1" )
+tmax_list=( "100" )
 Ohd_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
-MAXlevel_list=( "12", "13" )
+MAXlevel_list=( "10")
 hf_list=( "0.05" )
 
-MAX_PAR=8           # how many sims to run at once
-THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits available cores)
+MAX_PAR=1           # how many sims to run at once
+THREADS_PER_SIM=8   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits available cores)
 
 run_one() {
   local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8"
@@ -43,7 +43,7 @@ s1_${sigma_1}_s2_${sigma_2}_\
 hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
 
   local folder_tag="${tag//./p}"   # Clean tag for filesystem (replace dots with d)
-  local savefolder="Results/${folder_tag}"
+  local savefolder="Results/test/${folder_tag}"
   mkdir -p -- "$savefolder"
 
   (
@@ -54,27 +54,27 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
 
     # Run simulation
     ./bubbleAtLubis "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
-                    "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \
-                    > "${savefolder}/logTerminal" 2>&1
+                    "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" 
+                    
     # # Post-processing
-    # {
+    {
     #   python3 Video.py "$hf" "$Ldomain" "$Ohd" "$Ohf" "$Ohe" "$savefolder" &
-    #   python3 TriplePoint.py "0" "$Ldomain" "$hf" "$savefolder" &
-    #   wait
-    # } > "${savefolder}/logPostProcessingTerminal" 2>&1
+      python3 TriplePoint.py "0" "$Ldomain" "$hf" "$savefolder"
+      wait
+    } > "${savefolder}/logPostProcessingTerminal" 2>&1
 
-    # # Make videos
-    # if [[ -d "$savefolder" ]]; then
-    #   (
-    #     cd "$savefolder"
-    #     ffmpeg -y -framerate 60 -pattern_type glob -i 'TrackingTP/*.png' \
-    #            -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p TPsim.mp4 \
-    #            > ffmpeg_TP.log 2>&1 || true
-    #     ffmpeg -y -framerate 60 -pattern_type glob -i 'Video/*.png' \
-    #            -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p video.mp4 \
-    #            > ffmpeg_video.log 2>&1 || true
-    #   )
-    # fi
+    # Make videos
+    if [[ -d "$savefolder" ]]; then
+      (
+        cd "$savefolder"
+        ffmpeg -y -framerate 60 -pattern_type glob -i 'TrackingTP/*.png' \
+               -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p TPsim.mp4 \
+               > ffmpeg_TP.log 2>&1 || true
+        # ffmpeg -y -framerate 60 -pattern_type glob -i 'Video/*.png' \
+        #        -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p video.mp4 \
+        #        > ffmpeg_video.log 2>&1 || true
+      )
+    fi
   ) &
 }
 

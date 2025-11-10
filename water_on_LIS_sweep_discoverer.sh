@@ -8,7 +8,7 @@
 #SBATCH --time=72:00:00
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=32
+#SBATCH --ntasks=128
 #SBATCH --ntasks-per-core=1
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=251G
@@ -16,7 +16,7 @@
 #SBATCH -o job.%J.out
 
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=m.c.boulogne@studen.utwente.nl
+#SBATCH --mail-user=m.c.boulogne@student.utwente.nl
 
 source ~/.bash_shell
 
@@ -52,7 +52,7 @@ sigma2_list=( "0.67" )
 MAXlevel_list=("12")
 hf_list=("0.03" "0.05" "0.1")
 # Concurrency control
-MAX_PAR=8           # how many sims to run at once
+MAX_PAR=16           # how many sims to run at once
 THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {

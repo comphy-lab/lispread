@@ -1,6 +1,5 @@
-# TODO: check with aman if parameters below are correct
-
 #!/bin/bash
+
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
 #SBATCH --job-name=water_on_LIS_sweep
 #SBATCH --account=ehpc-reg-2023r03-178

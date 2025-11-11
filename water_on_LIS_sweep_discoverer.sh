@@ -63,7 +63,7 @@ s1_${sigma_1}_s2_${sigma_2}_\
 hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
 
   local folder_tag="${tag//./p}"   # Clean tag for filesystem (replace dots with d)
-  local savefolder="Results/${folder_tag}"
+  local savefolder="Results/water/${folder_tag}"
   mkdir -p -- "$savefolder"
 
   (

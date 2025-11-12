@@ -16,6 +16,7 @@
 
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=m.c.boulogne@student.utwente.nl
+source ~/.bash_shell
 set -euo pipefail
 
 # ---------- Base parameters (shared across runs) ----------

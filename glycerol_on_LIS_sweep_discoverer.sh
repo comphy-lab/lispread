@@ -1,11 +1,27 @@
 #!/bin/bash
-# generated with ChatGPT
+
+#SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
+#SBATCH --job-name=glycerol_on_LIS_sweep
+#SBATCH --account=ehpc-reg-2023r03-178
+#SBATCH --qos=ehpc-reg-2023r03-178
+#SBATCH --time=72:00:00
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=128
+#SBATCH --ntasks-per-core=1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=251G
+#SBATCH -e job.%J.err
+#SBATCH -o job.%J.out
+
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=m.c.boulogne@student.utwente.nl
 set -euo pipefail
 
 # ---------- Base parameters (shared across runs) ----------
-rhod="1"
-rhof="0.75"
-rhoe="1.e-3"
+rhod="0.055"
+rhof="0.041"
+rhoe="5.5e-5"
 Ldomain="5"
 delta="0.01"
 year=$(date +%Y)
@@ -23,17 +39,18 @@ qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
-Ohd_list=( "4.3" )
-Ohf_list=( "1e-3" "1e-2" "6e-2" "0.2" "0.5" "1"  "2.5" "5" "20")
-tmax_list=("20"  "20"  "20"  "20" "20" "20" "20"  "20" "30")
-Ohe_list=( "7.77e-5" )
+Ohd_list=( "1" )
+Ohf_list=( "5e-3" "5e-2" "0.3" "1" "2.5" "5" "12.5" "25" "100" )
+tmax_list=("100"  "100"  "100"  "100" "100" "100" "100" "100" "100")
+Ohe_list=( "1.81e-5" )
 sigma1_list=( "0.43" )
 sigma2_list=( "0.57" )
-MAXlevel_list=("11" "12")
-hf_list=("0.03" "0.05" "0.1")
+MAXlevel_list=("12", "13")
+hf_list=("0.05")
 # Concurrency control
-MAX_PAR=4           # how many sims to run at once
-THREADS_PER_SIM=5   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
+
+MAX_PAR=8           # how many sims to run at once
+THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {
   local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8"

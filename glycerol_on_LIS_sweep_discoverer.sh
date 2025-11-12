@@ -40,8 +40,8 @@ qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
 Ohd_list=( "1" )
-Ohf_list=( "5e-3" "5e-2" "0.3" "1" "2.5" "5" "12.5" "25" "100" )
-tmax_list=("100"  "100"  "100"  "100" "100" "100" "100" "100" "100")
+Ohf_list=( "5e-3" "5e-2" "0.3" "1" "2.5" "5" "12.5" "25" )
+tmax_list=("100"  "100"  "100"  "100" "100" "100" "100" "100")
 Ohe_list=( "1.81e-5" )
 sigma1_list=( "0.43" )
 sigma2_list=( "0.57" )

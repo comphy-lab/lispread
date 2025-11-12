@@ -1,9 +1,9 @@
 int steady_streak = 0;
 const int    STEADY_NEED  = 5;     // consecutive checks needed
-const double USUM_MIN = 5e-4;  // miniumum usum
-double usum_prev = 0.0;
-event endSimulation (i = 100; i += 10) {
-  double usum = 0.0;
+const double USUM_MIN = 0.3;  // miniumum usum
+double usum;
+event endSimulation (i = 1000; i += 10) {
+  usum = 0.0;
 
   foreach (reduction(+:usum)) {
 
@@ -11,7 +11,7 @@ event endSimulation (i = 100; i += 10) {
     usum += (sq(u.x[]) + sq(u.y[])) * sq(Delta);
   }
 
-  if (usum < USUM_MIN && usum_prev > usum) {
+  if (usum < USUM_MIN) {
     steady_streak++;  // reset if usum is too small
     if (steady_streak >= STEADY_NEED) {
       fprintf(ferr,
@@ -22,6 +22,5 @@ event endSimulation (i = 100; i += 10) {
   } else {
     steady_streak = 0;  // reset if usum is too large
   }
-  usum_prev = usum;
 }
 

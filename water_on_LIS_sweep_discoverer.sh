@@ -34,11 +34,11 @@ day=$(date +%d)
 # Build tag with underscores between date parts and parameters
 
 # Compile once
-qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
-qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
-qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
-qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
-qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
+# qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
+# qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
+# qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
+# qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
+# qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations

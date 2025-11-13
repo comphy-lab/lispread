@@ -20,9 +20,9 @@ source ~/.bash_shell
 set -euo pipefail
 
 # ---------- Base parameters (shared across runs) ----------
-rhod="0.055"
-rhof="0.041"
-rhoe="5.5e-5"
+rhod="0.041"
+rhof="0.029"
+rhoe="3.9e-5"
 Ldomain="5"
 delta="0.01"
 year=$(date +%Y)
@@ -42,7 +42,7 @@ qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 # Edit these lists to create your combinations
 Ohd_list=( "1" )
 Ohf_list=( "5e-3" "5e-2" "0.3" "1" "2.5" "5" "12.5" "25" )
-tmax_list=("100"  "100"  "100"  "100" "100" "100" "100" "100")
+tmax_list=("10"  "10"  "10"  "10" "10" "10" "10" "10")
 Ohe_list=( "1.81e-5" )
 sigma1_list=( "0.43" )
 sigma2_list=( "0.57" )
@@ -77,25 +77,25 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
                     "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \
                     > "${savefolder}/logTerminal" 2>&1
 
-    # Post-process (each in its own folder)
-    {
-      python3 Video.py "$hf" "$Ldomain" "$Ohd" "$Ohf" "$Ohe" "$savefolder" &
-      python3 TriplePoint.py "0" "$Ldomain" "$hf" "$savefolder" &
-      wait
-    } > "${savefolder}/logPostProcessingTerminal" 2>&1
+    # # Post-process (each in its own folder)
+    # {
+    #   python3 Video.py "$hf" "$Ldomain" "$Ohd" "$Ohf" "$Ohe" "$savefolder" &
+    #   python3 TriplePoint.py "0" "$Ldomain" "$hf" "$savefolder" &
+    #   wait
+    # } > "${savefolder}/logPostProcessingTerminal" 2>&1
 
-    # Make videos (paths relative to savefolder)
-    if [[ -d "$savefolder" ]]; then
-      (
-        cd "$savefolder"
-        ffmpeg -y -framerate 60 -pattern_type glob -i 'TrackingTP/*.png' \
-               -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p TPsim.mp4 \
-               > ffmpeg_TP.log 2>&1 || true
-        ffmpeg -y -framerate 60 -pattern_type glob -i 'Video/*.png' \
-               -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p video.mp4 \
-               > ffmpeg_video.log 2>&1 || true
-      )
-    fi
+    # # Make videos (paths relative to savefolder)
+    # if [[ -d "$savefolder" ]]; then
+    #   (
+    #     cd "$savefolder"
+    #     ffmpeg -y -framerate 60 -pattern_type glob -i 'TrackingTP/*.png' \
+    #            -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p TPsim.mp4 \
+    #            > ffmpeg_TP.log 2>&1 || true
+    #     ffmpeg -y -framerate 60 -pattern_type glob -i 'Video/*.png' \
+    #            -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p video.mp4 \
+    #            > ffmpeg_video.log 2>&1 || true
+    #   )
+    # fi
   ) &
 }
 

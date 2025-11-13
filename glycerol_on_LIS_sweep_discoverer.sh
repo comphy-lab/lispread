@@ -42,10 +42,10 @@ qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 # Edit these lists to create your combinations
 Ohd_list=( "1" )
 Ohf_list=( "5e-3" "5e-2" "0.3" "1" "2.5" "5" "12.5" "25" )
-tmax_list=("10"  "10"  "10"  "10" "10" "10" "10" "10")
+tmax_list=("10" "10" "10" "10" "10" "10" "10" "10")
 Ohe_list=( "1.81e-5" )
-sigma1_list=( "0.43" )
-sigma2_list=( "0.57" )
+sigma1_list=( "0.4" )
+sigma2_list=( "0.6" )
 MAXlevel_list=("12", "13")
 hf_list=("0.05")
 # Concurrency control

@@ -7,7 +7,7 @@
 #SBATCH --time=72:00:00
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=128
+#SBATCH --ntasks=64
 #SBATCH --ntasks-per-core=1
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=251G
@@ -46,12 +46,12 @@ tmax_list=("10" "10" "10" "10" "10" "10" "10" "10")
 Ohe_list=( "1.81e-5" )
 sigma1_list=( "0.4" )
 sigma2_list=( "0.6" )
-MAXlevel_list=("12" "13")
+MAXlevel_list=( "12" "12" "12" "12" "12" "13" "13" "13")
 hf_list=("0.05")
 # Concurrency control
 
 MAX_PAR=8           # how many sims to run at once
-THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
+THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {
   local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8"
@@ -76,26 +76,6 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
     ./bubbleAtLubis "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
                     "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \
                     > "${savefolder}/logTerminal" 2>&1
-
-    # # Post-process (each in its own folder)
-    # {
-    #   python3 Video.py "$hf" "$Ldomain" "$Ohd" "$Ohf" "$Ohe" "$savefolder" &
-    #   python3 TriplePoint.py "0" "$Ldomain" "$hf" "$savefolder" &
-    #   wait
-    # } > "${savefolder}/logPostProcessingTerminal" 2>&1
-
-    # # Make videos (paths relative to savefolder)
-    # if [[ -d "$savefolder" ]]; then
-    #   (
-    #     cd "$savefolder"
-    #     ffmpeg -y -framerate 60 -pattern_type glob -i 'TrackingTP/*.png' \
-    #            -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p TPsim.mp4 \
-    #            > ffmpeg_TP.log 2>&1 || true
-    #     ffmpeg -y -framerate 60 -pattern_type glob -i 'Video/*.png' \
-    #            -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p video.mp4 \
-    #            > ffmpeg_video.log 2>&1 || true
-    #   )
-    # fi
   ) &
 }
 
@@ -107,18 +87,17 @@ wait_for_slot() {
 }
 
 # Launch sweep
-for MAXlevel in "${MAXlevel_list[@]}"; do
-  for hf in "${hf_list[@]}"; do
-    for Ohd in "${Ohd_list[@]}"; do
-      for i in "${!Ohf_list[@]}"; do
-        Ohf="${Ohf_list[$i]}"
-        tmax="${tmax_list[$i]}"
-        for Ohe in "${Ohe_list[@]}"; do
-          for sigma_1 in "${sigma1_list[@]}"; do
-            for sigma_2 in "${sigma2_list[@]}"; do
-              wait_for_slot
-              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax"
-            done
+for hf in "${hf_list[@]}"; do
+  for Ohd in "${Ohd_list[@]}"; do
+    for i in "${!Ohf_list[@]}"; do
+      Ohf="${Ohf_list[$i]}"
+      tmax="${tmax_list[$i]}"
+      MAXlevel="${MAXlevel_list[$i]}"
+      for Ohe in "${Ohe_list[@]}"; do
+        for sigma_1 in "${sigma1_list[@]}"; do
+          for sigma_2 in "${sigma2_list[@]}"; do
+            wait_for_slot
+            run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax"
           done
         done
       done

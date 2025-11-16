@@ -46,7 +46,7 @@ tmax_list=("10" "10" "10" "10" "10" "10" "10" "10")
 Ohe_list=( "1.81e-5" )
 sigma1_list=( "0.4" )
 sigma2_list=( "0.6" )
-MAXlevel_list=("12", "13")
+MAXlevel_list=("12" "13")
 hf_list=("0.05")
 # Concurrency control
 

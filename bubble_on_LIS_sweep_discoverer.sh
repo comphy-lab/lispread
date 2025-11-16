@@ -28,8 +28,8 @@ rhod="1.2e-3"
 Ldomain="5"
 delta="0.01"
 year=$(date +%Y)
-month=$(date +%m)
-day=$(date +%d)
+month= "11"
+day= "13"
 
 # Build tag with underscores between date parts and parameters
 

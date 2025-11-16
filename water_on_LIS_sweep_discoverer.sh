@@ -28,8 +28,8 @@ rhoe="1.2e-3"
 Ldomain="5"
 delta="0.01"
 year=$(date +%Y)
-month=$(date +%m)
-day=$(date +%d)
+month= "11"
+day= "13"
 
 # Build tag with underscores between date parts and parameters
 
@@ -44,7 +44,7 @@ day=$(date +%d)
 # Edit these lists to create your combinations
 Ohd_list=( "5.08e-3" )
 Ohf_list=( "2.5" "5" "20" "1e-3" "1e-2" "6e-2" "0.2" "0.5" "1" )
-tmax_list=("10"  "20" "25" "3"  "3"  "3"  "3" "3" "10")
+tmax_list=("10" "20" "25" "3"  "3"  "3"  "3" "3" "10")
 Ohe_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
-#SBATCH --job-name=water_on_LIS_sweep
+#SBATCH --job-name=water_on_LIS_sweep_large_Oh
 #SBATCH --account=ehpc-reg-2023r03-178
 #SBATCH --qos=ehpc-reg-2023r03-178
 #SBATCH --time=72:00:00
@@ -27,9 +27,7 @@ rhof="0.9"
 rhoe="1.2e-3"
 Ldomain="5"
 delta="0.01"
-year=$(date +%Y)
-month="11"
-day="13"
+id_base="WLOh"
 
 # Build tag with underscores between date parts and parameters
 
@@ -43,27 +41,27 @@ day="13"
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
 Ohd_list=( "5.08e-3" )
-Ohf_list=( "2.5" "5" "20" "1e-3" "1e-2" "6e-2" "0.2" "0.5" "1" )
-tmax_list=("10" "20" "25" "3"  "3"  "3"  "3" "3" "10")
+Ohf_list=( "10" "20" "50" "100" )
+tmax_list=( "30" "30" "30" "30" )
 Ohe_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
-MAXlevel_list=("12")
-hf_list=("0.03" "0.05" "0.1")
+MAXlevel_list=("14" "15")
+hf_list=("0.05")
 # Concurrency control
-MAX_PAR=16           # how many sims to run at once
-THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
+MAX_PAR=8           # how many sims to run at once
+THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {
-  local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8"
-  local tag="${year}_${month}_${day}_\
+  local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8" id="$9"
+  local tag="${id_base}${id}_\
 Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_\
 rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_\
 s1_${sigma_1}_s2_${sigma_2}_\
 hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
 
   local folder_tag="${tag//./p}"   # Clean tag for filesystem (replace dots with d)
-  local savefolder="Results/water/${folder_tag}"
+  local savefolder="Results/waterLargeOh/${folder_tag}"
   mkdir -p -- "$savefolder"
 
   (
@@ -85,6 +83,7 @@ wait_for_slot() {
 }
 
 # Launch sweep
+id_counter=0
 for MAXlevel in "${MAXlevel_list[@]}"; do
   for Ohd in "${Ohd_list[@]}"; do
     for hf in "${hf_list[@]}"; do
@@ -95,7 +94,8 @@ for MAXlevel in "${MAXlevel_list[@]}"; do
           for sigma_1 in "${sigma1_list[@]}"; do
             for sigma_2 in "${sigma2_list[@]}"; do
               wait_for_slot
-              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax"
+              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax" "$id_counter"
+              id_counter=$((id_counter + 1))
             done
           done
         done

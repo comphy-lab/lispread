@@ -23,16 +23,16 @@ qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
 Ohe_list=( "5.08e-3" )
-Ohf_list=( "20" "5" "2.5" "1" "0.5" "0.2" "6e-2" "1e-2" "1e-3" )
-tmax_list=( "20" "10" "5" "5" "3" "2" "2" "2" "2" )
+Ohf_list=( "50" "100" )
+tmax_list=( "30" "30" )
 Ohd_list=( "9.1e-5" )
 sigma1_list=( "0.67" )
 sigma2_list=( "0.33" )
-MAXlevel_list=( "12", "13" )
+MAXlevel_list=( "14" "15" )
 hf_list=( "0.05" )
 
-MAX_PAR=8           # how many sims to run at once
-THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits available cores)
+MAX_PAR=4           # how many sims to run at once
+THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits available cores)
 
 run_one() {
   local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8"

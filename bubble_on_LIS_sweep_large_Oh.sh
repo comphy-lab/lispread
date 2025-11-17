@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
-#SBATCH --job-name=water_on_LIS_sweep
+#SBATCH --job-name=bubble_on_LIS_sweep
 #SBATCH --account=ehpc-reg-2023r03-178
 #SBATCH --qos=ehpc-reg-2023r03-178
 #SBATCH --time=72:00:00
@@ -22,12 +22,12 @@ source ~/.bash_shell
 set -euo pipefail
 
 # ---------- Base parameters (shared across runs) ----------
-rhod="1"
+rhoe="1"
 rhof="0.9"
-rhoe="1.2e-3"
+rhod="1.2e-3"
 Ldomain="5"
 delta="0.01"
-id_base="WLOh"
+id_base="BLOh"
 
 # Build tag with underscores between date parts and parameters
 
@@ -40,17 +40,17 @@ id_base="WLOh"
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
-Ohd_list=( "5.08e-3" )
+Ohe_list=( "5.08e-3" )
 Ohf_list=( "10" "20" "50" "100" )
 tmax_list=( "30" "30" "30" "30" )
-Ohe_list=( "9.1e-5" )
-sigma1_list=( "0.33" )
-sigma2_list=( "0.67" )
-MAXlevel_list=("14" "15")
-hf_list=("0.05")
-# Concurrency control
+Ohd_list=( "9.1e-5" )
+sigma1_list=( "0.67" )
+sigma2_list=( "0.33" )
+MAXlevel_list=( "14" "15" )
+hf_list=( "0.05" )
+
 MAX_PAR=8           # how many sims to run at once
-THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
+THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits available cores)
 
 run_one() {
   local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8" id="$9"
@@ -61,12 +61,14 @@ s1_${sigma_1}_s2_${sigma_2}_\
 hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
 
   local folder_tag="${tag//./p}"   # Clean tag for filesystem (replace dots with d)
-  local savefolder="Results/waterLargeOh/${folder_tag}"
+  local savefolder="Results/bubbleLargeOh/${folder_tag}"
   mkdir -p -- "$savefolder"
 
   (
     set -e
     export OMP_NUM_THREADS="${THREADS_PER_SIM}"
+
+    # Calculate_tmax
 
     # Run simulation
     ./bubbleAtLubis "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
@@ -75,7 +77,7 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
   ) &
 }
 
-# Simple semaphore: cap the number of background jobs
+# Cap the number of background jobs
 wait_for_slot() {
   while (( $(jobs -rp | wc -l) >= MAX_PAR )); do
     wait -n

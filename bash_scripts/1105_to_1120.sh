@@ -21,7 +21,10 @@ source ~/.bash_shell
 
 set -euo pipefail
 
-sub_save_folder="1105_to_1120/"
+
+id_start="1105"
+id_end="1120"
+sub_save_folder="${id_start}_to_${id_end}/"
 
 # ---------- Base parameters (shared across runs) ----------
 rhod="1"
@@ -54,8 +57,8 @@ MAX_PAR=16           # how many sims to run at once
 THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {
-  local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8"
-  local tag="${year}_${month}_${day}_\
+  local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8" id="$9"
+  local tag="${id}_\
 Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_\
 rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_\
 s1_${sigma_1}_s2_${sigma_2}_\
@@ -84,6 +87,8 @@ wait_for_slot() {
 }
 
 # Launch sweep
+# Launch sweep
+id_counter=$id_start
 for MAXlevel in "${MAXlevel_list[@]}"; do
   for i in "${!Ohf_list[@]}"; do
     Ohf="${Ohf_list[$i]}"
@@ -94,7 +99,8 @@ for MAXlevel in "${MAXlevel_list[@]}"; do
           for sigma_1 in "${sigma1_list[@]}"; do
             for sigma_2 in "${sigma2_list[@]}"; do
               wait_for_slot
-              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax"
+              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax" "$id_counter"
+              id_counter=$((id_counter + 1))
             done
           done
         done

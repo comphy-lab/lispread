@@ -18,7 +18,7 @@
 
 #define MINlevel 3                                              // maximum grid size, opposite of MAXlevel
 
-#define tsnap (5e-4)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
+#define tsnap (1e-3)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
 
 // Error tolerances
 #define fErr (1e-3)                                 // error tolerance in VOF
@@ -105,7 +105,7 @@ if (savefolder[0] != '\0') {
 
   L0=Ldomain;
   X0=-hf*1.001; Y0=0.;          // define origin, you can also define LD/2, can be easier
-  init_grid (1 << MINlevel);       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
+  init_grid (1 << 4);       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
   
 
 
@@ -203,7 +203,7 @@ event adapt(i++) {
     refRegion, MINlevel);
 }
 
-event writingFiles (t = 0; t += tsnap; t <= tmax + tsnap) {
+event writingFiles (t = 0; t += tsnap ; t <= tmax + tsnap) {
   // always write a plain dump for restart
   dump(file = dumpfile);
 

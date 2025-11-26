@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
-#SBATCH --job-name=bubble_on_LIS_sweep_large_Oh
+#SBATCH --job-name=1041_to_1056
 #SBATCH --account=ehpc-reg-2023r03-178
 #SBATCH --qos=ehpc-reg-2023r03-178
 #SBATCH --time=72:00:00
@@ -21,13 +21,14 @@ source ~/.bash_shell
 
 set -euo pipefail
 
+sub_save_folder="1041_to_1056/"
+
 # ---------- Base parameters (shared across runs) ----------
-rhoe="1"
+rhod="1"
 rhof="0.9"
-rhod="1.2e-3"
+rhoe="1.2e-3"
 Ldomain="5"
 delta="0.01"
-id_base="BLOh"
 
 # Build tag with underscores between date parts and parameters
 
@@ -40,35 +41,33 @@ id_base="BLOh"
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
-Ohe_list=( "5.08e-3" )
-Ohf_list=( "10" "20" "50" "100" )
-tmax_list=( "30" "30" "30" "30" )
-Ohd_list=( "9.1e-5" )
-sigma1_list=( "0.67" )
-sigma2_list=( "0.33" )
-MAXlevel_list=( "14" "15" )
-hf_list=( "0.05" )
-
-MAX_PAR=8           # how many sims to run at once
-THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits available cores)
+Ohd_list=( "1e-3" "2.5e-3" "5.0e-3" "1e-2")
+Ohf_list=( "1" "2.5" "5" "10")
+tmax_list=("10" "10" "10" "10")
+Ohe_list=( "9.1e-5" )
+sigma1_list=( "0.33" )
+sigma2_list=( "0.67" )
+MAXlevel_list=("12")
+hf_list=("0.015")
+# Concurrency control
+MAX_PAR=16           # how many sims to run at once
+THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {
-  local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8" id="$9"
-  local tag="${id_base}${id}_\
+  local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8"
+  local tag="${year}_${month}_${day}_\
 Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_\
 rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_\
 s1_${sigma_1}_s2_${sigma_2}_\
 hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
 
   local folder_tag="${tag//./p}"   # Clean tag for filesystem (replace dots with d)
-  local savefolder="Results/bubbleLargeOh/${folder_tag}"
+  local savefolder="Results/${sub_save_folder}${folder_tag}"
   mkdir -p -- "$savefolder"
 
   (
     set -e
     export OMP_NUM_THREADS="${THREADS_PER_SIM}"
-
-    # Calculate_tmax
 
     # Run simulation
     ./bubbleAtLubis "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
@@ -77,7 +76,7 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
   ) &
 }
 
-# Cap the number of background jobs
+# Simple semaphore: cap the number of background jobs
 wait_for_slot() {
   while (( $(jobs -rp | wc -l) >= MAX_PAR )); do
     wait -n
@@ -85,19 +84,17 @@ wait_for_slot() {
 }
 
 # Launch sweep
-id_counter=0
 for MAXlevel in "${MAXlevel_list[@]}"; do
-  for Ohd in "${Ohd_list[@]}"; do
-    for hf in "${hf_list[@]}"; do
-      for i in "${!Ohf_list[@]}"; do
-        Ohf="${Ohf_list[$i]}"
-        tmax="${tmax_list[$i]}"
+  for i in "${!Ohf_list[@]}"; do
+    Ohf="${Ohf_list[$i]}"
+    tmax="${tmax_list[$i]}"
+    for Ohd in "${Ohd_list[@]}"; do
+      for hf in "${hf_list[@]}"; do
         for Ohe in "${Ohe_list[@]}"; do
           for sigma_1 in "${sigma1_list[@]}"; do
             for sigma_2 in "${sigma2_list[@]}"; do
               wait_for_slot
-              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax" "$id_counter"
-              id_counter=$((id_counter + 1))
+              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax"
             done
           done
         done

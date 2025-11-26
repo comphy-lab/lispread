@@ -73,7 +73,8 @@ def main():
     first = True
     for xs, ys in polys2:
         ax.plot(xs, ys, linewidth=1.5, linestyle="--", label="f2" if first else None)
-        first = False
+    for xs, ys in polys1:
+        ax.plot(xs, ys, linewidth=1.5, linestyle=":", label="f1" if first else None)
 
     ax.set_aspect("equal", adjustable="box")
     ax.set_xlabel("x"); ax.set_ylabel("y")

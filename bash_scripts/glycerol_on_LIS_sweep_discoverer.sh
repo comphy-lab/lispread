@@ -7,7 +7,7 @@
 #SBATCH --time=72:00:00
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=64
+#SBATCH --ntasks=40
 #SBATCH --ntasks-per-core=1
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=251G
@@ -25,32 +25,32 @@ rhof="0.029"
 rhoe="3.9e-5"
 Ldomain="5"
 delta="0.01"
-year=$(date +%Y)
+year="2025"
 month="11"
 day="13"
 
 # Build tag with underscores between date parts and parameters
 
 # Compile once
-qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
-qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
-qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
-qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
-qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
+# qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
+# qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
+# qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
+# qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
+# qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
 Ohd_list=( "1" )
-Ohf_list=( "5e-3" "5e-2" "0.3" "1" "2.5" "5" "12.5" "25" )
-tmax_list=("10" "10" "10" "10" "10" "10" "10" "10")
+Ohf_list=( "5e-3" "5e-2" "0.3" "1" "2.5")
+tmax_list=("10" "10" "10" "10" "10")
 Ohe_list=( "1.81e-5" )
 sigma1_list=( "0.4" )
 sigma2_list=( "0.6" )
-MAXlevel_list=( "12" "12" "12" "12" "12" "13" "13" "13")
+MAXlevel_list=( "12" "12" "12" "12" "12")
 hf_list=("0.05")
 # Concurrency control
 
-MAX_PAR=8           # how many sims to run at once
+MAX_PAR=5           # how many sims to run at once
 THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {

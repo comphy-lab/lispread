@@ -21,7 +21,9 @@ source ~/.bash_shell
 
 set -euo pipefail
 
-sub_save_folder="1001_to_1016/"
+id="1001_to_1016"
+sub_save_folder="${id}/"
+
 # ---------- Base parameters (shared across runs) ----------
 rhod="1"
 rhof="0.9"

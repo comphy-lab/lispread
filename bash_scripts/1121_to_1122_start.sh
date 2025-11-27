@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
-#SBATCH --job-name=1121_to_1122
+#SBATCH --job-name=start_1121_to_1122
 #SBATCH --account=ehpc-reg-2023r03-178
 #SBATCH --qos=ehpc-reg-2023r03-178
 #SBATCH --time=72:00:00

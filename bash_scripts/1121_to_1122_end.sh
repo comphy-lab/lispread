@@ -1,13 +1,13 @@
 #!/bin/bash
 
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
-#SBATCH --job-name=1121_to_1122
+#SBATCH --job-name=end_1121_to_1122
 #SBATCH --account=ehpc-reg-2023r03-178
 #SBATCH --qos=ehpc-reg-2023r03-178
 #SBATCH --time=72:00:00
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=64
+#SBATCH --ntasks=32
 #SBATCH --ntasks-per-core=1
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=251G
@@ -50,10 +50,10 @@ tmax_list=("20" "20")
 Ohe_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
-MAXlevel_list=("13" "14")
+MAXlevel_list=("13")
 hf_list=("0.03")
 # Concurrency control
-MAX_PAR=4           # how many sims to run at once
+MAX_PAR=2     # how many sims to run at once
 THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {
@@ -62,7 +62,7 @@ run_one() {
 Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_\
 rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_\
 s1_${sigma_1}_s2_${sigma_2}_\
-hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
+hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
 
   local folder_tag="${tag//./p}"   # Clean tag for filesystem (replace dots with d)
   local savefolder="Results/${sub_save_folder}${folder_tag}"

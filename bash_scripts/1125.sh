@@ -50,7 +50,7 @@ tmax_list=("1" "10")
 Ohe_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
-MAXlevel_list=("11")
+MAXlevel_list=("11" "14")
 hf_list=("0.03")
 # Concurrency control
 MAX_PAR=1           # how many sims to run at once
@@ -89,19 +89,18 @@ wait_for_slot() {
 # Launch sweep
 # Launch sweep
 id_counter=$id_start
-for MAXlevel in "${MAXlevel_list[@]}"; do
-  for i in "${!Ohf_list[@]}"; do
-    Ohf="${Ohf_list[$i]}"
-    tmax="${tmax_list[$i]}"
-    for Ohd in "${Ohd_list[@]}"; do
-      for hf in "${hf_list[@]}"; do
-        for Ohe in "${Ohe_list[@]}"; do
-          for sigma_1 in "${sigma1_list[@]}"; do
-            for sigma_2 in "${sigma2_list[@]}"; do
-              wait_for_slot
-              run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax" "$id_counter"
-              id_counter=$((id_counter + 1))
-            done
+for i in "${!Ohf_list[@]}"; do
+  Ohf="${Ohf_list[$i]}"
+  tmax="${tmax_list[$i]}"
+  MAXlevel="${MAXlevel_list[$i]}"
+  for Ohd in "${Ohd_list[@]}"; do
+    for hf in "${hf_list[@]}"; do
+      for Ohe in "${Ohe_list[@]}"; do
+        for sigma_1 in "${sigma1_list[@]}"; do
+          for sigma_2 in "${sigma2_list[@]}"; do
+            wait_for_slot
+            run_one "$Ohd" "$Ohf" "$Ohe" "$sigma_1" "$sigma_2" "$MAXlevel" "$hf" "$tmax" "$id_counter"
+            # id_counter=$((id_counter + 1))
           done
         done
       done

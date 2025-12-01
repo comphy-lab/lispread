@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
-#SBATCH --job-name=1001_to_1016
+#SBATCH --job-name=2025_to_2040
 #SBATCH --account=ehpc-reg-2023r03-178
 #SBATCH --qos=ehpc-reg-2023r03-178
-#SBATCH --time=72:00:00
+#SBATCH --time=96:00:00
 
 #SBATCH --nodes=1
 #SBATCH --ntasks=128
@@ -21,36 +21,37 @@ source ~/.bash_shell
 
 set -euo pipefail
 
-id_start="1001"
-id_end="1016"
+
+id_start="2025"
+id_end="2040"
 sub_save_folder="${id_start}_to_${id_end}/"
 
 # ---------- Base parameters (shared across runs) ----------
-rhod="1"
+rhoe="1"
 rhof="0.9"
-rhoe="1.2e-3"
+rhod="1.2e-3"
 Ldomain="5"
 delta="0.01"
 
 # Build tag with underscores between date parts and parameters
 
 # Compile once
-qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
-qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
-qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
-qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
-qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
+# qcc -fopenmp -Wall -O2 bubbleAtLubis.c -o bubbleAtLubis -lm -disable-dimensions
+# qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
+# qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
+# qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions
+# qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
-Ohd_list=( "1e-3" "2.5e-3" "5.0e-3" "1e-2")
-Ohf_list=("1e-2" "5e-2" "0.5" "0.1")
+Ohe_list=( "1e-3" "2.5e-3" "5.0e-3" "1e-2")
+Ohf_list=("1e-2" "5e-2" "0.2" "0.5")
 tmax_list=("4" "4" "4" "4")
-Ohe_list=( "9.1e-5" )
-sigma1_list=( "0.33" )
-sigma2_list=( "0.67" )
-MAXlevel_list=("13")
-hf_list=("0.006")
+Ohd_list=( "9.1e-5" )
+sigma2_list=( "0.33" )
+sigma1_list=( "0.67" )
+MAXlevel_list=("12")
+hf_list=("0.015")
 # Concurrency control
 MAX_PAR=16           # how many sims to run at once
 THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)

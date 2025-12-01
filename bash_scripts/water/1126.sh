@@ -46,7 +46,7 @@ delta="0.01"
 # Edit these lists to create your combinations
 Ohd_list=( "5.0e-3")
 Ohf_list=("50" "50")
-tmax_list=("1" "10")
+tmax_list=("3" "20")
 Ohe_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )

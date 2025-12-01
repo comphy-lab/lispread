@@ -21,7 +21,6 @@ source ~/.bash_shell
 
 set -euo pipefail
 
-
 id_start="2017"
 id_end="2024"
 sub_save_folder="${id_start}_to_${id_end}/"

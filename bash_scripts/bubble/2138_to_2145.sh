@@ -44,7 +44,7 @@ delta="0.01"
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
 Ohe_list=( "1e-3" "2.5e-3" "5.0e-3" "1e-2")
-Ohf_list=("10" "20")
+Ohf_list=("30" "40")
 tmax_list=("20" "20")
 Ohd_list=( "9.1e-5" )
 sigma2_list=( "0.33" )

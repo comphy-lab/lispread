@@ -1,7 +1,6 @@
 # Ignore everything in the Video folder
 data/
 
-# Ignore everything in the intermediate folder
-figures/
+
 
 

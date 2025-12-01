@@ -7,7 +7,7 @@
 #SBATCH --time=72:00:00
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=64
+#SBATCH --ntasks=128
 #SBATCH --ntasks-per-core=1
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=251G
@@ -54,7 +54,7 @@ MAXlevel_list=("13")
 hf_list=("0.006")
 # Concurrency control
 MAX_PAR=8           # how many sims to run at once
-THREADS_PER_SIM=16   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
+THREADS_PER_SIM=32   # OpenMP threads per sim (make sure MAX_PAR*THREADS_PER_SIM fits your CPU)
 
 run_one() {
   local Ohd="$1" Ohf="$2" Ohe="$3" sigma_1="$4" sigma_2="$5" MAXlevel="$6" hf="$7" tmax="$8" id="$9"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
-#SBATCH --job-name=2130_to_2137
+#SBATCH --job-name=2138_to_2145
 #SBATCH --account=ehpc-reg-2023r03-178
 #SBATCH --qos=ehpc-reg-2023r03-178
 #SBATCH --time=96:00:00
@@ -21,8 +21,8 @@ source ~/.bash_shell
 
 set -euo pipefail
 
-id_start="2130"
-id_end="2137"
+id_start="2138"
+id_end="2145"
 sub_save_folder="${id_start}_to_${id_end}/"
 
 # ---------- Base parameters (shared across runs) ----------

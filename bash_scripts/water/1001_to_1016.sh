@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
-#SBATCH --job-name=2001_to_2016
+#SBATCH --job-name=1001_to_1016
 #SBATCH --account=ehpc-reg-2023r03-178
 #SBATCH --qos=ehpc-reg-2023r03-178
 #SBATCH --time=96:00:00
@@ -21,14 +21,14 @@ source ~/.bash_shell
 
 set -euo pipefail
 
-id_start="2001"
-id_end="2016"
+id_start="1001"
+id_end="1016"
 sub_save_folder="${id_start}_to_${id_end}/"
 
 # ---------- Base parameters (shared across runs) ----------
-rhoe="1"
+rhod="1"
 rhof="0.9"
-rhod="1.2e-3"
+rhoe="1.2e-3"
 Ldomain="5"
 delta="0.01"
 
@@ -43,12 +43,12 @@ delta="0.01"
 
 # ---------- Parameter sweeps ----------
 # Edit these lists to create your combinations
-Ohe_list=( "1e-3" "2.5e-3" "5.0e-3" "1e-2")
+Ohd_list=( "1e-3" "2.5e-3" "5.0e-3" "1e-2")
 Ohf_list=("1e-2" "5e-2" "0.5" "0.1")
 tmax_list=("4" "4" "4" "4")
-Ohd_list=( "9.1e-5" )
-sigma2_list=( "0.33" )
-sigma1_list=( "0.67" )
+Ohe_list=( "9.1e-5" )
+sigma1_list=( "0.33" )
+sigma2_list=( "0.67" )
 MAXlevel_list=("13")
 hf_list=("0.006")
 # Concurrency control

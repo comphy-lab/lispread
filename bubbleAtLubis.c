@@ -18,7 +18,7 @@
 
 #define MINlevel 3                                              // maximum grid size, opposite of MAXlevel
 
-#define tsnap (1e-3)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
+#define tsnap (2.5e-3)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
 
 // Error tolerances
 #define fErr (1e-3)                                 // error tolerance in VOF

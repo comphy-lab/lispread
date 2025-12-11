@@ -7,9 +7,9 @@
 #SBATCH --time=1:00:00
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=4
+#SBATCH --ntasks=1
 #SBATCH --ntasks-per-core=1
-#SBATCH --cpus-per-task=2
+#SBATCH --cpus-per-task=8
 #SBATCH --mem=251G
 #SBATCH -e job.%J.err
 #SBATCH -o job.%J.out

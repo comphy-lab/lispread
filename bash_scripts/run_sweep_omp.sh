@@ -71,6 +71,8 @@ fi
 # From here on we are inside the SLURM job #
 #########################################
 
+cd "$SLURM_SUBMIT_DIR"
+
 # Load sweep and sim parameters
 source "$PROP_FILE"
 

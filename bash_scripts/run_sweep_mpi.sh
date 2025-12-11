@@ -96,7 +96,7 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
   (
     set -e
 
-    mpirun -np "${MPI_RANKS_PER_SIM}" ./bubbleAtLubis \
+    mpirun -np "${THREADS_PER_SIM}" ./bubbleAtLubis \
       "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
       "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \
       > "${savefolder}/logTerminal" 2>&1

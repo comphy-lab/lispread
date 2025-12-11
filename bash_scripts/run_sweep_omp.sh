@@ -40,7 +40,7 @@ fi
 # Detect if we are inside a SLURM job or not
 if [[ -z "${SLURM_JOB_ID:-}" ]]; then
   # Not in SLURM: submit this script with sbatch, using SBATCH_* from the properties file
-  here="$(dirname "$0")"
+  # here="$(dirname "$0")"
   source "$PROP_FILE"
 
   sbatch \
@@ -58,7 +58,7 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     -o "${SBATCH_STDOUT}" \
     --mail-type="${SBATCH_MAIL_TYPE}" \
     --mail-user="${SBATCH_MAIL_USER}" \
-    "${here}/$(basename "$0")" "$PROP_FILE"
+    "$0" "$PROP_FILE"
 
   exit 0
 fi

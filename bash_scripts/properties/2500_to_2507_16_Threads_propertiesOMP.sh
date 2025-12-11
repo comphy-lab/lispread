@@ -5,7 +5,7 @@
 #############################
 id_start="2500"
 id_end="2507"
-sub_save_folder="${id_start}_to_${id_end}_64Threads/"
+sub_save_folder="${id_start}_to_${id_end}_16Threads_OpenMP/"
 
 
 ###################################
@@ -31,17 +31,17 @@ hf_list=( "0.05" )
 
 # Concurrency control
 MAX_PAR=8         # how many sims to run at once
-THREADS_PER_SIM=64 # OpenMP/MPI threads per sim
+THREADS_PER_SIM=16 # OpenMP/MPI threads per sim
 
 
 #############################
 # SBATCH related parameters #
 #############################
 
-SBATCH_JOB_NAME="${id_start}_to_${id_end}_64Threads"
+SBATCH_JOB_NAME="${id_start}_to_${id_end}_16Threads_OpenMP"
 SBATCH_TIME="1:00:00"
 
-SBATCH_NODES=2
+SBATCH_NODES=1
 SBATCH_NTASKS=$(( MAX_PAR * THREADS_PER_SIM / 2 ))
 SBATCH_NTASKS_PER_CORE=1
 SBATCH_CPUS_PER_TASK=2

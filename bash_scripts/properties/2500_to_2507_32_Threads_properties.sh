@@ -5,7 +5,7 @@
 #############################
 id_start="2500"
 id_end="2507"
-sub_save_folder="${id_start}_to_${id_end}_32Threads/"
+sub_save_folder="${id_start}_to_${id_end}_32Threads_OpenMP/"
 
 
 ###################################
@@ -38,7 +38,7 @@ THREADS_PER_SIM=32 # OpenMP/MPI threads per sim
 # SBATCH related parameters #
 #############################
 
-SBATCH_JOB_NAME="${id_start}_to_${id_end}_32Threads"
+SBATCH_JOB_NAME="${id_start}_to_${id_end}_32Threads_OpenMP"
 SBATCH_TIME="1:00:00"
 
 SBATCH_NODES=1

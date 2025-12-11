@@ -86,7 +86,7 @@ run_one() {
 Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_\
 rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_\
 s1_${sigma_1}_s2_${sigma_2}_\
-hf_${hf}_Ldomain_${Ldomain}_delta_${delta}_MaxLevel_${MAXlevel}"
+hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
 
   # Replace dots with p so folder names do not contain dots
   local folder_tag="${tag//./p}"

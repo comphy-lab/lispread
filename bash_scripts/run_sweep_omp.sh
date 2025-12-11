@@ -40,7 +40,11 @@ fi
 # Detect if we are inside a SLURM job or not
 if [[ -z "${SLURM_JOB_ID:-}" ]]; then
   # Not in SLURM: submit this script with sbatch, using SBATCH_* from the properties file
-  # here="$(dirname "$0")"
+
+  # Absolute path to this script, independent of current working directory
+  SCRIPT_PATH="$(cd "$(dirname "$0")" && pwd)/$(basename "$0")"
+
+  # Load SBATCH_* variables from the properties file
   source "$PROP_FILE"
 
   sbatch \
@@ -58,7 +62,7 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     -o "${SBATCH_STDOUT}" \
     --mail-type="${SBATCH_MAIL_TYPE}" \
     --mail-user="${SBATCH_MAIL_USER}" \
-    "$0" "$PROP_FILE"
+    "$SCRIPT_PATH" "$PROP_FILE"
 
   exit 0
 fi

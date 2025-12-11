@@ -38,8 +38,6 @@ a list called list.
 
 
 
-
-
 // boundary conditions
 u.t[left] = dirichlet(0.0);
 

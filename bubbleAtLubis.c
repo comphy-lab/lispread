@@ -50,7 +50,7 @@ u.t[left] = dirichlet(0.0);
 double Oh_d, Oh_f, Oh_e, rho_d, rho_f, rho_e, sigma_1, sigma_2, hf, tmax, Ldomain, delta;
 char savefolder[256], dumpfile[256], logfile[256];
 int MAXlevel;
-double CFL = 2.0;  // high CFL number
+CFL = 2.0;  // high CFL number
 int main(int argc, char const *argv[]) {
 
   if (argc != 14&& argc != 15) {

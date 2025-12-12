@@ -221,11 +221,12 @@ event writingFiles (t = 0; t += tsnap ; t <= tmax + tsnap) {
 
 
 event logWriting (i++) {
+  double ke = 0.;
+  foreach (reduction(+:ke)){
+    ke += sq(Delta)*(sq(u.x[]) + sq(u.y[]))*rho(f1[],f2[]);
+  }
+    
   if (pid() == 0) { 
-    double ke = 0.;
-    foreach (reduction(+:ke)){
-      ke += sq(Delta)*(sq(u.x[]) + sq(u.y[]))*rho(f1[],f2[]);
-    }
     static FILE * fp;
     if (i == 0) {
       // fprintf (ferr, "i dt t ke\n");

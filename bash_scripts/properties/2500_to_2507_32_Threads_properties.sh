@@ -44,7 +44,7 @@ OMP_THREADS_PER_RANK=1
 SBATCH_JOB_NAME="${id_start}_to_${id_end}_mpi32x8"
 SBATCH_TIME="1:00:00"
 
-SBATCH_NODES=1
+SBATCH_NODES=2
 
 # Total tasks in the allocation = concurrent sims * ranks per sim
 SBATCH_NTASKS=$(( MAX_PAR * MPI_RANKS_PER_SIM ))   # 8 * 32 = 256

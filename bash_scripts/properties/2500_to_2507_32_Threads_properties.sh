@@ -4,7 +4,7 @@
 # ----------------------------
 id_start="2500"
 id_end="2507"
-sub_save_folder="${id_start}_to_${id_end}_mpi32x8/"
+sub_save_folder="${id_start}_to_${id_end}_32Threads/"
 
 # ----------------------------
 # Simulation base parameters
@@ -41,7 +41,7 @@ OMP_THREADS_PER_RANK=1
 # ----------------------------
 # SBATCH parameters (allocation)
 # ----------------------------
-SBATCH_JOB_NAME="${id_start}_to_${id_end}_mpi32x8"
+SBATCH_JOB_NAME="${id_start}_to_${id_end}_32Threads"
 SBATCH_TIME="1:00:00"
 
 SBATCH_NODES=2

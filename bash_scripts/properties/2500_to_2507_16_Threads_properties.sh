@@ -1,48 +1,53 @@
 #!/bin/bash
-
-#############################
-# Run ID  #
-#############################
+# ----------------------------
+# Run IDs / output folder
+# ----------------------------
 id_start="2500"
 id_end="2507"
 sub_save_folder="${id_start}_to_${id_end}_16Threads/"
 
-
-###################################
-# Simulation and sweep parameters #
-###################################
-
-# Base parameters (shared across runs)
+# ----------------------------
+# Simulation base parameters
+# ----------------------------
 rhoe="1"
 rhof="0.9"
 rhod="1.2e-3"
 Ldomain="5"
 delta="0.01"
 
+# ----------------------------
 # Parameter sweeps
-Ohe_list=( "5.0e-3" "2.5e-2")
-Ohf_list=( "10" "20" "30" "40")
-tmax_list=( "20" "20" "20" "20")
+# ----------------------------
+Ohe_list=( "5.0e-3" "2.5e-2" )
+Ohf_list=( "10" "20" "30" "40" )
+tmax_list=( "20" "20" "20" "20" )
 Ohd_list=( "9.1e-5" )
 sigma2_list=( "0.33" )
 sigma1_list=( "0.67" )
 MAXlevel_list=( "14" )
 hf_list=( "0.05" )
 
-# Concurrency control
-MAX_PAR=8         # how many sims to run at once
-THREADS_PER_SIM=16 # OpenMP/MPI threads per sim
+# ----------------------------
+# Parallelization model (PURE MPI)
+# ----------------------------
+# You said: 8 simulations, each 32 "threads".
+# In MPI/Slurm terms: 8 concurrent sims, each with 32 MPI ranks (tasks).
+MAX_PAR=8
+MPI_RANKS_PER_SIM=32
 
+# OpenMP threads per MPI rank (keep 1 for pure MPI)
+OMP_THREADS_PER_RANK=1
 
-#############################
-# SBATCH related parameters #
-#############################
-
+# ----------------------------
+# SBATCH parameters (allocation)
+# ----------------------------
 SBATCH_JOB_NAME="${id_start}_to_${id_end}_16Threads"
 SBATCH_TIME="1:00:00"
 
-SBATCH_NODES=1
-SBATCH_NTASKS=$(( MAX_PAR * THREADS_PER_SIM / 2 ))
-SBATCH_NTASKS_PER_CORE=1
-SBATCH_CPUS_PER_TASK=2
+SBATCH_NODES=2
 
+# Total tasks in the allocation = concurrent sims * ranks per sim
+SBATCH_NTASKS=$(( MAX_PAR * MPI_RANKS_PER_SIM ))   # 8 * 32 = 256
+
+SBATCH_NTASKS_PER_CORE=1
+SBATCH_CPUS_PER_TASK="${OMP_THREADS_PER_RANK}"      # 1

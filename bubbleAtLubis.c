@@ -113,7 +113,7 @@ if (savefolder[0] != '\0') {
 
   f1.sigma = sigma_1;    
   f2.sigma = sigma_2;   
-  fprintf (fp, "CFL: %g\n", CFL);
+  fprintf(ferr, "CFL: %g\n", CFL);
   fprintf(ferr, "Level %d tmax %g. Oh_d %3.2e, Oh_f %3.2e, Oh_e %3.2e, rho_d %3.2e, rho_f %3.2e,rho_e %3.2e, hf %3.2f\n", 
                 MAXlevel, tmax, Oh_d, Oh_f, Oh_e, rho_d, rho_f, rho_e, hf);
   run();

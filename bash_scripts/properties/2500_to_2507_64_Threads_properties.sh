@@ -16,7 +16,7 @@ sub_save_folder="2500_to_2507_64Threads/"
 rhoe="1"
 rhof="0.9"
 rhod="1.2e-3"
-Ldomain="3"
+Ldomain="5"
 delta="0.01"
 
 # Parameter sweeps

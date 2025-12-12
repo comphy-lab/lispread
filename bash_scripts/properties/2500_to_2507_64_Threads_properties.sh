@@ -30,8 +30,8 @@ MAXlevel_list=( "14" )
 hf_list=( "0.05" )
 
 # Concurrency control
-MAX_PAR=8         # how many sims to run at once
-THREADS_PER_SIM=32 # OpenMP/MPI threads per sim
+MAX_PAR=2         # how many sims to run at once
+THREADS_PER_SIM=64 # OpenMP/MPI threads per sim
 
 
 #############################

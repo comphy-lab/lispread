@@ -93,8 +93,6 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
   mkdir -p -- "$savefolder"
 
   (
-    set -e
-
     # Each simulation is a Slurm step that uses exactly RANKS_PER_SIM tasks
 
     srun -n "${THREADS_PER_SIM}" -c 1 \

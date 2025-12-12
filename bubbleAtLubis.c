@@ -220,7 +220,7 @@ event writingFiles (t = 0; t += tsnap ; t <= tmax + tsnap) {
 }
 
 
-event logWriting (i++) {
+event logWriting (i+=5) {
   double ke = 0.;
   foreach (reduction(+:ke)){
     ke += sq(Delta)*(sq(u.x[]) + sq(u.y[]))*rho(f1[],f2[]);

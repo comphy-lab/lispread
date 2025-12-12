@@ -98,7 +98,7 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
 
     # Each simulation is a Slurm step that uses exactly RANKS_PER_SIM tasks
 
-    srun -n "${THREADS_PER_SIM}" \
+    mpirun -np "${THREADS_PER_SIM}" \
       ./bubbleAtLubis_mpi \
       "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
       "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \

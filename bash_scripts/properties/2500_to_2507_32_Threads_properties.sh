@@ -3,9 +3,9 @@
 #############################
 # Run ID  #
 #############################
-id_start="2500"
-id_end="2507"
-sub_save_folder="${id_start}_to_${id_end}_32Threads/"
+id_start="2502"
+id_end="2502"
+sub_save_folder="2500_to_2507_32Threads/"
 
 
 ###################################
@@ -20,9 +20,9 @@ Ldomain="5"
 delta="0.01"
 
 # Parameter sweeps
-Ohe_list=( "5.0e-3" "2.5e-2")
-Ohf_list=( "10" "20" "30" "40")
-tmax_list=( "20" "20" "20" "20")
+Ohe_list=( "5.0e-3")
+Ohf_list=("20")
+tmax_list=( "20")
 Ohd_list=( "9.1e-5" )
 sigma2_list=( "0.33" )
 sigma1_list=( "0.67" )

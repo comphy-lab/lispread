@@ -4,7 +4,7 @@
 # Run ID  #
 #############################
 id_start="2502"
-id_end="2502"
+id_end="2503"
 sub_save_folder="2500_to_2507_64Threads/"
 
 
@@ -16,17 +16,17 @@ sub_save_folder="2500_to_2507_64Threads/"
 rhoe="1"
 rhof="0.9"
 rhod="1.2e-3"
-Ldomain="5"
+Ldomain="3"
 delta="0.01"
 
 # Parameter sweeps
-Ohe_list=( "5.0e-3")
+Ohe_list=( "5.0e-3" "2.5e-2")
 Ohf_list=("20")
 tmax_list=( "20")
 Ohd_list=( "9.1e-5" )
 sigma2_list=( "0.33" )
 sigma1_list=( "0.67" )
-MAXlevel_list=( "14" )
+MAXlevel_list=( "13" )
 hf_list=( "0.05" )
 
 # Concurrency control

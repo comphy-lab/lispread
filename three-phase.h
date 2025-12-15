@@ -36,21 +36,33 @@ event defaults (i = 0) {
 /**
 The density and viscosity are defined using arithmetic averages by
 default. The user can overload these definitions to use other types of
-averages (i.e. harmonic). */
+averages (i.e. harmonic). 
+-- Update --
+Harmonic averages can now also be used by defineing HARMONIC_MU and/or HARMONIC_RHO before including this file
+*/
 
 #ifndef rho
+#ifdef HARMONIC_RHO
+#define rho(f1, f2) (1./(clamp((f1-f2), 0., 1.)/rho_film + clamp(f2, 0., 1.)/rho_drop \
+        + clamp((1-f1), 0., 1.)/rho_env))
+#else       
 /** #define rho(f1, f2) (clamp(f1*(1-f2), 0., 1.) * rho_film + clamp(f1*f2, 0., 1.) * rho_drop\
          + clamp((1-f1), 0., 1.) * rho_env) */
 #define rho(f1, f2) (clamp((f1-f2), 0., 1.) * rho_film + clamp(f2, 0., 1.) * rho_drop\
         + clamp((1-f1), 0., 1.) * rho_env)
 #endif
+#endif
 #ifndef mu
+#ifdef HARMONIC_MU
+#define mu(f1, f2) (1./(clamp((f1-f2), 0., 1.)/mu_film + clamp(f2, 0., 1.)/mu_drop \
+        + clamp((1-f1), 0., 1.)/mu_env))
+#else
 /** #define mu(f1, f2) (clamp(f1*(1-f2), 0., 1.) * mu_film + clamp(f1*f2, 0., 1.) * mu_drop \
         + clamp((1-f1), 0., 1.) * mu_env)*/
 #define mu(f1, f2) (clamp((f1-f2), 0., 1.) * mu_film + clamp(f2, 0., 1.) * mu_drop \
         + clamp((1-f1), 0., 1.) * mu_env)
 #endif
-
+#endif
 /**
 We have the option of using some "smearing" of the density/viscosity
 jump. */

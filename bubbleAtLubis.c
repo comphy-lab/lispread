@@ -10,6 +10,7 @@
 #include "navier-stokes/centered.h" // centered uses central difference method, now also /conserving.h might also be bossible it can get rid of blow ups due to cells moving into other cells in case of large density ratios
 // #include "navier-stokes/conserving.h"  // Perhaps have to reorder the order of the header files
 #define FILTERED     // spreads interface over a view grid cels to reduce jumps (mostly in curvature and fractions), the space o1
+#define HARMONIC_MU  // use harmonic average for viscosity
 #include "three-phase.h"  // initializes fractions mu1, mu2, mu3, rho1, rho2, rho3, + smearing out
 #include "tension.h"   // add surface tension
 #include "distance.h"   // some geometry

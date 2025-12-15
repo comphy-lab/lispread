@@ -52,8 +52,6 @@ double Oh_d, Oh_f, Oh_e, rho_d, rho_f, rho_e, sigma_1, sigma_2, hf, tmax, Ldomai
 char savefolder[256], dumpfile[256], logfile[256];
 int MAXlevel;
 int main(int argc, char const *argv[]) {
-  CFL = 2.0;  // high CFL number
-
   if (argc != 14&& argc != 15) {
     fprintf(ferr, "%d\n", argc);
     fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, rho_d, rho_f, rho_e,sigma_1, sigma_2, hf, tmax, Ldomain, delta, MAXlevel\n", 14-argc);

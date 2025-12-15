@@ -16,7 +16,7 @@ sub_save_folder="${id_start}_to_${id_end}/"
 rhoe="1"
 rhof="0.9"
 rhod="1.2e-3"
-Ldomain="5"
+Ldomain="3"
 delta="0.01"
 
 # Parameter sweeps

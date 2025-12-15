@@ -27,7 +27,7 @@ Ohd_list=( "9.1e-5" )
 sigma2_list=( "0.33" )
 sigma1_list=( "0.67" )
 MAXlevel_list=( "10" )
-hf_list=( "0.05" )
+hf_list=( "0.03" )
 
 # Concurrency control
 MAX_PAR=8         # how many sims to run at once

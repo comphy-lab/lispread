@@ -39,11 +39,15 @@ def create_all_plots(folders,fig_save_dir, forced_exponent = None, forced_dt=Non
     for f in folders:
         i +=1
         # load data and Oh
-        t, z, r, v, theta1, theta2 = load_data(f)
+        try:
+            t, z, r, v, theta1, theta2 = load_data(f)
+        except Exception as e: 
+            print(e, ", folder=", f)
+            continue
         l = get_Ohf_from_folder_name(f.split("/")[-1])
         if l in skip_Oh: 
             continue
-
+        
         # setup color and labels for plotting
         color = ohf_to_color[l]
         label = r'$Oh = $' + f'{l}'+r" $h = $" + f'{h}'
@@ -58,6 +62,7 @@ def create_all_plots(folders,fig_save_dir, forced_exponent = None, forced_dt=Non
         # mask = (theta_deg < 160) & (t < t_end[i])
         mask = remove_isolated_points(mask)
         if len(t[mask]) ==0:
+            print("no datapoints in fitrange")
             continue
         
         t_min = t[mask][0]
@@ -114,7 +119,7 @@ def create_all_plots(folders,fig_save_dir, forced_exponent = None, forced_dt=Non
         create_plot((t_o-dt)[(r_o>r_min)][::-1], r_o[(r_o>r_min)][::-1], 444, fmt=".", color=color, label=label, xlabel=r'$\tilde t - \tilde t_0$', ylabel=r'${\tilde{r}}$', 
                     title=None, alpha=1, xscale="log", yscale="log",markersize=5)  #markersize=6, markerfacecolor='white', markeredgewidth=2)
         create_plot((t_o-dt)[(r_o>r_min)], func(t_o-dt, a, 0, c)[(r_o>r_min)], 444, fmt="--", color="k", alpha=0.7)
-        plt.ylim(bottom=0.9e-1)
+        plt.ylim(1.9e-1, 2 )
         create_plot((t_o-dt)[(r_o>r_min)]*2*D, r_o[(r_o>r_min)], 5, fmt=".", color=color, label=label, xlabel=r'$(\tilde t - \tilde t_0) 2D$', ylabel=r'${\tilde{r}}$', 
                     title=None, alpha=0.7, xscale="log", yscale="log",  markersize=2)
         plt.xlim(1e-2, 2)
@@ -202,7 +207,7 @@ def create_all_plots(folders,fig_save_dir, forced_exponent = None, forced_dt=Non
     alpha = 2.8**2
     beta = np.sqrt(0.15)
     R = 1
-    create_plot(np.array(Oh) * (R/h), np.array(D_list), 99, label ="h="+str(h), alpha = 0.6,  # 0.9 therm to account for difference paper D0 and our D0 in surface tension
+    create_plot((np.array(Oh) * (R/h)), np.array(D_list), 99, label ="h="+str(h), alpha = 0.6,  # 0.9 therm to account for difference paper D0 and our D0 in surface tension
                 fmt=marker, xscale="log", yscale="log", xlabel=r"$Oh_{film}\cdot R/h$", 
                 ylabel = r"$D/D_0$", markerfacecolor='none', markeredgewidth=1)
     # x_min, x_max = 0.1, 1e3

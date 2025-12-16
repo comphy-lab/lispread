@@ -112,8 +112,8 @@ for key in folder_dict.keys():
     forced_dt[5] += -0.005   # brown
     forced_dt[6] += -0.03   # pink
     forced_dt[7] += -0.01   # gray
-    forced_dt=None
-    forced_exponent=None
+    # forced_dt=None
+    # forced_exponent=None
     r_fitrange = [(0.16, 0.6)] + [(0.16, 0.7)]*2 +[(0.17,0.7)]+ [(0.2, 0.7)]*5
     create_all_plots(folders, fig_save_dir="figures/water/h_0p05/", forced_exponent=forced_exponent ,
                             forced_dt=forced_dt, t_end=t_end, plot_individual_plots=False, h=h, save_plots=save_plots, 

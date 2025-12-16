@@ -80,12 +80,14 @@ for folder in temp_folder_names:
     #     continue
     hf_raw = re.search(r"_hf_([^_]+)", folder).group(1)
     skip_Oh=[0.001]
+    skip_Oh=[]
     # convert '0p05' to '0.05'
     hf_value = float(hf_raw.replace("p", "."))
     if hf_value not in folder_dict:
         folder_dict[hf_value] = []
 
     folder_dict[hf_value].append(folder)
+
 print(folder_dict.keys())
 for key in folder_dict.keys():
     h = float(key)
@@ -116,68 +118,68 @@ for key in folder_dict.keys():
     forced_dt[6] += -0.03   # pink
     forced_dt[7] += -0.01   # gray
     forced_dt=None
-    forced_exponent=None
-    r_fitrange = [(0.16, 0.6)] + [(0.16, 0.7)]*2 +[(0.17,0.7)]+ [(0.2, 0.7)]*5
+    # forced_exponent=None
+    r_fitrange = [(0.16, 0.6)] +[(0.16, 0.6)] + [(0.16, 0.7)]*2 +[(0.17,0.7)]+ [(0.2, 0.7)]*5
     create_all_plots(folders, fig_save_dir="figures/water/all_h/", forced_exponent=forced_exponent ,
                             forced_dt=forced_dt, t_end=t_end, plot_individual_plots=False, h=h, save_plots=save_plots, 
                             linestyle=linestyles[i-1], marker=marker, skip_Oh=skip_Oh, r_fitrange=r_fitrange)
-    if save_plots:
-        create_all_triangles()
-        # i = 0
-        # plot_triangle_with_labels((0.1, 0.4) , (0.1, 2*0.4), (0.3, 2*0.4), figure=3, l1=1, l2=2)
-        # plot_triangle_with_labels((1, 0.05) , (5, 0.05), (5, 0.05*5), figure=3, l1=1, l2=1)
-        for i in range(len(n_figs)):
-            print("creating legend for figure ", savenames[i])
-            # make_Oh_h_legend(Oh=Oh_list, h=h_list, colors=colors_Oh, linestyles=linestyles_Oh, n_fig=n_figs[i])
-            make_Oh_h_legend(Oh=Oh_list, h=[0.05], colors=colors_Oh, linestyles=[":"], n_fig=n_figs[i])
-            save_plot(n_figs[i], "figures/water/all_h/"+savenames[i])
+if save_plots:
+    create_all_triangles()
+    # i = 0
+    # plot_triangle_with_labels((0.1, 0.4) , (0.1, 2*0.4), (0.3, 2*0.4), figure=3, l1=1, l2=2)
+    # plot_triangle_with_labels((1, 0.05) , (5, 0.05), (5, 0.05*5), figure=3, l1=1, l2=1)
+    for i in range(len(n_figs)):
+        print("creating legend for figure ", savenames[i])
+        # make_Oh_h_legend(Oh=Oh_list, h=h_list, colors=colors_Oh, linestyles=linestyles_Oh, n_fig=n_figs[i])
+        make_Oh_h_legend(Oh=Oh_list, h=[0.05], colors=colors_Oh, linestyles=[":"], n_fig=n_figs[i])
+        save_plot(n_figs[i], "figures/water/all_h/"+savenames[i])
 
-        plt.figure(99)    
-        handles, labels = [], []
-        ax = plt.gca()
-        # handles.append(plt.Line2D([0], [0], color="black", marker="x", linestyle="none",
-        # markerfacecolor='none', markeredgewidth=1))
-        # labels.append(r"grid refinement level 11")
-        handles.append(plt.Line2D([0], [0], color="black", marker="o", linestyle="none",
-        markerfacecolor='none', markeredgewidth=1))
-        labels.append(r"grid refinement level 12")
-        handles.append(plt.Line2D([0], [0], color="black", marker="s", linestyle="none",
-        markerfacecolor='none', markeredgewidth=1))
-        labels.append(r"Experiments (Nath & Quéré)")
-        handles.append(plt.Line2D([0], [0], color="black", marker="v", linestyle="none",
-        markerfacecolor='none', markeredgewidth=1))
-        labels.append("Experiments (Nath & Quéré)\nPost-processed myself")
+    plt.figure(99)    
+    handles, labels = [], []
+    ax = plt.gca()
+    # handles.append(plt.Line2D([0], [0], color="black", marker="x", linestyle="none",
+    # markerfacecolor='none', markeredgewidth=1))
+    # labels.append(r"grid refinement level 11")
+    handles.append(plt.Line2D([0], [0], color="black", marker="o", linestyle="none",
+    markerfacecolor='none', markeredgewidth=1))
+    labels.append(r"grid refinement level 12")
+    handles.append(plt.Line2D([0], [0], color="black", marker="s", linestyle="none",
+    markerfacecolor='none', markeredgewidth=1))
+    labels.append(r"Experiments (Nath & Quéré)")
+    handles.append(plt.Line2D([0], [0], color="black", marker="v", linestyle="none",
+    markerfacecolor='none', markeredgewidth=1))
+    labels.append("Experiments (Nath & Quéré)\nPost-processed myself")
 
-        handles.append(plt.Line2D([0], [0], color="black", linestyle="--"))
-        labels.append(r"$\frac{D}{D_0} \sim 1$")
-        # handles.append(plt.Line2D([0], [0], color="black", linestyle=":"))
-        # labels.append(r"$\frac{D}{D_0} \sim\left(Oh(\frac{R}{h})\right)^{-1}$")
-        for i in range(len(h_list)):
-            handles.append(plt.Line2D([0], [0], color=colors[i], marker="o", linestyle="none"))
-            labels.append(f"$h = {h_list[i]}$")
-        
-        ax.legend([])  # This removes the original legend
-        ax.legend(handles=handles, labels=labels, loc='best', fontsize=14, markerscale=1.5,)# Add the custom legend
-        save_plot(99, "figures/water/all_h/"+"DvsOh.png")
-        
-        plt.figure(63)    
-        handles, labels = [], []
-        ax = plt.gca()
+    handles.append(plt.Line2D([0], [0], color="black", linestyle="--"))
+    labels.append(r"$\frac{D}{D_0} \sim 1$")
+    # handles.append(plt.Line2D([0], [0], color="black", linestyle=":"))
+    # labels.append(r"$\frac{D}{D_0} \sim\left(Oh(\frac{R}{h})\right)^{-1}$")
+    for i in range(len(h_list)):
+        handles.append(plt.Line2D([0], [0], color=colors[i], marker="o", linestyle="none"))
+        labels.append(f"$h = {h_list[i]}$")
+    
+    ax.legend([])  # This removes the original legend
+    ax.legend(handles=handles, labels=labels, loc='best', fontsize=14, markerscale=1.5,)# Add the custom legend
+    save_plot(99, "figures/water/all_h/"+"DvsOh.png")
+    
+    plt.figure(63)    
+    handles, labels = [], []
+    ax = plt.gca()
 
-        handles.append(plt.Line2D([0], [0], color="black", marker="x", linestyle="none",
-        markerfacecolor='none', markeredgewidth=1))
-        labels.append(r"grid refinement level 11")
-        handles.append(plt.Line2D([0], [0], color="black", marker="o", linestyle="none",
-        markerfacecolor='none', markeredgewidth=1))
-        labels.append(r"grid refinement level 12")
-        for i in range(len(h_list)):
-            handles.append(plt.Line2D([0], [0], color=colors[i], marker="o", linestyle="none"))
-            labels.append(f"$h = {h_list[i]}$")
-        
-        ax.legend([])  # This removes the original legend
-        ax.legend(handles=handles, labels=labels, loc='best', fontsize=14, markerscale=1.5,)# Add the custom legend
-        save_plot(63, "figures/water/all_h/"+"exponentvsOH.png")
-        
+    handles.append(plt.Line2D([0], [0], color="black", marker="x", linestyle="none",
+    markerfacecolor='none', markeredgewidth=1))
+    labels.append(r"grid refinement level 11")
+    handles.append(plt.Line2D([0], [0], color="black", marker="o", linestyle="none",
+    markerfacecolor='none', markeredgewidth=1))
+    labels.append(r"grid refinement level 12")
+    for i in range(len(h_list)):
+        handles.append(plt.Line2D([0], [0], color=colors[i], marker="o", linestyle="none"))
+        labels.append(f"$h = {h_list[i]}$")
+    
+    ax.legend([])  # This removes the original legend
+    ax.legend(handles=handles, labels=labels, loc='best', fontsize=14, markerscale=1.5,)# Add the custom legend
+    save_plot(63, "figures/water/all_h/"+"exponentvsOH.png")
+    
 
-        plt.close('all')
+    plt.close('all')
 

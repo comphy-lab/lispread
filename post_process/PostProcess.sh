@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # ---------- Config ----------
-MAX_PAR=8           # Max number of concurrent postprocessing tasks
+MAX_PAR=16           # Max number of concurrent postprocessing tasks
 THREADS_PER_SIM=1   # Threads per Python postprocessing
 
 # ---------- Check input ----------
@@ -49,7 +49,7 @@ run_postprocessing() {
     export OMP_NUM_THREADS="${THREADS_PER_SIM}"
 
     {
-      python3 TriplePoint.py "0" "$Ldomain" "$hf" "$folder"
+      python3 -u TriplePoint.py "0" "$Ldomain" "$hf" "$folder"
       # Add other postprocess scripts as needed
       # python3 Video.py "$hf" "$Ldomain" ...
     } > "${folder}/logTriplePointPostProccessing" 2>&1

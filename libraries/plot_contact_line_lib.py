@@ -53,11 +53,11 @@ def kalman_1d_velocity(v, Q=1e-5, R=1e-2, x0=None, P0=1.0):
         P = (1 - K) * P
         out[i] = x
     return out
-def save_plot(n_fig, filename, dpi=300):
+def save_plot(n_fig, filename, dpi=1000):
     plt.figure(n_fig)
     plt.grid(True, which='both', alpha=0.3)
     # plt.tight_layout()
-    plt.savefig(filename, dpi=dpi)
+    plt.savefig(filename, dpi=dpi, bbox_inches="tight")
 
 def make_Oh_h_legend(Oh, h, colors, linestyles, n_fig=None, linewidth=2, Oh_string=" Oh = "):
     assert len(h) == len(linestyles)
@@ -155,7 +155,6 @@ def create_plot(x, y, n_fig=None, color=None, fmt="-", label=None, xlabel=None, 
 def load_folders(folder_names):
     folders = []
     for folder_name in folder_names:
-        folder_name = os.path.join("data", folder_name)
         # collect only subdirectories
         subfolders = [
             os.path.join(folder_name, f)
@@ -209,7 +208,9 @@ def fit_ELS_law(t, r, dt = None):
 
 # # --- loader ---
 def load_data(folder):
-    if os.path.exists(folder + '/tp_data.csv'):
+    if os.path.exists(folder + '/tp_dataWithBubblesEntrapped.csv'):
+        filename = "tp_dataWithBubblesEntrapped.csv"
+    elif os.path.exists(folder + '/tp_data.csv'):
         filename = "tp_data.csv"
     elif os.path.exists(folder + '/tp_data.npz'):
         filename = "tp_data.npz"

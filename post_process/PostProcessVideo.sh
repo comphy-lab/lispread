@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # ---------- Config ----------
-MAX_PAR=4           # Max number of concurrent postprocessing tasks
+MAX_PAR=16           # Max number of concurrent postprocessing tasks
 THREADS_PER_SIM=1   # Threads per Python postprocessing
 
 # ---------- Check input ----------
@@ -34,7 +34,7 @@ run_postprocessing() {
   # e.g., 2025_09_30_Ohd_4p6e-3_Ldomain_10.0_Ohf_2.5
   local Ldomain hf Ohf
   Ldomain=$(echo "$tag" | grep -oP '(?<=Ldomain_)[0-9p.-]+' || true)
-
+  Ldomain=3
   # Extract hf value
   hf=$(echo "$tag" | grep -oP '(?<=_hf_)[0-9p.-]+' || true)
 
@@ -60,14 +60,15 @@ run_postprocessing() {
     set -e
     export OMP_NUM_THREADS="${THREADS_PER_SIM}"
 
-    {
-      python3 Video.py "$hf" "$Ldomain" "$Ohd" "$Ohf" "$Ohe" "$folder" 
-    } > "${folder}/logVideoPostProccessing" 2>&1
+    # {
+    #   python3 Video.py "$hf" "$Ldomain" "$Ohd" "$Ohf" "$Ohe" "$folder" 
+    # } > "${folder}/logVideoPostProccessing" 2>&1
 
   #   # Make movie if tracking images exist
     if [[ -d "${folder}/Video" ]]; then
       (
         cd "$folder"
+        ls
         ffmpeg -y -framerate 60 -pattern_type glob -i 'Video/*.png' \
                    -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p video.mp4 \
                        > ffmpeg_video.log 2>&1 || true

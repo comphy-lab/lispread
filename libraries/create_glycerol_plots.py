@@ -23,7 +23,6 @@ def create_glycerol_plots(folders,fig_save_dir, forced_dt=None, t_end=None, h=0.
     unique_ohf = sorted({get_Ohf_from_folder_name(f) for f in folders})
     cmap = plt.get_cmap("tab10")
     ohf_to_color = {ohf: cmap(i % 10) for i, ohf in enumerate(unique_ohf)}
-    
     ## lists for plotting
     i = -1
     Oh = []
@@ -46,8 +45,8 @@ def create_glycerol_plots(folders,fig_save_dir, forced_dt=None, t_end=None, h=0.
 
         # apply filters to data
         theta_deg = theta2/np.pi * 180
-        mask = (r>0.2) & (t < t_end[i])
-        mask = remove_isolated_points(mask)
+        mask = (r > 0.3) & (t < t_end[i])
+        # mask = remove_isolated_points(mask)
         if len(t[mask]) ==0:
             continue
         
@@ -73,17 +72,19 @@ def create_glycerol_plots(folders,fig_save_dir, forced_dt=None, t_end=None, h=0.
         dt = t0
         
         # plot r vs t
-        create_plot(t_o,  r_o, 2, fmt=linestyle, color=color, label=label, alpha=0.7, 
+        create_plot(t,  r, 2, fmt=linestyle, color=color, label=label, alpha=0.7, 
+                    xlabel=r'$\tilde t$', ylabel=r'$\tilde{r}$', title=None)
+        create_plot(t-dt,  r, 4, fmt=linestyle, color=color, label=label, alpha=0.7, 
                     xlabel=r'$\tilde t$', ylabel=r'$\tilde{r}$', title=None)
                     
         create_plot(t_o-dt, r_o/np.log(1/r_o), 3, fmt=linestyle, label=label, xlabel=r'$\tilde t-dt$', ylabel=r'$\frac{\tilde{r}}{\ln(1/\tilde{r})}$', 
                     title=None, alpha=0.7, color=color)
-        plt.xlim(1e-3, 10)
+        plt.xlim(1e-2, 10)
 
         create_plot((t_o)-dt, r_o/np.log(1/r_o), 444, fmt=".", color=color, label=label, xlabel=r'$\tilde t - \tilde t_0$', ylabel=r'$\frac{\tilde{r}}{\ln(1/\tilde{r})}$', 
                     title=None, alpha=0.7, xscale="log", yscale="log",  markersize=2)
-        plt.xlim(1e-3, 10)
-        create_plot((r/1000/ np.log(1/r))*tau*3000, r/np.log(1/r), 444, fmt="--k", label="ELS fit", alpha=0.8)
+        plt.xlim(1e-2, 10)
+        create_plot((r/ np.log(1/r))*tau, r/np.log(1/r), 444, fmt="--k", label="ELS fit", alpha=0.8)
         
 
         # plot TP velocity vs time
@@ -91,10 +92,11 @@ def create_glycerol_plots(folders,fig_save_dir, forced_dt=None, t_end=None, h=0.
                     ylabel=r'$\tilde v(\tilde t)$', title=None, alpha=1, xscale="log", yscale="log",  markersize=0.7)
         create_plot(t_o, v_o, 11, fmt='-', color=color, label=label, xlabel=r'$\tilde t$', 
                     ylabel=r'$\tilde v(\tilde t)$)', title=None, alpha=1,markersize=0.7, xscale="log", yscale="log")
-        plt.xlim(1e-3, 10)
+        # plt.xlim(1e-3, 10)
         
     if save_plots:
         save_plot(2, fig_save_dir+'r_vs_t.png')
+        save_plot(4, fig_save_dir+'r_vs_tmindt.png')
         save_plot(3, fig_save_dir+'r_vs_tlog.png')
         save_plot(10, fig_save_dir+'v_vs_t_smooth_all.png')
         save_plot(11, fig_save_dir+'v_vs_t_all.png')

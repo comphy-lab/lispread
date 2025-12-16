@@ -12,13 +12,11 @@ from libraries.create_glycerol_plots import create_glycerol_plots
 
 plt.close('all')
 
-# forced_dt = [0] * 3
-forced_dt=[0]*3
-forced_dt=[0] * 3
-forced_dt=[3]*2.5
+forced_dt = [0.2] * 50
+# forced_dt=[0.5]
 # forced_dt = None
 # save_plots=False
-folders = load_folders(["glycerol/0p03/"])
+folders = load_folders(["/media/markEnAman/Mark2000/discoverer/glycerol"])
         
-create_glycerol_plots(folders,fig_save_dir="figures/glycerol/",
+create_glycerol_plots(folders,fig_save_dir="figures/glycerol/", skip_Oh=[0.005],
                         forced_dt=forced_dt, plot_individual_plots=False, h=0.03, save_plots=True)

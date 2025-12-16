@@ -93,13 +93,14 @@ for ti in range(nGFS):
     # if not os.path.exists(place):
     #     print("%s File not found!" % place)
     if os.path.exists(place):
+        print(t)
         facets1 = gettingFacets(place, 1)
         facets2 = gettingFacets(place, 2)
         if (len(facets1) == 0 or len(facets2) == 0):
             print("Problem in the available file %s" % place)
         else:
             tp, zTP, rTP, vTP, theta1, theta2  = gettingTriplePoint(place, name1, DistCutoff)
-            # print("t %5.4f zTP %4.3f rTP %4.3f vTP %4.3e" % (tp, zTP, rTP, vTP))
+            print("t %5.4f zTP %4.3f rTP %4.3f vTP %4.3e" % (tp, zTP, rTP, vTP))
             tp_list.append([tp, zTP, rTP, vTP, theta1, theta2]) # appending tp data to the list
             if os.path.exists(ImageName):
                 print("%s Image present!" % ImageName.split("/")[-1])

@@ -8,7 +8,7 @@ from libraries.plot_contact_line_lib import load_data, load_folders, get_Ohf_fro
                                             log_sampler, get_fit, func, get_lin_fit, get_D0, save_plot, kalman_1d_velocity, \
                                             make_Oh_h_legend, save_plot, plot_triangle_with_labels
 from libraries.create_bubble_plots import create_bubble_plots
-
+from libraries.create_all_plots import create_all_plots
 def create_all_triangles():
     plot_triangle_with_labels((2*1e-2*2, 0.3) , (2*1e-2*2, 0.6), (2*1e-2*2**2*2, 0.6), figure=4, l1=1, l2=2,
     l1_center = ["right", "top"], l2_center = ["right", "bottom"])
@@ -50,8 +50,11 @@ forced_dt = np.array([
 0.26,
 0.46, 
 None])
+forced_dt= np.array([0.03228058821322935, 0.03968656606976769, 0.07002935974709124, 0.1256576956603619, 0.1934743730653573, 0.332833300496112, 0.5935684020125455, None])
 folders = load_folders(["/media/markEnAman/BackupNator/discoverer/bubble2"])
 folders =[f for f in folders if "2025_11_13_" in f]
 print(folders)
-create_bubble_plots(folders,fig_save_dir="figures/bubble/", t_end=t_end, t_plot=t_plot, forced_exponent=0.5,
-                        forced_dt=forced_dt, plot_individual_plots=False, h=0.05, save_plots=True)
+# create_bubble_plots(folders,fig_save_dir="figures/bubble/", t_end=t_end, t_plot=t_plot, forced_exponent=0.5,
+#                         forced_dt=forced_dt, plot_individual_plots=False, h=0.05, save_plots=True)
+create_all_plots(folders,fig_save_dir="figures/bubble/", t_end=t_end, t_plot=t_plot, forced_exponent=0.5,
+                        forced_dt=forced_dt, plot_individual_plots=False, h=0.05, save_plots=True, r_fitrange= [(0.25, 1)]*50)

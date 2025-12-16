@@ -117,9 +117,10 @@ def create_bubble_plots(folders,fig_save_dir, forced_exponent = None, forced_dt=
             print(f"Could not process folder {f} due to error: {e}")
             continue
     Oh = np.array(Oh)
-    create_plot(Oh*0.650 / h, np.array(D_list), 99, label ="h="+str(h), alpha = 0.6,  # 0.9 therm to account for difference paper D0 and our D0 in surface tension
-                    fmt=marker, xscale="log", yscale="log", xlabel=r"$Oh_{film}( R/ h)$", 
+    create_plot(Oh, np.array(D_list), 99, label ="h="+str(h), alpha = 0.6,  # 0.9 therm to account for difference paper D0 and our D0 in surface tension
+                    fmt=marker, xscale="log", yscale="log", xlabel=r"$Oh_{film}$", 
                     ylabel = r"$D/D_0$", markerfacecolor='none', markeredgewidth=1,markersize=20)
+    create_plot([6666, 6666], [5e-2, 2], 99, fmt="r--", label="highest Oh(R/h) simulation")
     if save_plots:
         # r vs t
         save_plot(1, fig_save_dir + "r_vs_t_cropped.png")
@@ -143,8 +144,8 @@ def create_bubble_plots(folders,fig_save_dir, forced_exponent = None, forced_dt=
             [4691.333380048324, 0.36073462331628653]])
         R = 1
         h = 0.05
-        create_plot(data_alex[:,0] * R / h, (data_alex[:,1])**2/2 *(1-np.cos(110/180*np.pi))**(1/4), 99, label ="(Oratis, unpublished)", alpha = 0.75,  
-                    fmt="ks" , markeredgewidth=1, markerfacecolor='none')
+        create_plot(data_alex[:,0], (data_alex[:,1])**2/2 *(1-np.cos(110/180*np.pi))**(1/4), 99, label ="(Oratis, unpublished)", alpha = 0.75,  
+                    fmt=">k" , markeredgewidth=1, markerfacecolor='none')
         # create_plot(data_alex[:,0] * 1/np.sqrt(R), (data_alex[:,1])**2/2, 99, label ="Alex data", alpha = 0.75,  
         #             fmt="ks" , markeredgewidth=1, markerfacecolor='none')
         save_plot(99, fig_save_dir + "DvsOh.png")

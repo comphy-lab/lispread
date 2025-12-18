@@ -21,7 +21,7 @@ delta="0.01"
 
 # Parameter sweeps
 Ohe_list=( "2.5e-2")
-Ohf_list=( "10" )
+Ohf_list=( "30" )
 tmax_list=( "30" )
 Ohd_list=( "9.1e-5" )
 sigma2_list=( "0.33" )

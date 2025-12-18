@@ -11,6 +11,7 @@
 // #include "navier-stokes/conserving.h"  // Perhaps have to reorder the order of the header files
 #define FILTERED     // spreads interface over a view grid cels to reduce jumps (mostly in curvature and fractions), the space o1
 #define HARMONIC_MU  // use harmonic average for viscosity
+#define HARMONIC_RHO  // use harmonic average for density
 #include "three-phase.h"  // initializes fractions mu1, mu2, mu3, rho1, rho2, rho3, + smearing out
 #include "tension.h"   // add surface tension
 #include "distance.h"   // some geometry
@@ -21,7 +22,7 @@
 
 #define tsnap (2.5e-3)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
 
-// Error tolerances
+// Error tolerances   TODO increase the fErr value
 #define fErr (1e-3)                                 // error tolerance in VOF
 #define KErr (1e-4)                                 // error tolerance in KAPPA
 #define VelErr (1e-2)                            // error tolerances in velocity

@@ -23,7 +23,7 @@
 #define tsnap (2.5e-3)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
 
 // Error tolerances   TODO increase the fErr value
-#define fErr (1e-3)                                 // error tolerance in VOF
+#define fErr (1e-2)                                 // error tolerance in VOF
 #define KErr (1e-4)                                 // error tolerance in KAPPA
 #define VelErr (1e-2)                            // error tolerances in velocity
 #define OmegaErr (1e-2)                            // error tolerances in velocity

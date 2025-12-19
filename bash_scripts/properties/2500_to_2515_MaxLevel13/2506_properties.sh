@@ -33,7 +33,6 @@ hf_list=( "0.05" )
 MAX_PAR=1         # how many sims to run at once
 THREADS_PER_SIM=64 # OpenMP/MPI threads per sim
 
-
 #############################
 # SBATCH related parameters #
 #############################
@@ -45,4 +44,3 @@ SBATCH_NODES=1
 SBATCH_NTASKS=$(( MAX_PAR * THREADS_PER_SIM))
 SBATCH_NTASKS_PER_CORE=1
 SBATCH_CPUS_PER_TASK=1
-

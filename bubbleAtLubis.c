@@ -16,7 +16,7 @@
 #include "tension.h"   // add surface tension
 #include "distance.h"   // some geometry
 #include "adapt_wavelet_limited_v2.h" // adaptive mesh refinement
-#include "end_run_on_no_movement.h" // ends run on no movement
+// #include "end_run_on_no_movement.h" // ends run on no movement
 
 #define MINlevel 3                                              // maximum grid size, opposite of MAXlevel
 

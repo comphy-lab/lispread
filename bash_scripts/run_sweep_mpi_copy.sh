@@ -1,16 +1,21 @@
 #!/bin/bash
-#SBATCH -N 1
-#SBATCH -p genoa
-#SBATCH -J bubble
-#SBATCH --ntasks-per-node=24
-#SBATCH --ntasks=24
-#SBATCH --cpus-per-task=1
-#SBATCH --time=00:24:00
-#SBATCH --mem=336G
-#SBATCH --output=job.%A_%a.out
-#SBATCH --error=job.%A_%a.err
+
+#SBATCH --partition=pm6-isw2,pm9-isw0,pm11-isw2,cn
+#SBATCH --job-name=2001_to_2016
+#SBATCH --account=ehpc-reg-2023r03-178
+#SBATCH --qos=ehpc-reg-2023r03-178
+#SBATCH --time=96:00:00
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=16
+#SBATCH --tasks-per-node=24
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=251G
+#SBATCH -e job.%J.err
+#SBATCH -o job.%J.out
+
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=a.s.bhargava@utwente.nl
+#SBATCH --mail-user=m.c.boulogne@student.utwente.nl
 #SBATCH --array=2500-2515
 
 set -euo pipefail

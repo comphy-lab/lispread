@@ -23,7 +23,7 @@ set -euo pipefail
 source ~/.bash_shell
 
 # --- paths / constants ---
-PARAMS_FILE="bash_scripts/mpi_params/params_2500_to_2515.txt"
+PARAMS_FILE="bash_scripts/mpi_params/params_2500_to_2515_start.txt"
 EXE="./bubbleAtLubis_mpi"
 
 Ldomain="5"

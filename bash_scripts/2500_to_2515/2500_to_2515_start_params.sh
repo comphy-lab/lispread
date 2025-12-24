@@ -23,7 +23,7 @@ out="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_start.txt"
 
 
 # Concurrency control
-SBATCH_NTASKS=16         # how many sims to run at once
+SBATCH_NTASKS=1         # how many sims to run at once
 SBATCH_CPUS_PER_TASK=16 # OpenMP/MPI threads per sim
 
 

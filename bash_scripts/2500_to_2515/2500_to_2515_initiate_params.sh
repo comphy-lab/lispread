@@ -19,6 +19,8 @@ hf_list=( "0.03" "0.05" )
 
 id_start="2500"
 id_end="2515"
+
+
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_initiate.txt"
 EXE="./bubbleAtLubis"
 
@@ -33,13 +35,13 @@ export OMP_NUM_THREADS="${SBATCH_CPUS_PER_TASK}"
 # SBATCH related parameters #
 #############################
 
-SBATCH_JOB_NAME="2500_to_2515_start"
+SBATCH_JOB_NAME="2500_to_2515_init"
 SBATCH_ARRAY=2500-2515
 SBATCH_TIME="96:00:00"
 
 # Node shape
 SBATCH_NODES=1
-SBATCH_NTASKS_PER_CORE=1
+SBATCH_NTASKS_PER_CORE=2
 
 # How many of *your jobs* can fit on a 128-core node if each job uses SBATCH_NTASKS ranks
 jobs_per_node=$(( 128 / SBATCH_NTASKS / SBATCH_CPUS_PER_TASK))

@@ -48,7 +48,6 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     --nodes="${SBATCH_NODES}" \
     --ntasks="${SBATCH_NTASKS}" \
     --ntasks-per-core="${SBATCH_NTASKS_PER_CORE}" \
-    --ntasks-per-node="${SBATCH_NTASKS_PER_NODE}" \
     --cpus-per-task="${SBATCH_CPUS_PER_TASK}" \
     --mem="${SBATCH_MEM}" \
     -e "${SBATCH_STDERR}" \
@@ -80,7 +79,7 @@ set -euo pipefail
 # Keep Ldomain here since your params generator didn't include it.
 
 # Where to store outputs (change as you like)
-BASE_SAVE_DIR="$PWD/Results"
+BASE_SAVE_DIR="$PWD/Results/$SBATCH_ARRAY"
 
 # --- select the line for this array task ---
 task_id="${SLURM_ARRAY_TASK_ID}"
@@ -98,7 +97,7 @@ fi
 read -r runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax \
   SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS SBATCH_ARRAY <<< "$line"
 
-savefolder="${BASE_SAVE_DIR}/test_${runid}"
+savefolder="${BASE_SAVE_DIR}/{runid}"
 mkdir -p "$savefolder"
 
 echo "RunID: $runid"

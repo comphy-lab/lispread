@@ -100,7 +100,7 @@ while read -r line; do
   read -r runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS SBATCH_ARRAY <<< "$line"
 done < "$PARAMS_FILE"
 
-savefolder="${BASE_SAVE_DIR}/runid"
+savefolder="${BASE_SAVE_DIR}/test_runid"
 mkdir -p "$savefolder"
 
 echo "RunID: $runid"

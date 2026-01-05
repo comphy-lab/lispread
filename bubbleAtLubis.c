@@ -233,11 +233,11 @@ event logWriting (i+=5) {
       // fprintf (ferr, "i dt t ke\n");
       fp = fopen (logfile, "w");
       fprintf (fp, "i dt t ke \n");
-      fprintf (fp, "%d %g %g %g %g\n", i, dt, t, ke);
+      fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
       fclose(fp);
     } else {
       fp = fopen (logfile, "a");
-      fprintf (fp, "%d %g %g %g %g\n", i, dt, t, ke);
+      fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
       fclose(fp);
     }
     // fprintf (ferr, "%d %g %g %g\n", i, dt, t, ke);

@@ -16,7 +16,8 @@ fi
 source "$param_file"
 
 
-: > "$out"
+: > "$PARAMS_FILE"
+printf "# runid Ohd Ohf Ohe rhod rhof rhoe sigma1 sigma2 hf Ldomain MAXlevel delta tmax SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS SBATCH_ARRAY\n" > "$PARAMS_FILE"
 
 runid=$((id_start))   # starting run ID
 
@@ -29,8 +30,11 @@ for MAXlevel in "${MAXlevel_list[@]}"; do
         for Ohe in "${Ohe_list[@]}"; do
           for sigma1 in "${sigma1_list[@]}"; do
             for sigma2 in "${sigma2_list[@]}"; do
-
-              printf "%d %s %s %s %s %s %s %s %s %s %s %s %s %s\n" "$runid" "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" "$sigma1" "$sigma2" "$hf" "$Ldomain" "$MAXlevel" "$delta" "$tmax" >> "$out"
+            
+            printf "%d %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s\n" \
+              "$runid" "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
+              "$sigma1" "$sigma2" "$hf" "$Ldomain" "$MAXlevel" "$delta" "$tmax" \
+              "$SBATCH_JOB_NAME" "$SBATCH_TIME" "$SBATCH_NODES" "$TOTAL_CPUS" "$SBATCH_ARRAY">> "$PARAMS_FILE"
 
               runid=$((runid+1))
             done

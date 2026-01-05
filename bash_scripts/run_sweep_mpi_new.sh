@@ -72,10 +72,7 @@ source ~/.bash_shell
 
 set -euo pipefail
 
-source ~/.bash_shell
-
 # --- paths / constants ---
-PARAMS_FILE="bash_scripts/mpi_params/params_2500_to_2515_start.txt"
 EXE="./bubbleAtLubis_mpi"
 
 # If delta and MAXlevel are in the params file already, these constants are not used.
@@ -96,8 +93,11 @@ if [[ -z "${line}" ]]; then
 fi
 
 # Parse columns from the line
-# Format: runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf MAXlevel delta tmax
-read -r runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax <<< "$line"
+# Format: runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS 
+while read -r line; do
+  [[ $line == \#* ]] && continue
+  read -r runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS SBATCH_ARRAY <<< "$line"
+done < "$out"
 
 savefolder="${BASE_SAVE_DIR}/test_${runid}"
 mkdir -p "$savefolder"

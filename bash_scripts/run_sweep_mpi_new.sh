@@ -48,7 +48,7 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     --nodes="${SBATCH_NODES}" \
     --ntasks="${SBATCH_NTASKS}" \
     --ntasks-per-core="${SBATCH_NTASKS_PER_CORE}" \
-    --ntasks-per-node="${SBATCH_NTASKS_PER_CORE}" \
+    --ntasks-per-node="${SBATCH_NTASKS_PER_NODE}" \
     --cpus-per-task="${SBATCH_CPUS_PER_TASK}" \
     --mem="${SBATCH_MEM}" \
     -e "${SBATCH_STDERR}" \
@@ -144,6 +144,6 @@ params_log="${savefolder}/parameters.txt"
 
 # --- run ---
 # Use -n to match how many MPI ranks you want.
-srun -n "${SBATCH_CPUS_PER_TASK}" "$EXE" \
-  "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
-  "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder"
+# srun -n "${SBATCH_NTASKS}" "$EXE" \
+#   "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
+#   "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder"

@@ -8,7 +8,7 @@ SBATCH_PARTITION="pm6-isw2,pm9-isw0,pm11-isw2,cn"
 SBATCH_ACCOUNT="ehpc-reg-2023r03-178"
 SBATCH_QOS="ehpc-reg-2023r03-178"
 
-SBATCH_MEM="251G"
+SBATCH_MEM="32G"
 
 SBATCH_STDERR="job.%J.err"
 SBATCH_STDOUT="job.%J.out"

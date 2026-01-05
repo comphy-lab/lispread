@@ -23,7 +23,7 @@ PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_star
 
 
 # Concurrency control
-SBATCH_NTASKS=16         # how many sims to run at once
+SBATCH_NTASKS=1         # how many sims to run at once
 SBATCH_CPUS_PER_TASK=8 # OpenMP/MPI threads per sim
 
 
@@ -36,6 +36,6 @@ SBATCH_ARRAY=2500-2515
 SBATCH_TIME="96:00:00"
 
 TOTAL_CPUS=$((SBATCH_NTASKS * SBATCH_CPUS_PER_TASK))
-SBATCH_NODES=2
+SBATCH_NODES=1
 SBATCH_NTASKS_PER_CORE=1
 SBATCH_NTASKS_PER_NODE=16

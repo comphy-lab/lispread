@@ -54,6 +54,7 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     -o "${SBATCH_STDOUT}" \
     --mail-type="${SBATCH_MAIL_TYPE}" \
     --mail-user="${SBATCH_MAIL_USER}" \
+    --array="${SBATCH_ARRAY}" \
     "$SCRIPT_PATH" "$PROP_FILE"
 
   exit 0
@@ -97,7 +98,7 @@ fi
 while read -r line; do
   [[ $line == \#* ]] && continue
   read -r runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS SBATCH_ARRAY <<< "$line"
-done < "$out"
+done < "$PARAMS_FILE"
 
 savefolder="${BASE_SAVE_DIR}/runid"
 mkdir -p "$savefolder"

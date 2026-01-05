@@ -31,6 +31,7 @@ fi
 
 # Detect if we are inside a SLURM job or not
 if [[ -z "${SLURM_JOB_ID:-}" ]]; then
+  bash bash_scripts/make_mpi_params.sh "$PROP_FILE"
   # Not in SLURM: submit this script with sbatch, using SBATCH_* from the properties file
 
   # Absolute path to this script, independent of current working directory

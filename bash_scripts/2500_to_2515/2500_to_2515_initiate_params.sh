@@ -10,7 +10,7 @@ delta="0.01"
 # Parameter sweeps
 Ohe_list=( "5.0e-3" "2.5e-2" )
 Ohf_list=( "10" "20" "30" "40" )
-tmax_list=( "0.2" "0.25" "0.5" "0.5" )
+tmax_list=( "0.01" "0.01" "0.01" "0.01" )
 Ohd_list=( "9.1e-5" )
 sigma2_list=( "0.33" )
 sigma1_list=( "0.67" )
@@ -19,13 +19,14 @@ hf_list=( "0.03" "0.05" )
 
 id_start="2500"
 id_end="2515"
-PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_start.txt"
-EXE="./bubbleAtLubis_mpi"
+PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_initiate.txt"
+EXE="./bubbleAtLubis"
+
 
 # Concurrency control
-SBATCH_NTASKS=8         # MPI threads per sim
-SBATCH_CPUS_PER_TASK=1 # OpenMP threads per sim
-export OMP_NUM_THREADS=1
+SBATCH_NTASKS=1         # MPI threads per sim
+SBATCH_CPUS_PER_TASK=8 # OpenMP threads per sim
+export OMP_NUM_THREADS="${SBATCH_CPUS_PER_TASK}"
 
 
 #############################
@@ -42,6 +43,9 @@ SBATCH_NTASKS_PER_CORE=1
 
 # How many of *your jobs* can fit on a 128-core node if each job uses SBATCH_NTASKS ranks
 jobs_per_node=$(( 128 / SBATCH_NTASKS / SBATCH_CPUS_PER_TASK))
+if (( jobs_per_node < 1 )); then
+  jobs_per_node=1
+fi
 
 
 # Memory per job so that jobs_per_node jobs fit in 251G total on the node

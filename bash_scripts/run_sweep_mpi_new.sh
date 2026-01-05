@@ -8,7 +8,6 @@ SBATCH_PARTITION="pm6-isw2,pm9-isw0,pm11-isw2,cn"
 SBATCH_ACCOUNT="ehpc-reg-2023r03-178"
 SBATCH_QOS="ehpc-reg-2023r03-178"
 
-SBATCH_MEM="32G"
 
 SBATCH_STDERR="job.%J.err"
 SBATCH_STDOUT="job.%J.out"
@@ -76,7 +75,6 @@ source ~/.bash_shell
 set -euo pipefail
 
 # --- paths / constants ---
-EXE="./bubbleAtLubis_mpi"
 
 # If delta and MAXlevel are in the params file already, these constants are not used.
 # Keep Ldomain here since your params generator didn't include it.
@@ -145,6 +143,6 @@ params_log="${savefolder}/parameters.txt"
 
 # --- run ---
 # Use -n to match how many MPI ranks you want.
-# srun -n "${SBATCH_NTASKS}" "$EXE" \
-#   "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
-#   "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder"
+srun -n "${SBATCH_NTASKS}" "$EXE" \
+  "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
+  "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder"

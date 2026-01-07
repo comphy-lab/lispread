@@ -20,14 +20,14 @@ hf_list=( "0.03" "0.05" )
 id_start="2500"
 id_end="2515"
 
-
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_initiate.txt"
 EXE="./bubbleAtLubis"
 
 
 # Concurrency control
-SBATCH_NTASKS=1         # MPI threads per sim
+MPI_RANKS=1         # MPI threads per sim
 SBATCH_CPUS_PER_TASK=8 # OpenMP threads per sim
+SBATCH_NTASKS=16 
 export OMP_NUM_THREADS="${SBATCH_CPUS_PER_TASK}"
 
 

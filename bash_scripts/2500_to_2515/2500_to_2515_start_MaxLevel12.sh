@@ -39,7 +39,7 @@ SBATCH_ARRAY=2500-2515
 SBATCH_TIME="96:00:00"
 
 # base save directory
-base_save_dir="Results/${SBATCH_ARRAY}_Maxlevel_12"
+base_save_dir="Results/${SBATCH_ARRAY}_MaxLevel_12"
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${SBATCH_ARRAY}_MaxLevel12.txt"
 EXE="./bubbleAtLubis_mpi"
 

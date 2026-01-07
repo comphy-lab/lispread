@@ -34,7 +34,7 @@ for MAXlevel in "${MAXlevel_list[@]}"; do
             printf "%d %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s\n" \
               "$runid" "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
               "$sigma1" "$sigma2" "$hf" "$Ldomain" "$MAXlevel" "$delta" "$tmax" \
-              "$SBATCH_JOB_NAME" "$SBATCH_TIME" "$SBATCH_NODES" "$TOTAL_CPUS" "$SBATCH_ARRAY">> "$PARAMS_FILE"
+              "$SBATCH_JOB_NAME" "$SBATCH_TIME" "$SBATCH_NODES" "0" "$SBATCH_ARRAY">> "$PARAMS_FILE"
 
               runid=$((runid+1))
             done

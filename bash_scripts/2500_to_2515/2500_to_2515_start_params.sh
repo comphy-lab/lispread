@@ -8,7 +8,7 @@ Ldomain="3"
 delta="0.01"
 
 # Parameter sweeps
-Ohe_list=( "5.0e-3" "2.5e-2" )
+Ohe_list=( "1e-3" "5e-3" )
 Ohf_list=( "10" "20" "30" "40" )
 tmax_list=( "0.2" "0.25" "0.5" "0.5" )
 Ohd_list=( "9.1e-5" )
@@ -19,14 +19,19 @@ hf_list=( "0.03" "0.05" )
 
 id_start="2500"
 id_end="2515"
+
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_start.txt"
 EXE="./bubbleAtLubis_mpi"
 
 # Concurrency control
-SBATCH_NTASKS=16         # MPI threads per sim
+MPI_RANKS=8         # MPI threads per sim
 SBATCH_CPUS_PER_TASK=1 # OpenMP threads per sim
+SBATCH_NTASKS=128 
 export OMP_NUM_THREADS=1
 
+# Node shape
+SBATCH_NODES=1
+SBATCH_NTASKS_PER_CORE=1
 
 #############################
 # SBATCH related parameters #
@@ -36,21 +41,18 @@ SBATCH_JOB_NAME="2500_to_2515_start"
 SBATCH_ARRAY=2500-2515
 SBATCH_TIME="96:00:00"
 
-# Node shape
-SBATCH_NODES=1
-SBATCH_NTASKS_PER_CORE=1
 
-# How many of *your jobs* can fit on a 128-core node if each job uses SBATCH_NTASKS ranks
-jobs_per_node=$(( 128 / SBATCH_NTASKS / SBATCH_CPUS_PER_TASK))
+# # How many of *your jobs* can fit on a 128-core node if each job uses SBATCH_NTASKS ranks
+# jobs_per_node=$(( 128 / SBATCH_NTASKS / SBATCH_CPUS_PER_TASK))
 
 
-# Memory per job so that jobs_per_node jobs fit in 251G total on the node
-# Use integer division, and clamp to at least 1G
-mem_per_job_gb=$(( 251 / jobs_per_node ))
-if (( mem_per_job_gb < 1 )); then
-  mem_per_job_gb=1
-fi
-SBATCH_MEM="${mem_per_job_gb}G"
+# # Memory per job so that jobs_per_node jobs fit in 251G total on the node
+# # Use integer division, and clamp to at least 1G
+# mem_per_job_gb=$(( 251 / jobs_per_node ))
+# if (( mem_per_job_gb < 1 )); then
+#   mem_per_job_gb=1
+# fi
+# SBATCH_MEM="${mem_per_job_gb}G"
 
-# Total CPUs requested by this job allocation (for info/logging)
-TOTAL_CPUS=$(( SBATCH_NTASKS * SBATCH_CPUS_PER_TASK ))
+# # Total CPUs requested by this job allocation (for info/logging)
+# TOTAL_CPUS=$(( SBATCH_NTASKS * SBATCH_CPUS_PER_TASK ))

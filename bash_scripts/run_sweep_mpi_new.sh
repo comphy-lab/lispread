@@ -4,7 +4,7 @@
 # standard SBATCH parameters #
 #############################
 
-SBATCH_PARTITION="pm6-isw2,pm9-isw0,pm11-isw2,cn"
+SBATCH_PARTITION="cn"
 SBATCH_ACCOUNT="ehpc-reg-2023r03-178"
 SBATCH_QOS="ehpc-reg-2023r03-178"
 

@@ -79,7 +79,7 @@ set -euo pipefail
 # Keep Ldomain here since your params generator didn't include it.
 
 # Where to store outputs (change as you like)
-BASE_SAVE_DIR="$PWD/Results/$SBATCH_ARRAY"
+BASE_SAVE_DIR="$PWD/$base_save_dir"
 
 # --- select the line for this array task ---
 task_id="${SLURM_ARRAY_TASK_ID}"
@@ -96,7 +96,7 @@ fi
 # Format: runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS 
 read -r runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax \
   SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS SBATCH_ARRAY <<< "$line"
-local tag="${runid}_\
+tag="${runid}_\
 Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_\
 rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_\
 s1_${sigma_1}_s2_${sigma_2}_\

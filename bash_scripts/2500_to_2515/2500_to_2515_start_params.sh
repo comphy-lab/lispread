@@ -30,7 +30,7 @@ MPI_RANKS=8
 export OMP_NUM_THREADS=1
 
 # Node shape
-SBATCH_NODES=2
+SBATCH_NODES=1
 SBATCH_NTASKS_PER_CORE=1
 
 #############################

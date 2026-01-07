@@ -49,14 +49,14 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     --ntasks="${SBATCH_NTASKS}" \
     --ntasks-per-core="${SBATCH_NTASKS_PER_CORE}" \
     --cpus-per-task="${SBATCH_CPUS_PER_TASK}" \
-    # --mem="${SBATCH_MEM}" \
     -e "${SBATCH_STDERR}" \
     -o "${SBATCH_STDOUT}" \
     --mail-type="${SBATCH_MAIL_TYPE}" \
     --mail-user="${SBATCH_MAIL_USER}" \
     --array="${SBATCH_ARRAY}" \
     "$SCRIPT_PATH" "$PROP_FILE"
-
+    
+    # --mem="${SBATCH_MEM}" \
   exit 0
 fi
 

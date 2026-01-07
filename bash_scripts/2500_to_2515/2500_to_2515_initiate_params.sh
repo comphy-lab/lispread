@@ -27,7 +27,7 @@ EXE="./bubbleAtLubis"
 # Concurrency control
 MPI_RANKS=1         # MPI threads per sim
 SBATCH_CPUS_PER_TASK=8 # OpenMP threads per sim
-SBATCH_NTASKS=16 
+SBATCH_NTASKS=1 
 export OMP_NUM_THREADS="${SBATCH_CPUS_PER_TASK}"
 
 

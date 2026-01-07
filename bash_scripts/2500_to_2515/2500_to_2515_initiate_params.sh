@@ -22,7 +22,7 @@ id_end="2515"
 
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_initiate.txt"
 EXE="./bubbleAtLubis"
-
+base_save_dir="Results/${SBATCH_ARRAY}"_Maxlevel_12
 
 # Concurrency control
 MPI_RANKS=1         # MPI threads per sim

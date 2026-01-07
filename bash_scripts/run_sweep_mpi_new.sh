@@ -96,8 +96,12 @@ fi
 # Format: runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS 
 read -r runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax \
   SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS SBATCH_ARRAY <<< "$line"
-
-savefolder="${BASE_SAVE_DIR}/${runid}"
+local tag="${runid}_\
+Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_\
+rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_\
+s1_${sigma_1}_s2_${sigma_2}_\
+hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
+savefolder="${BASE_SAVE_DIR}/${tag}"
 mkdir -p "$savefolder"
 
 echo "RunID: $runid"

@@ -23,7 +23,7 @@ id_end="2515"
 
 # Concurrency control
 SBATCH_CPUS_PER_TASK=1 # OpenMP threads per sim
-SBATCH_NTASKS=64 # MPI threads per sim
+SBATCH_NTASKS=16 # MPI threads per sim
 export OMP_NUM_THREADS=1
 
 # Node shape

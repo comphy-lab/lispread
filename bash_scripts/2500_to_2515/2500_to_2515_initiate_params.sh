@@ -42,21 +42,3 @@ SBATCH_TIME="96:00:00"
 # Node shape
 SBATCH_NODES=1
 SBATCH_NTASKS_PER_CORE=2
-
-# How many of *your jobs* can fit on a 128-core node if each job uses SBATCH_NTASKS ranks
-jobs_per_node=$(( 128 / SBATCH_NTASKS / SBATCH_CPUS_PER_TASK))
-if (( jobs_per_node < 1 )); then
-  jobs_per_node=1
-fi
-
-
-# Memory per job so that jobs_per_node jobs fit in 251G total on the node
-# Use integer division, and clamp to at least 1G
-mem_per_job_gb=$(( 251 / jobs_per_node ))
-if (( mem_per_job_gb < 1 )); then
-  mem_per_job_gb=1
-fi
-SBATCH_MEM="${mem_per_job_gb}G"
-
-# Total CPUs requested by this job allocation (for info/logging)
-TOTAL_CPUS=$(( SBATCH_NTASKS * SBATCH_CPUS_PER_TASK ))

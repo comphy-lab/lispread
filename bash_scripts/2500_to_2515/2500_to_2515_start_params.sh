@@ -24,9 +24,9 @@ PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_star
 EXE="./bubbleAtLubis_mpi"
 
 # Concurrency control
-MPI_RANKS=8         # MPI threads per sim
 SBATCH_CPUS_PER_TASK=1 # OpenMP threads per sim
 SBATCH_NTASKS=128 
+MPI_RANKS=8
 export OMP_NUM_THREADS=1
 
 # Node shape

@@ -17,9 +17,9 @@
 
 #define MINlevel 3                                              // maximum grid size, opposite of MAXlevel
 
-#define tsnap (5e-4)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
+#define tsnap (2.5e-3)                // time interval, can be smaller in case of cfl convergence (tollorance needs to be made)
 
-// Error tolerances
+// Error tolerances   TODO increase the fErr value
 #define fErr (1e-3)                                 // error tolerance in VOF
 #define KErr (1e-4)                                 // error tolerance in KAPPA
 #define VelErr (1e-2)                            // error tolerances in velocity
@@ -31,8 +31,6 @@ Curvature(f, kappa , sigma) calculates the curvature and multiplies it with sigm
 tensiion.h first gets all surface forces for each interface, and saves them in phi1 and phi2 and then puts all interfaces in 
 a list called list.
 */
-
-
 
 
 
@@ -51,9 +49,7 @@ u.t[left] = dirichlet(0.0);
 double Oh_d, Oh_f, Oh_e, rho_d, rho_f, rho_e, sigma_1, sigma_2, hf, tmax, Ldomain, delta;
 char savefolder[256], dumpfile[256], logfile[256];
 int MAXlevel;
-
 int main(int argc, char const *argv[]) {
-
   if (argc != 14&& argc != 15) {
     fprintf(ferr, "%d\n", argc);
     fprintf(ferr, "Need %d more argument(s): Oh_drop, Oh_film, Oh_env, rho_d, rho_f, rho_e,sigma_1, sigma_2, hf, tmax, Ldomain, delta, MAXlevel\n", 14-argc);
@@ -114,6 +110,7 @@ if (savefolder[0] != '\0') {
 
   f1.sigma = sigma_1;    
   f2.sigma = sigma_2;   
+  fprintf(ferr, "CFL: %g\n", CFL);
   fprintf(ferr, "Level %d tmax %g. Oh_d %3.2e, Oh_f %3.2e, Oh_e %3.2e, rho_d %3.2e, rho_f %3.2e,rho_e %3.2e, hf %3.2f\n", 
                 MAXlevel, tmax, Oh_d, Oh_f, Oh_e, rho_d, rho_f, rho_e, hf);
   run();
@@ -181,6 +178,9 @@ event init(t = 0){
     fractions (phi2, f2);
     fprintf(ferr, " done\n" );
   }
+  else{
+    fprintf(ferr, "Dump file found, restart from dump file\n" );
+  }
   dump (file = dumpfile);
   // return 1;
 }
@@ -192,14 +192,14 @@ event adapt(i++) {
   curvature(f1, KAPPA1);
   curvature(f2, KAPPA2);
   foreach(){
-    omega[] *= f1[]*(1-f2[]);
+    omega[] *= f1[] * (1 - f2[]);
   }
   adapt_wavelet_limited ((scalar *){f1, f2, u.x, u.y, KAPPA1, KAPPA2, omega},
     (double[]){fErr, fErr, VelErr, VelErr, KErr, KErr, OmegaErr},
     refRegion, MINlevel);
 }
 
-event writingFiles (t = 0; t += tsnap * 10; t <= tmax + tsnap) {
+event writingFiles (t = 0; t += tsnap ; t <= tmax + tsnap) {
   // always write a plain dump for restart
   dump(file = dumpfile);
 
@@ -218,22 +218,25 @@ event writingFiles (t = 0; t += tsnap * 10; t <= tmax + tsnap) {
 }
 
 
-event logWriting (i++) {
+event logWriting (i+=5) {
   double ke = 0.;
   foreach (reduction(+:ke)){
     ke += sq(Delta)*(sq(u.x[]) + sq(u.y[]))*rho(f1[],f2[]);
   }
-  static FILE * fp;
-  if (i == 0) {
-    // fprintf (ferr, "i dt t ke\n");
-    fp = fopen (logfile, "w");
-    fprintf (fp, "i dt t ke\n");
-    fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
-    fclose(fp);
-  } else {
-    fp = fopen (logfile, "a");
-    fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
-    fclose(fp);
+    
+  if (pid() == 0) { 
+    static FILE * fp;
+    if (i == 0) {
+      // fprintf (ferr, "i dt t ke\n");
+      fp = fopen (logfile, "w");
+      fprintf (fp, "i dt t ke \n");
+      fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
+      fclose(fp);
+    } else {
+      fp = fopen (logfile, "a");
+      fprintf (fp, "%d %g %g %g\n", i, dt, t, ke);
+      fclose(fp);
+    }
+    // fprintf (ferr, "%d %g %g %g\n", i, dt, t, ke);
   }
-  // fprintf (ferr, "%d %g %g %g\n", i, dt, t, ke);
 }

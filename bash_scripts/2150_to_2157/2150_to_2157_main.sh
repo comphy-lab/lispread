@@ -23,7 +23,7 @@ id_end="2157"
 
 # Concurrency control
 SBATCH_CPUS_PER_TASK=1 # OpenMP threads per sim
-SBATCH_NTASKS=16 # MPI threads per sim
+SBATCH_NTASKS=8 # MPI threads per sim
 export OMP_NUM_THREADS=1
 
 # Node shape
@@ -41,5 +41,5 @@ SBATCH_TIME="96:00:00"
 # base save directory
 base_save_dir="Results/${SBATCH_ARRAY}"
 PARAMS_FILE="bash_scripts/2150_to_2157/params_list_${SBATCH_ARRAY}.txt"
-EXE="./bubbleAtLubis_unaltered_3phase"
+EXE="./bubbleAtLubis_unaltered_3phase_mpi"
 SBATCH_MEM="16G"

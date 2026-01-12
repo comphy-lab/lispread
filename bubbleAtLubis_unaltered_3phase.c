@@ -25,6 +25,7 @@
 #define VelErr (1e-2)                            // error tolerances in velocity
 #define OmegaErr (1e-2)                            // error tolerances in velocity
 
+
 /** Variable definitions
 Curvature(f, kappa) calculates the curvature and stores it in kappa
 Curvature(f, kappa , sigma) calculates the curvature and multiplies it with sigma and stores it in kappa

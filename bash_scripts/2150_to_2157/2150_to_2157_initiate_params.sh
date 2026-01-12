@@ -20,6 +20,7 @@ hf_list=("0.05" )
 id_start="2150"
 id_end="2157"
 
+
 # Concurrency control
 MPI_RANKS=1         # MPI threads per sim
 SBATCH_CPUS_PER_TASK=8 # OpenMP threads per sim

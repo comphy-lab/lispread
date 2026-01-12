@@ -47,6 +47,6 @@ done
 
 
 if [ "$runid" -ne $((id_end + 1)) ]; then
-  echo "ERROR: runid ended at $((runid-1)), expected $id_end" >&2
+  echo "warning: runid ended at $((runid-1)), expected $id_end" >&2
   exit 1
 fi

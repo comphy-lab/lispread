@@ -33,7 +33,7 @@ SBATCH_NTASKS_PER_CORE=1
 # SBATCH related parameters #
 #############################
 
-SBATCH_JOB_NAME="2500_to_2515_MaxLevel12"
+SBATCH_JOB_NAME="2500_to_2515_MaxLevel13"
 SBATCH_ARRAY=2500-2515
 SBATCH_TIME="96:00:00"
 
@@ -41,4 +41,5 @@ SBATCH_TIME="96:00:00"
 base_save_dir="Results/${SBATCH_ARRAY}_MaxLevel_13"
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${SBATCH_ARRAY}_MaxLevel13.txt"
 EXE="./bubbleAtLubis_mpi"
+SBATCH_MEM="32G"
 

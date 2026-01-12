@@ -22,7 +22,6 @@ id_end="2515"
 
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${id_start}_to_${id_end}_start.txt"
 EXE="./bubbleAtLubis_mpi"
-base_save_dir="Results/${SBATCH_ARRAY}"_Maxlevel_12
 
 # Concurrency control
 SBATCH_CPUS_PER_TASK=1 # OpenMP threads per sim
@@ -41,6 +40,8 @@ SBATCH_JOB_NAME="2500_to_2515_start"
 SBATCH_ARRAY=2500-2515
 SBATCH_TIME="96:00:00"
 
+# base save directory
+base_save_dir="Results/${SBATCH_ARRAY}"
 
 # # How many of *your jobs* can fit on a 128-core node if each job uses SBATCH_NTASKS ranks
 # jobs_per_node=$(( 128 / SBATCH_NTASKS / SBATCH_CPUS_PER_TASK))

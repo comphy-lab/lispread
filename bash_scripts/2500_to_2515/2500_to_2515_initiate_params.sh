@@ -43,4 +43,4 @@ SBATCH_NODES=1
 SBATCH_NTASKS_PER_CORE=2
 
 # base save directory
-base_save_dir="Results/${SBATCH_ARRAY}_Maxlevel_12"
+base_save_dir="Results/${SBATCH_ARRAY}"

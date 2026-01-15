@@ -54,9 +54,9 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     --mail-type="${SBATCH_MAIL_TYPE}" \
     --mail-user="${SBATCH_MAIL_USER}" \
     --array="${SBATCH_ARRAY}" \
+    --mem="${SBATCH_MEM}" \
     "$SCRIPT_PATH" "$PROP_FILE"
     
-    # --mem="${SBATCH_MEM}" \
   exit 0
 fi
 
@@ -148,4 +148,4 @@ params_log="${savefolder}/parameters.txt"
 # Use -n to match how many MPI ranks you want.
 srun -n "${SBATCH_NTASKS}" "$EXE" \
   "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
-  "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder"
+  "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" > "${savefolder}/run.log" 2>&1

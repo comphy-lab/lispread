@@ -42,6 +42,6 @@ SBATCH_NTASKS_PER_CORE=2
 
 # base save directory
 base_save_dir="Results/${SBATCH_ARRAY}"
-PARAMS_FILE="bash_scripts/2154_to_2157/params_list_${SBATCH_ARRAY}_init.txt"
+PARAMS_FILE="bash_scripts/2150_to_2157/params_list_${SBATCH_ARRAY}_init.txt"
 EXE="./bubbleAtLubis_unaltered_3phase"
 SBATCH_MEM="16G"

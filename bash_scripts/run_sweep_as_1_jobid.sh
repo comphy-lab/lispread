@@ -151,7 +151,7 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
   (
     export OMP_NUM_THREADS="${SBATCH_CPUS_PER_TASK}"
    
-    srun --exclusive -n 1 -c "$SBATCH_CPUS_PER_TASK" --cpu-bind=cores "$EXE" \
+    "$EXE" \
       "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
       "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \
       > "${savefolder}/run.log" 2>&1

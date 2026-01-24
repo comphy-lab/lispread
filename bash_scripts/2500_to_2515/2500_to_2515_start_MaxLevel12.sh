@@ -24,7 +24,7 @@ id_end="2515"
 sims_simultaneously=$((id_end - id_start + 1))
 # Concurrency control
 SBATCH_CPUS_PER_TASK=1 # OpenMP threads per sim
-SBATCH_NTASKS=252 # Total MPI threads per sweep
+SBATCH_NTASKS=16 # Total MPI threads per sweep
 mpi_ranks=16
 export OMP_NUM_THREADS=1
 
@@ -44,4 +44,4 @@ SBATCH_TIME="96:00:00"
 base_save_dir="Results/${SBATCH_ARRAY}_MaxLevel_12"
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${SBATCH_ARRAY}_MaxLevel12.txt"
 EXE="./bubbleAtLubis_mpi"
-SBATCH_MEM="16G"
+SBATCH_MEM="251G"

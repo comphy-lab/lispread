@@ -17,8 +17,8 @@ sigma2_list=( "0.67" )
 MAXlevel_list=("12")
 hf_list=("0.05")
 
-id_start="3116"
-id_end="3152"
+id_start="3090"
+id_end="3115"
 
 sims_simultaneously=$((id_end - id_start + 1))
 

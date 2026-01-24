@@ -149,7 +149,7 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
     echo
   } >> "$params_log"
   (
-    export OMP_NUM_THREADS="${SBATCH_CPUS_PER_TASK}"
+    export OMP_NUM_THREADS="${omp_num_threads}"
    
     "$EXE" \
       "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \

@@ -146,6 +146,6 @@ params_log="${savefolder}/parameters.txt"
 
 # --- run ---
 # Use -n to match how many MPI ranks you want.
-srun -n "${mpi_ranks}" "$EXE" \
+srun -n "${SBATCH_NTASKS}" "$EXE" \
   "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
   "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" > "${savefolder}/run.log" 2>&1

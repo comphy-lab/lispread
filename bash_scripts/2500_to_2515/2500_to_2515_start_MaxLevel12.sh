@@ -44,4 +44,4 @@ SBATCH_TIME="96:00:00"
 base_save_dir="Results/${SBATCH_ARRAY}_MaxLevel_12"
 PARAMS_FILE="bash_scripts/2500_to_2515/params_list_${SBATCH_ARRAY}_MaxLevel12.txt"
 EXE="./bubbleAtLubis_mpi"
-SBATCH_MEM="251G" # memory per sim
+SBATCH_MEM="16G" # memory per sim

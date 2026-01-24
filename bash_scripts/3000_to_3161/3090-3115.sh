@@ -23,7 +23,7 @@ id_end="3125"
 sims_simultaneously=$((id_end - id_start + 1))
 
 # Concurrency control
-SBATCH_CPUS_PER_TASK=16 # OpenMP threads per sim
+SBATCH_CPUS_PER_TASK=251 # OpenMP threads per sim
 SBATCH_NTASKS=1 # MPI threads per sim
 export OMP_NUM_THREADS=16
 

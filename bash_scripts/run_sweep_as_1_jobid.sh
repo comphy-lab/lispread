@@ -150,8 +150,11 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
   } >> "$params_log"
   (
     export OMP_NUM_THREADS="${omp_num_threads}"
-   
-    "$EXE" \
+    export OMP_PROC_BIND=close
+    export OMP_PLACES=cores
+
+    srun --exclusive -N 1 -n 1 -c "${omp_num_threads}" --cpu-bind=cores \
+      "$EXE" \
       "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
       "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \
       > "${savefolder}/run.log" 2>&1

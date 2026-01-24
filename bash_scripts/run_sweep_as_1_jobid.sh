@@ -102,37 +102,56 @@ run_one() {
   read -r runid Ohd Ohf Ohe rhod rhof rhoe sigma_1 sigma_2 hf Ldomain MAXlevel delta tmax \
     SBATCH_JOB_NAME SBATCH_TIME SBATCH_NODES TOTAL_CPUS SBATCH_ARRAY <<< "$line"
 
-  # Tag without whitespace/newlines
-  tag="${runid}_Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_s1_${sigma_1}_s2_${sigma_2}_hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
-  tag="${tag//[[:space:]]/}"
-
+  tag="${runid}_\
+Ohd_${Ohd}_Ohf_${Ohf}_Ohe_${Ohe}_\
+rho_d_${rhod}_rho_f_${rhof}_rho_e_${rhoe}_\
+s1_${sigma_1}_s2_${sigma_2}_\
+hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
   savefolder="${BASE_SAVE_DIR}/${tag}"
   mkdir -p "$savefolder"
 
-  echo "RunID: $runid -> $savefolder"
+  echo "RunID: $runid"
+  echo "Params: Ohd=$Ohd Ohf=$Ohf Ohe=$Ohe rhod=$rhod rhof=$rhof rhoe=$rhoe sigma_1=$sigma_1 sigma_2=$sigma_2 hf=$hf tmax=$tmax Ldomain=$Ldomain delta=$delta MAXlevel=$MAXlevel"
+  echo "Savefolder: $savefolder"
+  echo "SLURM job: ${SLURM_JOB_ID:-NA} task: ${SLURM_ARRAY_TASK_ID:-NA}"
 
+  # save parameters to a log file
   params_log="${savefolder}/parameters.txt"
+
   {
     echo "========================"
+    echo "=== Simulation info ==="
     echo "start_time = $(date -Is)"
     echo "runid = $runid"
     echo "job_id = ${SLURM_JOB_ID:-NA}"
-    echo "omp_threads = ${SBATCH_CPUS_PER_TASK}"
+    echo "array_task_id = ${SLURM_ARRAY_TASK_ID:-NA}"
+    echo "SBATCH_NTASKS = ${SBATCH_NTASKS:-NA}"
+    echo "SBATCH_CPUS_PER_TASK = ${SBATCH_CPUS_PER_TASK:-NA}"
+    echo "SBATCH_NODES = ${SBATCH_NODES:-NA}"
     echo "host = $(hostname)"
+    
+    echo "=== Parameters ==="
+    echo "Ohd = $Ohd"
+    echo "Ohf = $Ohf"
+    echo "Ohe = $Ohe"
+    echo "rhod = $rhod"
+    echo "rhof = $rhof"
+    echo "rhoe = $rhoe"
+    echo "sigma_1 = $sigma_1"
+    echo "sigma_2 = $sigma_2"
+    echo "hf = $hf"
+    echo "tmax = $tmax"
+    echo "Ldomain = $Ldomain"
+    echo "delta = $delta"
+    echo "MAXlevel = $MAXlevel"
+    echo "========================"
     echo "========================"
     echo
   } >> "$params_log"
-
   (
     export OMP_NUM_THREADS="${SBATCH_CPUS_PER_TASK}"
-    export OMP_PROC_BIND=close
-    export OMP_PLACES=cores
-
-    srun --exclusive \
-      -n 1 \
-      -c "${SBATCH_CPUS_PER_TASK}" \
-      --cpu-bind=cores \
-      "$EXE" \
+   
+    "$EXE" \
       "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
       "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \
       > "${savefolder}/run.log" 2>&1

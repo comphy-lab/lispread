@@ -23,13 +23,13 @@ id_end="3125"
 sims_simultaneously=$((id_end - id_start + 1))
 
 # Concurrency control
-SBATCH_CPUS_PER_TASK=251 # OpenMP threads per sim
-SBATCH_NTASKS=1 # MPI threads per sim
-export OMP_NUM_THREADS=10
+SBATCH_CPUS_PER_TASK=16 # OpenMP threads per sim
+SBATCH_NTASKS=36 # MPI threads per sim
+export OMP_NUM_THREADS=16
 
 # Node shape
-SBATCH_NODES=1
-SBATCH_NTASKS_PER_CORE=2
+SBATCH_NODES=3
+SBATCH_NTASKS_PER_CORE=1
 
 #############################
 # SBATCH related parameters #
@@ -37,7 +37,7 @@ SBATCH_NTASKS_PER_CORE=2
 
 SBATCH_JOB_NAME="3090_to_3125"
 SBATCH_ARRAY="3090-3125"
-SBATCH_TIME="24:00:00"
+SBATCH_TIME="48:00:00"
 
 # base save directory
 base_save_dir="Results/${SBATCH_ARRAY}"

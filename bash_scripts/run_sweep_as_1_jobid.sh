@@ -81,8 +81,9 @@ set -euo pipefail
 BASE_SAVE_DIR="$PWD/$base_save_dir"
 
 # --- select the line for this array task ---
-for task_id in $(seq "$id_start" "$id_end"); do
+run_one() {
   # Find the line whose first column equals the task id
+  task_id="$1"
   line="$(awk -v id="$task_id" '$1==id {print; exit}' "$PARAMS_FILE")"
 
   if [[ -z "${line}" ]]; then
@@ -140,11 +141,16 @@ for task_id in $(seq "$id_start" "$id_end"); do
     echo "========================"
     echo
   } >> "$params_log"
-
-
   # --- run ---
   # run this file in with only omp_ranks amount per sim and run them in paralell.
-  srun -n "${SBATCH_NTASKS}" "$EXE" \
+  srun -n "1" "$EXE" \
     "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
     "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" > "${savefolder}/run.log" 2>&1
+
+}
+for tsk_id in $(seq "$id_start" "$id_end"); do
+  run_one "$tsk_id"
 done
+wait
+
+

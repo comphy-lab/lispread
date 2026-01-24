@@ -18,7 +18,7 @@ MAXlevel_list=("12")
 hf_list=("0.05")
 
 id_start="3090"
-id_end="3115"
+id_end="3125"
 
 sims_simultaneously=$((id_end - id_start + 1))
 
@@ -35,12 +35,12 @@ SBATCH_NTASKS_PER_CORE=1
 # SBATCH related parameters #
 #############################
 
-SBATCH_JOB_NAME="3090_to_3115"
-SBATCH_ARRAY="3090-3115"
+SBATCH_JOB_NAME="3090_to_3125"
+SBATCH_ARRAY="3090-3125"
 SBATCH_TIME="96:00:00"
 
 # base save directory
 base_save_dir="Results/${SBATCH_ARRAY}"
-PARAMS_FILE="bash_scripts/3000_to_3151/params_list_${SBATCH_ARRAY}.txt"
+PARAMS_FILE="bash_scripts/3000_to_3161/params_list_${SBATCH_ARRAY}.txt"
 EXE="./bubbleAtLubis_unaltered_3phase"
 SBATCH_MEM="251G"

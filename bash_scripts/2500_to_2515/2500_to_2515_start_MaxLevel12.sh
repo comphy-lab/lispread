@@ -21,9 +21,11 @@ id_start="2500"
 id_end="2515"
 
 
+sims_simultaneously=$((id_end - id_start + 1))
 # Concurrency control
 SBATCH_CPUS_PER_TASK=1 # OpenMP threads per sim
-SBATCH_NTASKS=16 # MPI threads per sim
+SBATCH_NTASKS=252 # Total MPI threads per sweep
+mpi_ranks=16
 export OMP_NUM_THREADS=1
 
 # Node shape

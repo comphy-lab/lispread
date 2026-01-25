@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-id_start="3015"
-id_end="3029"
+id_start="3075"
+id_end="3089"
 
 sims_simultaneously=$((id_end - id_start + 1))
 
@@ -10,6 +10,7 @@ sims_simultaneously=$((id_end - id_start + 1))
 SBATCH_CPUS_PER_TASK=252 # OpenMP threads per sim
 SBATCH_NTASKS=1 # MPI threads per sim
 export OMP_NUM_THREADS=16
+omp_num_threads=16
 
 # Node shape
 SBATCH_NODES=1

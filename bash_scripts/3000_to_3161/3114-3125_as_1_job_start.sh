@@ -10,23 +10,23 @@ delta="0.01"
 # Parameter sweeps
 Ohd_list=( "5e-3" )
 Ohf_list=( "0.01" "0.05" "0.1" "0.5" "1" "2.5" "5" "7.5" "10")
-tmax_list=( "3" "3" "3" "4" "5" "10" "10" "12" "12")
+tmax_list=( "0.1" "0.1" "0.1" "0.1" "0.1" "0.5" "0.5" "0.5" "0.5")
 Ohe_list=( "5e-5" "8e-5" "1.2e-3" "1.5e-5")
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
-MAXlevel_list=("12")
+MAXlevel_list=("10")
 hf_list=("0.05")
 
-id_start="3106"
-id_end="3121"
+id_start="3114"
+id_end="3125"
 
 sims_simultaneously=$((id_end - id_start + 1))
 
 # Concurrency control
 SBATCH_CPUS_PER_TASK=252 # OpenMP threads per sim
 SBATCH_NTASKS=1 # MPI threads per sim
-export OMP_NUM_THREADS=16
-omp_num_threads=16
+export OMP_NUM_THREADS=20
+omp_num_threads=20
 
 # Node shape
 SBATCH_NODES=1

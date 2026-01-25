@@ -30,7 +30,6 @@ fi
 
 # Detect if we are inside a SLURM job or not
 if [[ -z "${SLURM_JOB_ID:-}" ]]; then
-  bash bash_scripts/make_mpi_params.sh "$PROP_FILE"
   # Not in SLURM: submit this script with sbatch, using SBATCH_* from the properties file
 
   # Absolute path to this script, independent of current working directory
@@ -150,10 +149,6 @@ hf_${hf}_Ldomain_${Ldomain}_delta_${delta}"
   } >> "$params_log"
   (
     export OMP_NUM_THREADS="${omp_num_threads}"
-    export OMP_PROC_BIND=close
-    export OMP_PLACES=cores
-
-    srun --exclusive -N 1 -n 1 -c "${omp_num_threads}" --cpu-bind=cores \
       "$EXE" \
       "$Ohd" "$Ohf" "$Ohe" "$rhod" "$rhof" "$rhoe" \
       "$sigma_1" "$sigma_2" "$hf" "$tmax" "$Ldomain" "$delta" "$MAXlevel" "$savefolder" \

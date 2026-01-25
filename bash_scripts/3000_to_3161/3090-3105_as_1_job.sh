@@ -14,7 +14,7 @@ tmax_list=( "3" "3" "3" "4" "5" "10" "10" "12" "12")
 Ohe_list=( "5e-5" "8e-5" "1.2e-3" "1.5e-5")
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
-MAXlevel_list=("12")
+MAXlevel_list=("11")
 hf_list=("0.05")
 
 id_start="3090"

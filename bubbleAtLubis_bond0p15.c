@@ -16,7 +16,7 @@
 #include "tension.h"   // add surface tension
 #include "distance.h"   // some geometry
 #include "adapt_wavelet_limited_v2.h" // adaptive mesh refinement
-// #include "reduced.h"  // reduced gravity
+#include "reduced.h"  // reduced gravity
 // #include "end_run_on_no_movement.h" // ends run on no movement
 
 #define MINlevel 3                                              // maximum grid size, opposite of MAXlevel
@@ -94,8 +94,8 @@ if (savefolder[0] != '\0') {
   rho_d = atof(argv[4]);
   rho_f = atof(argv[5]);
   rho_e = atof(argv[6]);
-  sigma_1 = atof(argv[7]);  // liquid-env (assuming liquid has a lower surface tension then drop)
-  sigma_2 = atof(argv[8]);  // drop-liquid
+  sigma_1 = atof(argv[7]); 
+  sigma_2 = atof(argv[8]); 
   hf = atof(argv[9]);  // used to determine where box start
   tmax = atof(argv[10]);
   Ldomain = atof(argv[11]); // used wherer box ends
@@ -106,7 +106,7 @@ if (savefolder[0] != '\0') {
   X0=-hf*1.001; Y0=0.;          // define origin, you can also define LD/2, can be easier
   init_grid (1 << 4);       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
   
-  // G.x = -0.15;
+  G.x = -0.15;
 
   rho_drop = rho_d; mu_drop = Oh_d;
   rho_film = rho_f; mu_film = Oh_f;

@@ -8,17 +8,17 @@ Ldomain="5"
 delta="0.01"
 
 # Parameter sweeps
-Ohe_list=( "5e-3" )
-Ohf_list=( "0.5" "5" )
-tmax_list=( "10" "10" )
-Ohd_list=( "9.1e-5" )
-sigma2_list=( "0.33" )
-sigma1_list=( "0.67" )
-MAXlevel_list=( "11" )
-hf_list=("0.05" "0.03")
+Ohd_list=( "5e-3" )
+Ohf_list=( "0.01" "0.05" "0.1" "0.5" "1" "2.5" "5" "7.5" "10")
+tmax_list=( "0.1" "0.1" "0.1" "0.1" "0.1" "0.5" "0.5" "0.5" "0.5")
+Ohe_list=( "9.1e-5" )
+sigma1_list=( "0.33" )
+sigma2_list=( "0.67" )
+MAXlevel_list=( "12")
+hf_list=("0.05")
 
-id_start="2800"
-id_end="2803"
+id_start="3200"
+id_end="3208"
 
 sims_simultaneously=$((id_end - id_start + 1))
 
@@ -35,12 +35,12 @@ SBATCH_NTASKS_PER_CORE=1
 # SBATCH related parameters #
 #############################
 
-SBATCH_JOB_NAME="2800_to_2803"
-SBATCH_ARRAY=2800-2803
+SBATCH_JOB_NAME="3200_to_3208"
+SBATCH_ARRAY="3200-3208"
 SBATCH_TIME="96:00:00"
 
 # base save directory
-base_save_dir="Results/${SBATCH_ARRAY}_old_omp"
-PARAMS_FILE="bash_scripts/2800_to_2803/params_list_${SBATCH_ARRAY}_old_omp.txt"
-EXE="./bubbleAtLubis_unaltered_3phase"
+base_save_dir="Results/${SBATCH_ARRAY}"
+PARAMS_FILE="bash_scripts/3200_to_3208/params_list_${SBATCH_ARRAY}_start.txt"
+EXE="./bubbleAtLubis_bond0p15_mpi"
 SBATCH_MEM="251G"

@@ -1,3 +1,5 @@
+
+coord G = {0.,0.,0.}, Z = {0.,0.,0.};
 /**
 We need the interfacial force module as well as functions to compute the
 position of the interface. */

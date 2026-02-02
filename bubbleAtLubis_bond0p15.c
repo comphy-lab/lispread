@@ -106,7 +106,7 @@ if (savefolder[0] != '\0') {
   X0=-hf*1.001; Y0=0.;          // define origin, you can also define LD/2, can be easier
   init_grid (1 << 4);       // grid size is 2^4, you can start with Max level( not coarse) or min level(coarse) by changing the n(4) in this case
   
-  G.x = -0.15;
+  G.x = 0.15;
 
   rho_drop = rho_d; mu_drop = Oh_d;
   rho_film = rho_f; mu_film = Oh_f;

@@ -42,5 +42,5 @@ SBATCH_TIME="96:00:00"
 # base save directory
 base_save_dir="Results/${SBATCH_ARRAY}"
 PARAMS_FILE="bash_scripts/3000_to_3161/params_list_${SBATCH_ARRAY}_start.txt"
-EXE="./bubbleAtLubis_unaltered_3phase"
+EXE="./bubbleAtLubis"
 SBATCH_MEM="16G"

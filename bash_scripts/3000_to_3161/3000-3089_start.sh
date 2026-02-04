@@ -14,11 +14,11 @@ tmax_list=( "0.1" "0.1" "0.1" "0.1" "0.1" "0.5" "0.5" "0.5" "0.5")
 Ohe_list=( "9.1e-5" )
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
-MAXlevel_list=( "9" "9")
-hf_list=("0.01" "0.03" "0.05" "0.1" "0.25")
+MAXlevel_list=( "10" "11")
+hf_list=("0.01" "0.03" "0.05" "0.1")
 
 id_start="3000"
-id_end="3089"
+id_end="3071"
 
 sims_simultaneously=$((id_end - id_start + 1))
 

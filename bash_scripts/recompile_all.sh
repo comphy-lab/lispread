@@ -31,7 +31,7 @@ qcc -Wall -O2 getFacet1.c -o getFacet1 -lm -disable-dimensions
 qcc -Wall -O2 getFacet2.c -o getFacet2 -lm -disable-dimensions
 qcc -Wall -O2 getData.c  -o getData  -lm -disable-dimensions 
 qcc -Wall -O2 getX0Y0V0.c -o getX0Y0V0 -lm -disable-dimensions
-CC99='mpicc -std=c99' qcc -Wall -O2 -D_MPI=1 bubbleAtLubis.c -o bubbleAtLubis_mpi -lm -disable-dimensions
-CC99='mpicc -std=c99' qcc -Wall -O2 -D_MPI=1 bubbleAtLubisStokes.c -o bubbleAtLubisStokes_mpi -lm -disable-dimensions
-CC99='mpicc -std=c99' qcc -Wall -O2 -D_MPI=1 bubbleAtLubis_unaltered_3phase.c -o bubbleAtLubis_unaltered_3phase_mpi -lm -disable-dimensions
-CC99='mpicc -std=c99' qcc -Wall -O2 -D_MPI=1 bubbleAtLubis_bond0p15.c -o bubbleAtLubis_bond0p15_mpi -lm -disable-dimensions
+CC99='mpicc -std=c99 -D_GNU_SOURCE'' qcc -Wall -O2 -D_MPI=1 bubbleAtLubis.c -o bubbleAtLubis_mpi -lm -disable-dimensions
+CC99='mpicc -std=c99 -D_GNU_SOURCE'' qcc -Wall -O2 -D_MPI=1 bubbleAtLubisStokes.c -o bubbleAtLubisStokes_mpi -lm -disable-dimensions
+CC99='mpicc -std=c99 -D_GNU_SOURCE'' qcc -Wall -O2 -D_MPI=1 bubbleAtLubis_unaltered_3phase.c -o bubbleAtLubis_unaltered_3phase_mpi -lm -disable-dimensions
+CC99='mpicc -std=c99 -D_GNU_SOURCE'' qcc -Wall -O2 -D_MPI=1 bubbleAtLubis_bond0p15.c -o bubbleAtLubis_bond0p15_mpi -lm -disable-dimensions

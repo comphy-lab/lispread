@@ -19,7 +19,7 @@ for v in "${Ohf_base[@]}"; do
   Ohf_list+=( "$(echo "$v * $sqrt_inv_R" | bc -l)" )
 done
 
-tmax_base=( "3" "3" "3" "3" )
+tmax_base=( "3" "3" "3" "3" "3" "4" "5" "6")
 tmax_list=()
 for v in "${tmax_base[@]}"; do
   tmax_list+=( "$(echo "$v * $sqrt_inv_R" | bc -l)" )

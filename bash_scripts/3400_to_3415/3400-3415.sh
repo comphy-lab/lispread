@@ -8,17 +8,17 @@ Ldomain="5"
 delta="0.01"
 
 # Parameter sweeps
-Ohf_list=("3e-3" "5e-3" "8e-3" )
+Ohf_list=("3e-3" "6e-3")
 Ohe_list=(  "9.1e-5")
-tmax_list=( "3" "3" "3")
+tmax_list=( "3" "3" )
 Ohd_list=( 1e-3 1e-2)
 sigma1_list=( "0.67" )
 sigma2_list=( "0.33" )
 MAXlevel_list=( "12")
-hf_list=("0.006" "0.015" "0.03" "0.05" "0.01")
+hf_list=("0.006" "0.015" "0.03" "0.01")
 
 id_start="3400"
-id_end="3429"
+id_end="3415"
 
 sims_simultaneously=$((id_end - id_start + 1))
 
@@ -35,12 +35,12 @@ SBATCH_NTASKS_PER_CORE=1
 # SBATCH related parameters #
 #############################
 
-SBATCH_JOB_NAME="3400_to_3429"
-SBATCH_ARRAY="3400-3429"
+SBATCH_JOB_NAME="3400_to_3415"
+SBATCH_ARRAY="3400-3415"
 SBATCH_TIME="96:00:00"
 
 # base save directory
 base_save_dir="Results/${SBATCH_ARRAY}"
-PARAMS_FILE="bash_scripts/3400_to_3429/params_list_${SBATCH_ARRAY}.txt"
+PARAMS_FILE="bash_scripts/3400_to_3415/params_list_${SBATCH_ARRAY}.txt"
 EXE="./bubbleAtLubis"
 SBATCH_MEM="251G"

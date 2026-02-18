@@ -9,11 +9,11 @@ delta="0.01"
 
 # Parameter sweeps
 Ohf_list=("1e-2")
-Ohd_list=(  "9.1e-5")
+Ohe_list=(  "9.1e-5")
 tmax_list=( "1" )
-Ohe_list=( 1e-3 1e-2)
-sigma2_list=( "0.33" )
-sigma1_list=( "0.67" )
+Ohd_list=( 5e-3)
+sigma1_list=( "0.33" )
+sigma2_list=( "0.67" )
 MAXlevel_list=( "9")
 hf_list=("0.1")
 

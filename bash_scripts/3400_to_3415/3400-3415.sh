@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Base parameters (shared across runs)
-rhoe="1"
+rhod="1"
 rhof="0.9"
-rhod="1.2e-3"
+rhoe="1.2e-3"
 Ldomain="5"
 delta="0.01"
 

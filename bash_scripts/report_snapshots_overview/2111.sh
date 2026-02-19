@@ -8,7 +8,7 @@ Ldomain="5"
 delta="0.01"
 
 # Parameter sweeps
-Ohf_list=("5e-2")
+Ohf_list=("2.5")
 Ohd_list=(  "9.1e-5")
 tmax_list=( "20" )
 Ohe_list=( 5e-3)

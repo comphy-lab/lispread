@@ -36,7 +36,7 @@ SBATCH_NTASKS_PER_CORE=1
 #############################
 
 SBATCH_JOB_NAME="1095b"
-SBATCH_ARRAY="1095"
+SBATCH_ARRAY="1095-1095"
 SBATCH_TIME="96:00:00"
 
 # base save directory

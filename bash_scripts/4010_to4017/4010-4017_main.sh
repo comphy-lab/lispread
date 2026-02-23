@@ -36,7 +36,7 @@ for v in "${Ohf_base[@]}"; do
 done
 
 # tmax values
-tmax_base=( 3 3 3 3 3 4 5 6 )
+tmax_base=( 3 3 3 3)
 tmax_list=()
 
 for v in "${tmax_base[@]}"; do
@@ -72,7 +72,6 @@ hf_list=(
 sigma1_list=( "0.33" )
 sigma2_list=( "0.67" )
 MAXlevel_list=( "12")
-hf_list=( "$(echo "0.05 / $R" | bc -l)" )
 
 id_start="4010"
 id_end="4017"
